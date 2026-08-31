@@ -14,18 +14,18 @@
 
   <style>
     :root {
-      --cream: #fbf6ed;
-      --cream-dark: #f1e7d7;
-      --sage: #66734a;
-      --sage-dark: #4d5936;
-      --terracotta: #b8664e;
-      --terracotta-dark: #984d3a;
-      --brown: #4a382d;
-      --text: #403a34;
-      --muted: #756d63;
-      --white: #fff;
-      --border: #e8dccb;
-      --shadow: 0 18px 50px rgba(74, 56, 45, .11);
+  --cream: #1e1e1e;
+  --cream-dark: #151515;
+  --sage: #8a8a8a;
+  --sage-dark: #6f6f6f;
+  --terracotta: #c9a77d;
+  --terracotta-dark: #a98a64;
+  --brown: #2a2a2a;
+  --text: #f5f5f5;
+  --muted: #b5b5b5;
+  --white: #ffffff;
+  --border: #3a3a3a;
+  --shadow: 0 18px 50px rgba(0, 0, 0, .35);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
