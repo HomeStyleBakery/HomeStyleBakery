@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pureroots | Pure Ingredients. Honest Flavors.</title>
+  <title>Home Style Bakery | Pure Ingredients. Honest Flavors.</title>
 
   <style>
     body {
@@ -95,7 +95,7 @@
 <body>
 
   <header>
-    <h1>Pureroots</h1>
+    <h1>Home Style Bakery</h1>
     <p>Pure ingredients. Honest flavors.</p>
   </header>
 
@@ -122,9 +122,9 @@
   </section>
 
   <section class="section about">
-    <h2>About Pureroots</h2>
+    <h2>About Home Style Bakery</h2>
     <p>
-      At Pureroots, we believe food should be simple, pure, and honest.  
+      At Home Style Bakery, we believe food should be simple, pure, and honest.  
       Our products are made using natural ingredients, traditional methods,
       and lots of care — just the way homemade food should be.
     </p>
@@ -138,7 +138,7 @@
   </section>
 
   <footer>
-    © 2026 Pureroots. All rights reserved.
+    © 2026 Home Style Bakery. All rights reserved.
   </footer>
 
 </body>
