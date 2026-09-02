@@ -1,16 +1,16 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Home Style Bakery | Homemade. Eggless. Made With Care.</title>
+  <title>Home Style Bakery | Eggless. Homemade. Made Beautifully.</title>
 
   <meta
     name="description"
-    content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes, cheesecakes, breads, cookies and desserts made with carefully selected ingredients."
+    content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes, cheesecakes, breads, cookies, desserts and A2 ghee made with carefully selected ingredients."
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,25 +24,31 @@
   <style>
 
     :root {
-      --background: #f5f5f3;
-      --surface: #ffffff;
-      --surface-soft: #eeeeeb;
+      --bg: #0d0e0d;
+      --bg-2: #121412;
+      --panel: #171a17;
+      --panel-2: #1d211d;
+      --cream: #f3eee5;
+      --cream-soft: #d8d1c5;
+      --muted: #9a9c96;
+      --muted-2: #737770;
 
-      --black: #1d1d1f;
-      --dark: #292929;
-      --text: #242424;
-      --muted: #6e6e73;
+      --green: #a9b5a1;
+      --green-dark: #6f806a;
 
-      --accent: #7a6652;
-      --accent-dark: #5e4e3e;
-      --accent-soft: #e8e0d6;
+      --gold: #c5a97b;
+      --gold-soft: #ead8b8;
 
-      --green: #536052;
-      --border: #dededb;
+      --white: #ffffff;
+      --border: rgba(255,255,255,.10);
+      --border-light: rgba(255,255,255,.16);
 
-      --shadow: 0 20px 60px rgba(0,0,0,.08);
-      --radius: 24px;
+      --shadow:
+        0 30px 90px rgba(0,0,0,.38);
+
+      --radius: 28px;
     }
+
 
     * {
       box-sizing: border-box;
@@ -50,647 +56,1232 @@
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
       font-family: "DM Sans", sans-serif;
-      background: var(--background);
-      color: var(--text);
+      background:
+        radial-gradient(
+          circle at 15% 10%,
+          rgba(169,181,161,.07),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(197,169,123,.06),
+          transparent 25%
+        ),
+        var(--bg);
+
+      color: var(--cream);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
+
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .025;
+
+      background-image:
+        radial-gradient(#fff 1px, transparent 1px);
+
+      background-size: 4px 4px;
+      z-index: 9999;
+    }
+
 
     img {
       width: 100%;
       display: block;
     }
 
+
     a {
       color: inherit;
       text-decoration: none;
     }
 
+
+    button,
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+
+
     /* =========================
-       ANNOUNCEMENT
+       ANIMATIONS
     ========================= */
 
-    .announcement {
-      background: var(--black);
-      color: #fff;
-      text-align: center;
-      padding: 9px 15px;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: .2px;
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition:
+        opacity .8s ease,
+        transform .8s ease;
     }
+
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+
+    }
+
+
+    @keyframes pulse {
+
+      0% {
+        box-shadow: 0 0 0 0 rgba(197,169,123,.25);
+      }
+
+      70% {
+        box-shadow: 0 0 0 14px rgba(197,169,123,0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(197,169,123,0);
+      }
+
+    }
+
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+
+    .announcement {
+      background: #080908;
+      color: #aaa99f;
+      text-align: center;
+      padding: 10px 15px;
+
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
 
     /* =========================
        NAVIGATION
     ========================= */
 
+
     nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(245,245,243,.88);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(0,0,0,.07);
+
+      background: rgba(13,14,13,.76);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+
+      border-bottom: 1px solid rgba(255,255,255,.07);
     }
 
+
     .nav-container {
-      max-width: 1280px;
+      max-width: 1380px;
       margin: auto;
-      padding: 17px 28px;
+
+      padding: 18px 30px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 30px;
     }
 
+
     .logo {
       font-family: "Playfair Display", serif;
-      font-size: 21px;
+
+      font-size: 22px;
       font-weight: 700;
-      letter-spacing: -.4px;
-      color: var(--black);
+
+      letter-spacing: -.5px;
+
+      color: var(--cream);
+
       white-space: nowrap;
     }
+
+
+    .logo span {
+      color: var(--gold);
+    }
+
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 28px;
+
       list-style: none;
-      font-size: 13px;
+
+      font-size: 12px;
       font-weight: 600;
-      color: #454545;
+
+      color: #a9aaa4;
     }
+
 
     .nav-links a {
-      transition: color .2s ease;
+      transition: color .25s ease;
     }
+
 
     .nav-links a:hover {
-      color: var(--accent);
+      color: var(--cream);
     }
+
 
     .nav-order {
-      background: var(--black);
-      color: #fff !important;
-      padding: 10px 19px;
+      background: var(--cream);
+      color: #111 !important;
+
+      padding: 11px 20px;
+
       border-radius: 100px;
-      transition: transform .2s ease, background .2s ease;
+
+      transition:
+        transform .25s ease,
+        background .25s ease;
     }
 
+
     .nav-order:hover {
-      background: var(--accent-dark);
-      transform: translateY(-1px);
+      background: var(--gold-soft);
+      transform: translateY(-2px);
     }
+
 
     /* =========================
        HERO
     ========================= */
 
+
     .hero {
-      max-width: 1280px;
+      max-width: 1380px;
+      min-height: 780px;
+
       margin: auto;
-      min-height: 720px;
-      padding: 85px 28px 95px;
+
+      padding: 90px 30px 100px;
+
       display: grid;
-      grid-template-columns: .95fr 1.05fr;
+      grid-template-columns: .9fr 1.1fr;
+
       align-items: center;
-      gap: 80px;
+
+      gap: 70px;
     }
+
 
     .hero-content {
-      max-width: 600px;
+      max-width: 610px;
     }
 
-    .hero-label,
-    .section-label {
-      color: var(--accent);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.6px;
-    }
 
-    .hero-label {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      margin-bottom: 22px;
+      gap: 10px;
+
+      color: var(--gold);
+
+      font-size: 10px;
+      font-weight: 800;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      margin-bottom: 25px;
     }
 
-    .hero-label::before {
+
+    .eyebrow::before {
       content: "";
-      width: 28px;
+
+      width: 30px;
       height: 1px;
-      background: var(--accent);
+
+      background: var(--gold);
     }
+
 
     .hero h1 {
       font-family: "Playfair Display", serif;
-      color: var(--black);
-      font-size: clamp(52px,6.2vw,82px);
-      line-height: .98;
-      letter-spacing: -3px;
-      margin-bottom: 28px;
+
+      font-size: clamp(55px, 7vw, 94px);
+
+      line-height: .94;
+
+      letter-spacing: -4px;
+
+      color: var(--cream);
+
+      margin-bottom: 30px;
     }
 
-    .hero h1 span {
-      color: var(--accent);
+
+    .hero h1 em {
+      color: var(--green);
+      font-style: normal;
     }
+
 
     .hero-description {
-      max-width: 530px;
+      max-width: 540px;
+
       color: var(--muted);
-      font-size: 17px;
-      line-height: 1.8;
-      margin-bottom: 34px;
+
+      font-size: 16px;
+      line-height: 1.9;
+
+      margin-bottom: 35px;
     }
+
 
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
+
       gap: 12px;
+
       margin-bottom: 30px;
     }
+
 
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
       padding: 14px 23px;
+
       border-radius: 100px;
-      font-size: 13px;
-      font-weight: 700;
-      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
-      cursor: pointer;
-      border: none;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
     }
+
 
     .button-primary {
-      background: var(--black);
-      color: #fff;
-      box-shadow: 0 8px 25px rgba(0,0,0,.12);
+      background: var(--cream);
+      color: #111;
+
+      box-shadow: 0 15px 40px rgba(0,0,0,.25);
     }
+
 
     .button-primary:hover {
-      background: var(--accent-dark);
-      transform: translateY(-2px);
+      background: var(--gold-soft);
+      transform: translateY(-3px);
     }
+
 
     .button-secondary {
-      background: transparent;
-      border: 1px solid #c9c9c6;
-      color: var(--black);
+      border: 1px solid var(--border-light);
+      color: var(--cream);
+      background: rgba(255,255,255,.025);
     }
 
+
     .button-secondary:hover {
-      background: #fff;
-      transform: translateY(-2px);
+      background: rgba(255,255,255,.08);
+      transform: translateY(-3px);
     }
+
 
     .hero-features {
       display: flex;
       flex-wrap: wrap;
-      gap: 9px;
+      gap: 8px;
     }
+
 
     .hero-features span {
       padding: 7px 11px;
+
       border: 1px solid var(--border);
+
       border-radius: 100px;
-      background: rgba(255,255,255,.55);
-      color: #555;
-      font-size: 11px;
-      font-weight: 600;
+
+      background: rgba(255,255,255,.025);
+
+      color: #aaa;
+
+      font-size: 10px;
+      font-weight: 700;
     }
 
-    .hero-photo {
+
+    /* HERO IMAGE */
+
+
+    .hero-visual {
       position: relative;
-      height: 600px;
+
+      min-height: 620px;
     }
 
-    .hero-photo img {
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+
+      overflow: hidden;
+
+      border-radius: 36px;
+
+      background: #191c19;
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .hero-image img {
       height: 100%;
       object-fit: cover;
-      border-radius: 32px;
-      box-shadow: var(--shadow);
-      background: var(--surface-soft);
+
+      transition: transform 1s ease;
     }
 
-    .hero-note {
+
+    .hero-visual:hover .hero-image img {
+      transform: scale(1.025);
+    }
+
+
+    .hero-image::after {
+      content: "";
+
       position: absolute;
-      left: -30px;
-      bottom: 30px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 18px 21px;
-      border-radius: 18px;
-      box-shadow: 0 15px 40px rgba(0,0,0,.1);
-      z-index: 2;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent 45%,
+          rgba(0,0,0,.55)
+        );
     }
 
-    .hero-note strong {
+
+    .hero-card {
+      position: absolute;
+
+      left: -35px;
+      bottom: 35px;
+
+      z-index: 3;
+
+      width: 230px;
+
+      padding: 22px;
+
+      background: rgba(23,26,23,.90);
+
+      backdrop-filter: blur(20px);
+
+      border: 1px solid var(--border-light);
+
+      border-radius: 22px;
+
+      box-shadow: var(--shadow);
+
+      animation: float 5s ease-in-out infinite;
+    }
+
+
+    .hero-card small {
+      color: var(--gold);
+
+      font-size: 9px;
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+
+    .hero-card strong {
       display: block;
-      color: var(--black);
+
       font-family: "Playfair Display", serif;
-      font-size: 18px;
+
+      font-size: 22px;
+
+      margin: 7px 0 4px;
     }
 
-    .hero-note span {
+
+    .hero-card span {
       color: var(--muted);
-      font-size: 11px;
+
+      font-size: 10px;
     }
+
+
+    .hero-stamp {
+      position: absolute;
+
+      right: -20px;
+      top: 40px;
+
+      z-index: 3;
+
+      width: 115px;
+      height: 115px;
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      text-align: center;
+
+      background: var(--gold);
+
+      color: #17140f;
+
+      font-size: 9px;
+      font-weight: 900;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      padding: 18px;
+
+      animation: pulse 3s infinite;
+    }
+
 
     /* =========================
-       INTRO
+       MARQUEE
     ========================= */
 
-    .intro-strip {
+
+    .marquee {
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      background: var(--surface);
+
+      background: #101210;
+
+      overflow: hidden;
     }
 
-    .intro-inner {
-      max-width: 1280px;
-      margin: auto;
-      padding: 22px 28px;
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
+
+    .marquee-track {
+      display: flex;
+
+      width: max-content;
+
+      animation: marquee 25s linear infinite;
     }
 
-    .intro-item {
-      text-align: center;
-      padding: 5px 20px;
-      border-right: 1px solid var(--border);
+
+    .marquee-item {
+      padding: 18px 35px;
+
+      color: #878a83;
+
+      font-size: 10px;
+      font-weight: 800;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      white-space: nowrap;
     }
 
-    .intro-item:last-child {
-      border-right: none;
+
+    .marquee-item::after {
+      content: "✦";
+      margin-left: 35px;
+      color: var(--gold);
     }
 
-    .intro-item strong {
-      display: block;
-      color: var(--black);
-      font-size: 12px;
+
+    @keyframes marquee {
+
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+
     }
 
-    .intro-item span {
-      color: var(--muted);
-      font-size: 11px;
-    }
 
     /* =========================
-       SECTIONS
+       SECTION
     ========================= */
 
+
     .section {
-      max-width: 1280px;
+      max-width: 1380px;
+
       margin: auto;
-      padding: 110px 28px;
+
+      padding: 120px 30px;
     }
 
-    .section-header {
-      max-width: 680px;
-      margin-bottom: 52px;
+
+    .section-label {
+      color: var(--gold);
+
+      font-size: 10px;
+      font-weight: 800;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
+
+
+    .section-header {
+      max-width: 720px;
+
+      margin-bottom: 55px;
+    }
+
 
     .section-header.center {
       text-align: center;
+
       margin-left: auto;
       margin-right: auto;
     }
 
+
     .section-header h2 {
-      font-family: "Playfair Display",serif;
-      color: var(--black);
-      font-size: clamp(38px,4.5vw,58px);
-      line-height: 1.05;
-      letter-spacing: -1.5px;
-      margin: 12px 0 16px;
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(40px, 5vw, 68px);
+
+      line-height: 1;
+
+      letter-spacing: -2.5px;
+
+      color: var(--cream);
+
+      margin: 13px 0 20px;
     }
+
+
+    .section-header h2 em {
+      color: var(--green);
+      font-style: normal;
+    }
+
 
     .section-header p {
       color: var(--muted);
-      font-size: 15px;
-      line-height: 1.8;
+
+      font-size: 14px;
+
+      line-height: 1.85;
     }
+
 
     /* =========================
        PRODUCTS
     ========================= */
 
+
     .products {
       display: grid;
+
       grid-template-columns: repeat(3,1fr);
-      gap: 22px;
+
+      gap: 18px;
     }
+
 
     .product-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+      position: relative;
+
       overflow: hidden;
-      transition: transform .3s ease, box-shadow .3s ease;
+
+      background:
+        linear-gradient(
+          145deg,
+          #191c19,
+          #111311
+        );
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
     }
 
+
     .product-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
+
+      border-color: rgba(197,169,123,.35);
+
       box-shadow: var(--shadow);
     }
 
+
     .product-image {
-      height: 300px;
+      height: 330px;
+
       overflow: hidden;
-      background: var(--surface-soft);
+
+      background: #20231f;
     }
+
 
     .product-image img {
       height: 100%;
+
       object-fit: cover;
-      transition: transform .5s ease;
+
+      transition: transform .7s ease;
     }
+
 
     .product-card:hover .product-image img {
-      transform: scale(1.035);
+      transform: scale(1.06);
     }
 
+
     .product-info {
-      padding: 24px 24px 27px;
+      padding: 25px 25px 28px;
     }
+
 
     .tag {
       display: inline-block;
+
       color: var(--green);
-      background: #edf0eb;
+
+      background: rgba(169,181,161,.10);
+
+      border: 1px solid rgba(169,181,161,.15);
+
       padding: 5px 9px;
+
       border-radius: 100px;
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
+
+      font-size: 8px;
+      font-weight: 900;
+
+      letter-spacing: 1.4px;
+
+      margin-bottom: 13px;
     }
 
+
     .product-info h3 {
-      font-family: "Playfair Display",serif;
-      color: var(--black);
-      font-size: 25px;
-      line-height: 1.2;
-      margin-bottom: 8px;
+      font-family: "Playfair Display", serif;
+
+      color: var(--cream);
+
+      font-size: 26px;
+
+      line-height: 1.15;
+
+      margin-bottom: 9px;
     }
+
 
     .product-info p {
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.7;
-      margin-bottom: 19px;
+
+      font-size: 12px;
+
+      line-height: 1.75;
+
+      margin-bottom: 18px;
     }
+
 
     .product-button {
       display: inline-flex;
+
       align-items: center;
-      gap: 5px;
-      color: var(--black);
-      font-size: 12px;
-      font-weight: 700;
+
+      gap: 6px;
+
+      color: var(--cream);
+
+      font-size: 11px;
+      font-weight: 800;
+
+      transition: color .2s ease;
     }
+
+
+    .product-button:hover {
+      color: var(--gold);
+    }
+
 
     /* =========================
-       ORDER BUILDER
+       CATEGORY ORDER BUILDER
     ========================= */
 
+
     .order-builder-section {
-      background: var(--surface-soft);
-      padding: 110px 28px;
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(169,181,161,.06),
+          transparent 30%
+        ),
+        #111411;
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+
+      padding: 120px 30px;
     }
 
+
     .order-builder {
-      max-width: 1100px;
+      max-width: 1120px;
+
       margin: auto;
     }
 
+
     .order-builder-header {
       text-align: center;
-      max-width: 720px;
-      margin: 0 auto 45px;
+
+      max-width: 760px;
+
+      margin: 0 auto 55px;
     }
 
+
     .order-builder-header h2 {
-      font-family: "Playfair Display",serif;
-      font-size: clamp(42px,5vw,64px);
+      font-family: "Playfair Display", serif;
+
+      color: var(--cream);
+
+      font-size: clamp(42px,5vw,66px);
+
       line-height: 1;
-      letter-spacing: -2px;
-      color: var(--black);
-      margin: 12px 0 16px;
+
+      letter-spacing: -2.5px;
+
+      margin: 13px 0 17px;
     }
+
+
+    .order-builder-header h2 em {
+      color: var(--green);
+
+      font-style: normal;
+    }
+
 
     .order-builder-header p {
       color: var(--muted);
-      font-size: 14px;
+
+      font-size: 13px;
     }
+
 
     .order-step {
-      background: var(--surface);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.045),
+          rgba(255,255,255,.015)
+        );
+
       border: 1px solid var(--border);
+
       border-radius: 28px;
-      padding: 35px;
-      margin-bottom: 22px;
-      box-shadow: 0 10px 40px rgba(0,0,0,.04);
+
+      padding: 34px;
+
+      margin-bottom: 18px;
+
+      box-shadow: 0 20px 70px rgba(0,0,0,.16);
     }
 
-    .step-title {
-      display: flex;
-      align-items: center;
-      gap: 13px;
+
+    .step-number {
+      width: 35px;
+      height: 35px;
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      background: var(--gold);
+
+      color: #17140f;
+
+      font-size: 10px;
+      font-weight: 900;
+
+      margin-bottom: 17px;
+    }
+
+
+    .step-content h3 {
+      font-family: "Playfair Display", serif;
+
+      color: var(--cream);
+
+      font-size: 27px;
+
       margin-bottom: 25px;
     }
 
-    .step-number {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: var(--black);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
 
-    .step-title h3,
-    .step-content > h3 {
-      font-family: "Playfair Display",serif;
-      font-size: 25px;
-      color: var(--black);
-      margin-bottom: 22px;
-    }
+    /* CATEGORY CARDS */
+
 
     .category-grid {
       display: grid;
+
       grid-template-columns: repeat(6,1fr);
+
       gap: 10px;
     }
 
+
     .category-button {
+      position: relative;
+
+      min-height: 145px;
+
+      overflow: hidden;
+
       border: 1px solid var(--border);
-      background: #fafaf8;
-      border-radius: 15px;
-      padding: 15px 8px;
+
+      border-radius: 18px;
+
+      background: #191c19;
+
+      color: var(--cream);
+
       cursor: pointer;
-      transition: all .25s ease;
-      font-family: inherit;
-      font-weight: 600;
-      font-size: 12px;
-      color: var(--text);
+
+      transition:
+        transform .3s ease,
+        border-color .3s ease;
     }
 
-    .category-button:hover,
+
+    .category-button:hover {
+      transform: translateY(-4px);
+
+      border-color: rgba(197,169,123,.5);
+    }
+
+
     .category-button.active {
-      background: var(--black);
-      color: white;
-      border-color: var(--black);
-      transform: translateY(-2px);
+      border-color: var(--gold);
+
+      box-shadow:
+        0 0 0 1px var(--gold),
+        0 15px 35px rgba(0,0,0,.2);
     }
 
-    .category-icon {
-      display: block;
-      font-size: 24px;
-      margin-bottom: 5px;
+
+    .category-button img {
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      opacity: .48;
+
+      transition:
+        transform .5s ease,
+        opacity .3s ease;
     }
+
+
+    .category-button:hover img,
+    .category-button.active img {
+      transform: scale(1.08);
+
+      opacity: .65;
+    }
+
+
+    .category-button::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.05),
+          rgba(0,0,0,.85)
+        );
+    }
+
+
+    .category-name {
+      position: absolute;
+
+      left: 14px;
+      right: 14px;
+      bottom: 13px;
+
+      z-index: 2;
+
+      font-size: 11px;
+      font-weight: 800;
+
+      text-align: left;
+    }
+
+
+    /* ORDER PRODUCTS */
+
 
     .order-products {
       display: grid;
+
       grid-template-columns: repeat(3,1fr);
-      gap: 15px;
+
+      gap: 14px;
     }
+
 
     .order-product {
       position: relative;
+
+      overflow: hidden;
+
       border: 1px solid var(--border);
-      background: #fafaf8;
-      border-radius: 19px;
-      padding: 18px;
+
+      background: #171a17;
+
+      border-radius: 20px;
+
+      padding: 14px;
+
       cursor: pointer;
-      transition: all .25s ease;
+
+      transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease;
     }
+
 
     .order-product:hover {
-      border-color: var(--accent);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.07);
+      transform: translateY(-4px);
+
+      border-color: rgba(197,169,123,.45);
     }
+
 
     .order-product.selected {
-      border: 2px solid var(--accent);
-      background: #fbf8f3;
+      border-color: var(--gold);
+
+      background: #1b1d19;
     }
 
+
     .order-product-image {
-      height: 150px;
-      border-radius: 13px;
+      height: 160px;
+
+      border-radius: 14px;
+
       overflow: hidden;
+
       margin-bottom: 14px;
-      background: var(--surface-soft);
+
+      background: #20231f;
     }
+
 
     .order-product-image img {
       height: 100%;
+
       object-fit: cover;
     }
 
-    .order-product h4 {
-      font-family: "Playfair Display",serif;
+
+    .order-product-info h4 {
+      font-family: "Playfair Display", serif;
+
+      color: var(--cream);
+
       font-size: 19px;
+
       margin-bottom: 3px;
-      color: var(--black);
     }
+
 
     .order-product-info p {
       color: var(--muted);
-      font-size: 12px;
-      margin: 0;
+
+      font-size: 11px;
     }
 
-    .order-product small {
-      color: var(--muted);
-      font-size: 10px;
-    }
 
     .selected-check {
       position: absolute;
+
       top: 12px;
       right: 12px;
-      width: 28px;
-      height: 28px;
+
+      width: 29px;
+      height: 29px;
+
       border-radius: 50%;
-      background: var(--black);
-      color: white;
+
       display: none;
+
       place-items: center;
-      font-size: 13px;
-      z-index: 2;
+
+      background: var(--gold);
+
+      color: #17140f;
+
+      font-weight: 900;
+
+      z-index: 3;
     }
+
 
     .order-product.selected .selected-check {
       display: grid;
     }
 
+
     .quantity-row {
       display: none;
+
       align-items: center;
+
       justify-content: space-between;
+
       margin-top: 15px;
+
       padding-top: 13px;
+
       border-top: 1px solid var(--border);
+
+      color: var(--muted);
+
+      font-size: 11px;
     }
+
 
     .order-product.selected .quantity-row {
       display: flex;
     }
 
+
     .quantity-controls {
       display: flex;
+
       align-items: center;
+
       gap: 9px;
     }
 
+
     .qty-button {
-      width: 30px;
-      height: 30px;
+      width: 29px;
+      height: 29px;
+
       border: 1px solid var(--border);
+
       border-radius: 50%;
-      background: white;
+
+      background: #222621;
+
+      color: var(--cream);
+
       cursor: pointer;
-      font-size: 16px;
     }
+
 
     .qty-number {
       min-width: 18px;
+
       text-align: center;
-      font-weight: 700;
-      font-size: 13px;
+
+      color: var(--cream);
+
+      font-weight: 800;
     }
+
 
     /* =========================
        ORDER SUMMARY
     ========================= */
 
+
     .order-summary {
       display: none;
     }
 
+
     .order-summary.visible {
       display: block;
+
       animation: fadeUp .4s ease;
     }
+
 
     @keyframes fadeUp {
 
@@ -706,530 +1297,871 @@
 
     }
 
+
     .summary-list {
       display: flex;
+
       flex-direction: column;
-      gap: 10px;
+
+      gap: 9px;
+
       margin-bottom: 25px;
     }
 
+
     .summary-item {
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       padding: 14px 16px;
-      background: #fafaf8;
+
+      background: #171a17;
+
       border: 1px solid var(--border);
+
       border-radius: 13px;
     }
 
-    .summary-item strong {
-      color: var(--black);
-      font-size: 13px;
-    }
 
-    .summary-item span {
-      color: var(--muted);
+    .summary-item strong {
+      color: var(--cream);
+
       font-size: 12px;
     }
 
+
+    .summary-item span {
+      color: var(--muted);
+
+      font-size: 11px;
+
+      margin-left: 7px;
+    }
+
+
     .summary-total {
       display: flex;
+
       justify-content: space-between;
-      align-items: center;
+
       padding: 18px 16px;
+
       border-top: 1px solid var(--border);
+
       margin-top: 5px;
-      margin-bottom: 20px;
     }
+
 
     .summary-total span {
       color: var(--muted);
-      font-size: 13px;
+
+      font-size: 12px;
     }
 
+
     .summary-total strong {
-      color: var(--black);
+      color: var(--gold-soft);
+
       font-size: 18px;
     }
 
+
     .empty-summary {
       color: var(--muted);
-      font-size: 13px;
+
+      font-size: 12px;
+
       padding: 15px 0;
     }
 
+
+    /* FORM */
+
+
     .customer-form {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
-      gap: 15px;
+
+      gap: 14px;
     }
+
 
     .form-group {
       display: flex;
+
       flex-direction: column;
+
       gap: 7px;
     }
+
 
     .form-group.full {
       grid-column: 1 / -1;
     }
 
+
     .form-group label {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--black);
+      color: var(--cream);
+
+      font-size: 10px;
+      font-weight: 800;
     }
+
 
     .form-group input,
     .form-group textarea,
     .form-group select {
       width: 100%;
+
       border: 1px solid var(--border);
-      background: #fafaf8;
+
+      background: #111411;
+
+      color: var(--cream);
+
       border-radius: 12px;
+
       padding: 13px 14px;
-      font-family: inherit;
-      font-size: 13px;
-      color: var(--text);
+
+      font-size: 12px;
+
       outline: none;
     }
+
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #666a64;
+    }
+
 
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
-      border-color: var(--accent);
-      background: white;
+      border-color: var(--gold);
+
+      background: #151815;
     }
+
 
     .form-group textarea {
       min-height: 100px;
+
       resize: vertical;
     }
 
+
     .send-order {
       width: 100%;
-      margin-top: 20px;
-      padding: 17px;
-      border: none;
-      border-radius: 100px;
-      background: var(--black);
-      color: white;
-      font-family: inherit;
-      font-weight: 700;
-      font-size: 13px;
-      cursor: pointer;
-      transition: all .25s ease;
+
       grid-column: 1 / -1;
+
+      border: none;
+
+      border-radius: 100px;
+
+      background: var(--cream);
+
+      color: #111;
+
+      padding: 17px;
+
+      font-size: 12px;
+      font-weight: 900;
+
+      cursor: pointer;
+
+      transition:
+        transform .25s ease,
+        background .25s ease;
     }
 
+
     .send-order:hover {
-      background: var(--accent-dark);
+      background: var(--gold-soft);
+
       transform: translateY(-2px);
     }
+
 
     /* =========================
        PROMISE
     ========================= */
 
+
     .promise-section {
-      background: var(--black);
-      color: white;
+      background: #080908;
+
+      border-bottom: 1px solid var(--border);
     }
 
+
     .promise-inner {
-      max-width: 1280px;
+      max-width: 1380px;
+
       margin: auto;
-      padding: 110px 28px;
+
+      padding: 125px 30px;
     }
+
 
     .promise-header {
       max-width: 800px;
+
       margin: 0 auto 55px;
+
       text-align: center;
     }
 
-    .promise-header .section-label {
-      color: #bda98f;
-    }
 
     .promise-header h2 {
-      color: white;
-      font-family: "Playfair Display",serif;
-      font-size: clamp(40px,5vw,62px);
-      line-height: 1.04;
-      letter-spacing: -1.7px;
-      margin: 12px 0 17px;
+      font-family: "Playfair Display", serif;
+
+      color: var(--cream);
+
+      font-size: clamp(42px,5vw,70px);
+
+      line-height: 1;
+
+      letter-spacing: -2.5px;
+
+      margin: 13px 0 18px;
     }
 
+
+    .promise-header h2 em {
+      color: var(--green);
+
+      font-style: normal;
+    }
+
+
     .promise-header p {
-      color: rgba(255,255,255,.64);
-      font-size: 15px;
+      color: var(--muted);
+
+      font-size: 14px;
+
       line-height: 1.8;
     }
 
+
     .promise-photo {
-      max-width: 1100px;
-      height: 380px;
-      margin: 0 auto 45px;
+      max-width: 1120px;
+
+      height: 420px;
+
+      margin: 0 auto 18px;
+
       overflow: hidden;
-      border-radius: 28px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: #292929;
+
+      border-radius: 30px;
+
+      border: 1px solid var(--border);
+
+      background: #171a17;
     }
+
 
     .promise-photo img {
-      width: 100%;
       height: 100%;
+
       object-fit: cover;
-      display: block;
+
+      transition: transform .8s ease;
     }
+
+
+    .promise-photo:hover img {
+      transform: scale(1.025);
+    }
+
 
     .promise-grid {
+      max-width: 1120px;
+
+      margin: auto;
+
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+
+      grid-template-columns: repeat(4,1fr);
+
       gap: 1px;
-      max-width: 1100px;
-      margin: 0 auto;
-      background: rgba(255,255,255,.13);
-      border: 1px solid rgba(255,255,255,.13);
+
+      background: var(--border);
     }
+
 
     .promise-card {
-      background: var(--black);
-      padding: 34px 27px;
-      min-height: 225px;
+      position: relative;
+
+      min-height: 280px;
+
+      padding: 28px;
+
+      overflow: hidden;
+
+      background: #101210;
     }
+
+
+    .promise-card-image {
+      height: 100px;
+
+      margin: -28px -28px 22px;
+
+      overflow: hidden;
+
+      opacity: .65;
+    }
+
+
+    .promise-card-image img {
+      height: 100%;
+
+      object-fit: cover;
+
+      filter: saturate(.7);
+    }
+
 
     .promise-number {
-      color: #8e8e8e;
-      font-size: 11px;
-      font-weight: 700;
-      margin-bottom: 35px;
+      color: var(--gold);
+
+      font-size: 9px;
+      font-weight: 900;
+
+      letter-spacing: 1.5px;
+
+      margin-bottom: 17px;
     }
 
-    .promise-icon {
-      font-size: 25px;
-      margin-bottom: 16px;
-    }
 
     .promise-card h3 {
-      font-family: "Playfair Display",serif;
-      font-size: 21px;
-      margin-bottom: 8px;
+      font-family: "Playfair Display", serif;
+
+      color: var(--cream);
+
+      font-size: 22px;
+
+      margin-bottom: 9px;
     }
 
+
     .promise-card p {
-      color: rgba(255,255,255,.57);
-      font-size: 12px;
+      color: var(--muted);
+
+      font-size: 11px;
+
       line-height: 1.7;
     }
+
 
     /* =========================
        STORY
     ========================= */
 
+
     .story {
-      max-width: 1280px;
+      max-width: 1380px;
+
       margin: auto;
-      padding: 120px 28px;
+
+      padding: 125px 30px;
+
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
+
+      grid-template-columns: .95fr 1.05fr;
+
       gap: 90px;
+
       align-items: center;
     }
 
+
     .story-image {
-      height: 600px;
+      height: 620px;
+
+      overflow: hidden;
+
+      border-radius: 32px;
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow);
     }
+
 
     .story-image img {
       height: 100%;
+
       object-fit: cover;
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      background: var(--surface-soft);
+
+      transition: transform .8s ease;
     }
+
+
+    .story-image:hover img {
+      transform: scale(1.03);
+    }
+
 
     .story-copy {
       max-width: 620px;
     }
 
+
     .story-copy h2 {
-      font-family: "Playfair Display",serif;
-      color: var(--black);
-      font-size: clamp(40px,4.5vw,60px);
-      line-height: 1.04;
-      letter-spacing: -1.7px;
-      margin: 12px 0 25px;
+      font-family: "Playfair Display", serif;
+
+      color: var(--cream);
+
+      font-size: clamp(42px,5vw,67px);
+
+      line-height: 1;
+
+      letter-spacing: -2.5px;
+
+      margin: 13px 0 25px;
     }
+
+
+    .story-copy h2 em {
+      color: var(--green);
+
+      font-style: normal;
+    }
+
 
     .story-copy p {
       color: var(--muted);
-      font-size: 15px;
-      line-height: 1.85;
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
       margin-bottom: 17px;
     }
 
+
     .story-highlight {
-      margin-top: 30px;
-      padding: 20px 22px;
-      background: var(--surface);
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 15px;
+
+      margin-top: 20px;
+
+      padding: 17px 20px;
+
       border: 1px solid var(--border);
+
       border-radius: 18px;
-      display: inline-block;
+
+      background: rgba(255,255,255,.025);
     }
+
 
     .story-highlight strong {
-      display: block;
-      color: var(--black);
-      font-size: 13px;
+      color: var(--cream);
+
+      font-size: 12px;
     }
 
+
     .story-highlight span {
-      color: var(--muted);
-      font-size: 11px;
+      color: var(--gold);
+
+      font-size: 10px;
     }
+
 
     /* =========================
        FOOTER
     ========================= */
 
+
     footer {
-      background: var(--black);
+      background: #060706;
+
       color: white;
-      padding: 65px 28px 25px;
+
+      padding: 70px 30px 25px;
+
+      border-top: 1px solid var(--border);
     }
+
 
     .footer-inner {
-      max-width: 1280px;
+      max-width: 1380px;
+
       margin: auto;
+
       display: grid;
+
       grid-template-columns: 1.6fr 1fr 1fr;
+
       gap: 70px;
-      padding-bottom: 55px;
+
+      padding-bottom: 60px;
     }
 
+
     footer h3 {
-      font-family: "Playfair Display",serif;
-      font-size: 22px;
+      font-family: "Playfair Display", serif;
+
+      font-size: 23px;
+
       margin-bottom: 12px;
     }
 
+
     footer p,
     footer a {
-      color: rgba(255,255,255,.58);
-      font-size: 12px;
+      color: #777a74;
+
+      font-size: 11px;
+
       line-height: 1.8;
     }
 
+
+    footer a:hover {
+      color: var(--cream);
+    }
+
+
     .footer-links {
       display: flex;
+
       flex-direction: column;
+
       gap: 5px;
     }
 
+
     .footer-location {
       margin-top: 17px;
-      color: rgba(255,255,255,.72);
-      font-size: 12px;
+
+      color: #999b94;
+
+      font-size: 11px;
     }
 
+
     .copyright {
-      max-width: 1280px;
+      max-width: 1380px;
+
       margin: auto;
+
       padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,.12);
+
+      border-top: 1px solid var(--border);
+
       text-align: center;
-      color: rgba(255,255,255,.4);
-      font-size: 10px;
+
+      color: #4f524d;
+
+      font-size: 9px;
     }
+
+
+    /* =========================
+       MOBILE FLOATING BUTTON
+    ========================= */
+
+
+    .mobile-order {
+      display: none;
+
+      position: fixed;
+
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+
+      z-index: 5000;
+
+      text-align: center;
+
+      padding: 15px;
+
+      border-radius: 100px;
+
+      background: var(--cream);
+
+      color: #111;
+
+      font-size: 11px;
+      font-weight: 900;
+
+      box-shadow: 0 15px 40px rgba(0,0,0,.4);
+    }
+
 
     /* =========================
        TABLET
     ========================= */
 
-    @media (max-width: 950px) {
+
+    @media (max-width: 1000px) {
 
       .hero {
         grid-template-columns: 1fr;
-        gap: 55px;
-        padding-top: 65px;
+
+        gap: 50px;
       }
 
-      .hero-photo {
-        height: 540px;
+
+      .hero-content {
+        max-width: 700px;
       }
+
+
+      .hero-visual {
+        min-height: 550px;
+      }
+
 
       .products {
         grid-template-columns: repeat(2,1fr);
       }
 
-      .promise-grid {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .story {
-        grid-template-columns: 1fr;
-        gap: 55px;
-      }
-
-      .story-image {
-        height: 520px;
-      }
 
       .category-grid {
         grid-template-columns: repeat(3,1fr);
       }
 
+
+      .promise-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+
+      .story {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+      }
+
+
+      .story-copy {
+        max-width: 800px;
+      }
+
+
       .order-products {
         grid-template-columns: repeat(2,1fr);
       }
 
-      .footer-inner {
-        grid-template-columns: 1fr 1fr;
-      }
-
     }
+
 
     /* =========================
        MOBILE
     ========================= */
 
+
     @media (max-width: 680px) {
 
       .announcement {
-        font-size: 10px;
+        font-size: 8px;
+
+        letter-spacing: 1px;
       }
+
 
       .nav-container {
         padding: 14px 18px;
       }
 
+
       .logo {
         font-size: 18px;
       }
+
 
       .nav-links li:not(:last-child) {
         display: none;
       }
 
+
       .nav-links {
         margin-left: auto;
+
+        gap: 0;
       }
+
 
       .hero {
         min-height: auto;
-        padding: 60px 18px 70px;
+
+        padding: 65px 18px 70px;
+
+        gap: 35px;
       }
+
 
       .hero h1 {
-        font-size: 48px;
-        letter-spacing: -2px;
+        font-size: 51px;
+
+        letter-spacing: -2.5px;
       }
+
 
       .hero-description {
-        font-size: 14px;
+        font-size: 13px;
       }
 
-      .hero-photo {
-        height: 410px;
+
+      .hero-visual {
+        min-height: 430px;
       }
 
-      .hero-note {
+
+      .hero-card {
         left: 12px;
+
         bottom: 18px;
+
+        width: 210px;
       }
 
-      .intro-inner {
-        grid-template-columns: 1fr 1fr;
-        padding: 18px;
-        gap: 15px 0;
+
+      .hero-stamp {
+        right: 8px;
+
+        top: 20px;
+
+        width: 90px;
+        height: 90px;
+
+        font-size: 7px;
       }
 
-      .intro-item {
-        border-right: none;
-      }
 
       .section {
-        padding: 75px 18px;
+        padding: 80px 18px;
       }
+
+
+      .section-header h2 {
+        font-size: 43px;
+      }
+
 
       .products {
         grid-template-columns: 1fr;
       }
 
-      .promise-inner {
-        padding: 75px 18px;
+
+      .product-image {
+        height: 310px;
       }
 
-      .promise-header {
-        margin-bottom: 35px;
-      }
-
-      .promise-header h2 {
-        font-size: 42px;
-      }
-
-      .promise-photo {
-        height: 300px;
-        margin-bottom: 30px;
-        border-radius: 22px;
-      }
-
-      .promise-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .promise-card {
-        min-height: auto;
-        padding: 30px 25px;
-      }
-
-      .story {
-        padding: 75px 18px;
-      }
-
-      .story-image {
-        height: 390px;
-      }
 
       .order-builder-section {
-        padding: 70px 15px;
+        padding: 80px 15px;
       }
 
+
       .order-step {
-        padding: 22px 17px;
+        padding: 23px 17px;
+
         border-radius: 22px;
       }
+
 
       .category-grid {
         grid-template-columns: repeat(2,1fr);
       }
 
+
+      .category-button {
+        min-height: 125px;
+      }
+
+
       .order-products {
         grid-template-columns: 1fr;
       }
+
 
       .customer-form {
         grid-template-columns: 1fr;
       }
 
+
       .form-group.full {
         grid-column: auto;
       }
+
 
       .send-order {
         grid-column: auto;
       }
 
+
+      .promise-inner {
+        padding: 80px 18px;
+      }
+
+
+      .promise-header h2 {
+        font-size: 43px;
+      }
+
+
+      .promise-photo {
+        height: 300px;
+
+        border-radius: 22px;
+      }
+
+
+      .promise-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .promise-card {
+        min-height: auto;
+      }
+
+
+      .story {
+        padding: 80px 18px;
+      }
+
+
+      .story-image {
+        height: 390px;
+      }
+
+
+      .story-copy h2 {
+        font-size: 45px;
+      }
+
+
       .footer-inner {
         grid-template-columns: 1fr;
+
         gap: 35px;
       }
 
+
       footer {
-        padding: 50px 18px 20px;
+        padding: 55px 18px 25px;
+      }
+
+
+      .mobile-order {
+        display: block;
       }
 
     }
@@ -1241,7 +2173,8 @@
 
 <body>
 
-  <!-- ANNOUNCEMENT -->
+
+  <!-- TOP BAR -->
 
   <div class="announcement">
     Eggless · Vegetarian · Carefully Selected Ingredients · No Preservatives · No Artificial Colours
@@ -1255,8 +2188,9 @@
     <div class="nav-container">
 
       <a href="#home" class="logo">
-        Home Style Bakery
+        Home Style <span>Bakery</span>
       </a>
+
 
       <ul class="nav-links">
 
@@ -1296,38 +2230,57 @@
 
     <section class="hero">
 
-      <div class="hero-content">
 
-        <div class="hero-label">
+      <div class="hero-content reveal">
+
+        <div class="eyebrow">
           Fresh from our kitchen
         </div>
 
+
         <h1>
           Homemade food.<br>
-          <span>Made beautifully.</span>
+          <em>Made beautifully.</em>
         </h1>
 
+
         <p class="hero-description">
-          Thoughtfully made cakes, cheesecakes, breads and desserts from
-          Home Style Bakery in London, Ontario. Eggless, vegetarian and
-          prepared with carefully selected ingredients.
+
+          Cakes, cheesecakes, breads, cookies and desserts
+          made in small batches in London, Ontario.
+
+          <strong>
+            Eggless. Vegetarian. Homemade.
+          </strong>
+
+          Made with carefully selected ingredients and genuine care.
+
         </p>
+
 
         <div class="hero-buttons">
 
-          <a href="#order" class="button button-primary">
+          <a
+            href="#order"
+            class="button button-primary"
+          >
             Start Your Order →
           </a>
 
-          <a href="#products" class="button button-secondary">
+
+          <a
+            href="#products"
+            class="button button-secondary"
+          >
             Explore the Bakery
           </a>
 
         </div>
 
+
         <div class="hero-features">
 
-          <span>Eggless</span>
+          <span>100% Eggless</span>
           <span>Vegetarian</span>
           <span>Organic Ingredients</span>
           <span>No Preservatives</span>
@@ -1337,17 +2290,29 @@
       </div>
 
 
-      <div class="hero-photo">
+      <div class="hero-visual reveal">
 
-        <img
-          src="images/lemon-cake.jpg"
-          alt="Fresh homemade cake from Home Style Bakery"
-          onerror="this.src='https://placehold.co/900x1100/e9e9e6/555555?text=Add+lemon-cake.jpg'"
-        >
 
-        <div class="hero-note">
+        <div class="hero-image">
 
-          <strong>Made fresh</strong>
+          <img
+            src="images/lemon-cake.jpg"
+            alt="Fresh homemade cake from Home Style Bakery"
+            onerror="this.style.display='none';"
+          >
+
+        </div>
+
+
+        <div class="hero-card">
+
+          <small>
+            Home Style Bakery
+          </small>
+
+          <strong>
+            Made fresh.
+          </strong>
 
           <span>
             London, Ontario · Homemade with care
@@ -1355,83 +2320,92 @@
 
         </div>
 
-      </div>
 
-    </section>
-
-
-    <!-- INTRO -->
-
-    <section class="intro-strip">
-
-      <div class="intro-inner">
-
-        <div class="intro-item">
-
-          <strong>100% Eggless</strong>
-
-          <span>
-            Every item is egg-free
-          </span>
-
-        </div>
-
-
-        <div class="intro-item">
-
-          <strong>Vegetarian</strong>
-
-          <span>
-            Made with care
-          </span>
-
-        </div>
-
-
-        <div class="intro-item">
-
-          <strong>Freshly Prepared</strong>
-
-          <span>
-            Made for your order
-          </span>
-
-        </div>
-
-
-        <div class="intro-item">
-
-          <strong>London, Ontario</strong>
-
-          <span>
-            Proudly local
-          </span>
-
+        <div class="hero-stamp">
+          100%<br>
+          Eggless<br>
+          Bakery
         </div>
 
       </div>
 
     </section>
+
+
+    <!-- MARQUEE -->
+
+    <div class="marquee">
+
+      <div class="marquee-track">
+
+        <div class="marquee-item">
+          Eggless
+        </div>
+
+        <div class="marquee-item">
+          Vegetarian
+        </div>
+
+        <div class="marquee-item">
+          Homemade
+        </div>
+
+        <div class="marquee-item">
+          Carefully Selected Ingredients
+        </div>
+
+        <div class="marquee-item">
+          No Preservatives
+        </div>
+
+        <div class="marquee-item">
+          No Artificial Colours
+        </div>
+
+        <div class="marquee-item">
+          London Ontario
+        </div>
+
+        <div class="marquee-item">
+          Eggless
+        </div>
+
+        <div class="marquee-item">
+          Vegetarian
+        </div>
+
+        <div class="marquee-item">
+          Homemade
+        </div>
+
+      </div>
+
+    </div>
 
 
     <!-- PRODUCTS -->
 
-    <section class="section" id="products">
+    <section
+      class="section"
+      id="products"
+    >
 
-      <div class="section-header center">
 
-        <div class="section-label">
+      <div class="section-header center reveal">
+
+        <span class="section-label">
           The Bakery
-        </div>
+        </span>
 
         <h2>
-          Something worth<br>
-          slowing down for.
+          Made for moments<br>
+          <em>worth remembering.</em>
         </h2>
 
         <p>
-          From everyday favourites to something special for a celebration,
-          each item is prepared with the care you'd expect from homemade food.
+          From everyday favourites to something special
+          for a celebration, every item is prepared with
+          the care you'd expect from homemade food.
         </p>
 
       </div>
@@ -1440,16 +2414,16 @@
       <div class="products">
 
 
-        <!-- 01 LEMON -->
+        <!-- LEMON -->
 
-        <article class="product-card">
+        <article class="product-card reveal">
 
           <div class="product-image">
 
             <img
               src="images/lemon-cake.jpg"
               alt="Eggless homemade lemon cake"
-              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Lemon+Cake'"
+              onerror="this.style.display='none';"
             >
 
           </div>
@@ -1469,7 +2443,10 @@
               A bright homemade favourite.
             </p>
 
-            <a href="#order" class="product-button">
+            <a
+              href="#order"
+              class="product-button"
+            >
               Order this →
             </a>
 
@@ -1478,16 +2455,16 @@
         </article>
 
 
-        <!-- 02 BANANA WALNUT -->
+        <!-- BANANA WALNUT -->
 
-        <article class="product-card">
+        <article class="product-card reveal">
 
           <div class="product-image">
 
             <img
               src="images/02_banana_walnut_cake.jpg"
               alt="Homemade banana walnut cake"
-              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Banana+Walnut+Cake'"
+              onerror="this.style.display='none';"
             >
 
           </div>
@@ -1516,16 +2493,16 @@
         </article>
 
 
-        <!-- 03 PECAN -->
+        <!-- PECAN -->
 
-        <article class="product-card">
+        <article class="product-card reveal">
 
           <div class="product-image">
 
             <img
               src="images/03_pecan_cake.jpg"
               alt="Homemade pecan cake"
-              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Pecan+Cake'"
+              onerror="this.style.display='none';"
             >
 
           </div>
@@ -1554,16 +2531,16 @@
         </article>
 
 
-        <!-- 04 STRAWBERRY CHEESECAKE -->
+        <!-- STRAWBERRY CHEESECAKE -->
 
-        <article class="product-card">
+        <article class="product-card reveal">
 
           <div class="product-image">
 
             <img
               src="images/04_strawberry_cheesecake.jpg"
               alt="Fresh strawberry cheesecake"
-              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Strawberry+Cheesecake'"
+              onerror="this.style.display='none';"
             >
 
           </div>
@@ -1592,16 +2569,16 @@
         </article>
 
 
-        <!-- 05 CLASSIC CHEESECAKE -->
+        <!-- CLASSIC CAKE -->
 
-        <article class="product-card">
+        <article class="product-card reveal">
 
           <div class="product-image">
 
             <img
-              src="images/cheesecake.jpg"
-              alt="Fresh homemade cheesecake"
-              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Cheesecake'"
+              src="images/classic-cake.jpg"
+              alt="Homemade classic cake"
+              onerror="this.style.display='none';"
             >
 
           </div>
@@ -1609,16 +2586,16 @@
           <div class="product-info">
 
             <span class="tag">
-              MADE FRESH
+              CLASSIC
             </span>
 
             <h3>
-              Classic Cheesecake
+              Classic Cake
             </h3>
 
             <p>
-              Rich, creamy and made fresh to order for
-              a simple, delicious dessert.
+              Simple, elegant and homemade — a timeless
+              favourite for everyday celebrations.
             </p>
 
             <a href="#order" class="product-button">
@@ -1630,16 +2607,16 @@
         </article>
 
 
-        <!-- 06 COOKIES -->
+        <!-- COOKIES -->
 
-        <article class="product-card">
+        <article class="product-card reveal">
 
           <div class="product-image">
 
             <img
               src="images/cookies.jpg"
               alt="Homemade cookies"
-              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Cookies'"
+              onerror="this.style.display='none';"
             >
 
           </div>
@@ -1668,16 +2645,16 @@
         </article>
 
 
-        <!-- 07 FOCACCIA -->
+        <!-- FOCACCIA -->
 
-        <article class="product-card">
+        <article class="product-card reveal">
 
           <div class="product-image">
 
             <img
               src="images/06_focaccia_bread.jpg"
               alt="Fresh homemade focaccia bread"
-              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Focaccia'"
+              onerror="this.style.display='none';"
             >
 
           </div>
@@ -1706,16 +2683,16 @@
         </article>
 
 
-        <!-- 08 HOMEMADE BREAD -->
+        <!-- BREAD -->
 
-        <article class="product-card">
+        <article class="product-card reveal">
 
           <div class="product-image">
 
             <img
               src="images/07_homemade_bread.jpg"
               alt="Fresh homemade bread"
-              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Fresh+Bread'"
+              onerror="this.style.display='none';"
             >
 
           </div>
@@ -1744,16 +2721,16 @@
         </article>
 
 
-        <!-- 09 CUSTARD -->
+        <!-- CUSTARD -->
 
-        <article class="product-card">
+        <article class="product-card reveal">
 
           <div class="product-image">
 
             <img
               src="images/05_custard.jpg"
               alt="Homemade fruit custard"
-              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Fruit+Custard'"
+              onerror="this.style.display='none';"
             >
 
           </div>
@@ -1782,6 +2759,44 @@
         </article>
 
 
+        <!-- A2 GHEE -->
+
+        <article class="product-card reveal">
+
+          <div class="product-image">
+
+            <img
+              src="images/a2-ghee.jpg"
+              alt="A2 Desi Ghee"
+              onerror="this.style.display='none';"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              A2 GHEE
+            </span>
+
+            <h3>
+              A2 Desi Ghee
+            </h3>
+
+            <p>
+              A premium pantry favourite selected for
+              traditional homemade cooking and baking.
+            </p>
+
+            <a href="#order" class="product-button">
+              Ask about this →
+            </a>
+
+          </div>
+
+        </article>
+
+
       </div>
 
     </section>
@@ -1789,12 +2804,15 @@
 
     <!-- ORDER BUILDER -->
 
-    <section class="order-builder-section" id="order">
+    <section
+      class="order-builder-section"
+      id="order"
+    >
 
       <div class="order-builder">
 
 
-        <div class="order-builder-header">
+        <div class="order-builder-header reveal">
 
           <span class="section-label">
             ORDER FROM HOME STYLE BAKERY
@@ -1806,20 +2824,22 @@
           </h2>
 
           <p>
-            Select the items you'd like, choose your quantities,
-            and send us your order through WhatsApp.
+            Choose a category, select your items,
+            choose your quantities and send your order
+            directly through WhatsApp.
           </p>
 
         </div>
 
 
-        <!-- STEP 1 -->
+        <!-- CATEGORY -->
 
-        <div class="order-step">
+        <div class="order-step reveal">
 
           <div class="step-number">
             01
           </div>
+
 
           <div class="step-content">
 
@@ -1827,55 +2847,117 @@
               Choose a category
             </h3>
 
+
             <div class="category-grid">
+
 
               <button
                 type="button"
                 class="category-button active"
                 onclick="displayProducts('cakes', this)"
               >
-                Cakes
+
+                <img
+                  src="images/classic-cake.jpg"
+                  alt=""
+                >
+
+                <span class="category-name">
+                  Cakes
+                </span>
+
               </button>
+
 
               <button
                 type="button"
                 class="category-button"
                 onclick="displayProducts('cheesecakes', this)"
               >
-                Cheesecakes
+
+                <img
+                  src="images/04_strawberry_cheesecake.jpg"
+                  alt=""
+                >
+
+                <span class="category-name">
+                  Cheesecakes
+                </span>
+
               </button>
+
 
               <button
                 type="button"
                 class="category-button"
                 onclick="displayProducts('breads', this)"
               >
-                Breads
+
+                <img
+                  src="images/06_focaccia_bread.jpg"
+                  alt=""
+                >
+
+                <span class="category-name">
+                  Breads
+                </span>
+
               </button>
+
 
               <button
                 type="button"
                 class="category-button"
                 onclick="displayProducts('desserts', this)"
               >
-                Desserts
+
+                <img
+                  src="images/05_custard.jpg"
+                  alt=""
+                >
+
+                <span class="category-name">
+                  Desserts
+                </span>
+
               </button>
+
 
               <button
                 type="button"
                 class="category-button"
                 onclick="displayProducts('cookies', this)"
               >
-                Cookies
+
+                <img
+                  src="images/cookies.jpg"
+                  alt=""
+                >
+
+                <span class="category-name">
+                  Cookies
+                </span>
+
               </button>
+
 
               <button
                 type="button"
                 class="category-button"
                 onclick="displayProducts('other', this)"
               >
-                Other
+
+                <img
+                  src="images/a2-ghee.jpg"
+                  alt=""
+                >
+
+                <span class="category-name">
+                  Other
+                </span>
+
               </button>
+
 
             </div>
 
@@ -1884,19 +2966,21 @@
         </div>
 
 
-        <!-- STEP 2 -->
+        <!-- SELECT ITEMS -->
 
-        <div class="order-step">
+        <div class="order-step reveal">
 
           <div class="step-number">
             02
           </div>
+
 
           <div class="step-content">
 
             <h3>
               Select your items
             </h3>
+
 
             <div
               class="order-products"
@@ -1908,7 +2992,7 @@
         </div>
 
 
-        <!-- STEP 3 -->
+        <!-- SUMMARY -->
 
         <div
           class="order-step order-summary"
@@ -1919,11 +3003,13 @@
             03
           </div>
 
+
           <div class="step-content">
 
             <h3>
               Your order
             </h3>
+
 
             <div
               class="summary-list"
@@ -1938,6 +3024,7 @@
 
 
             <div class="customer-form">
+
 
               <div class="form-group">
 
@@ -1978,7 +3065,7 @@
                 <textarea
                   id="customerNotes"
                   rows="4"
-                  placeholder="Tell us about your preferred date, flavour, size or any special request..."
+                  placeholder="Preferred date, flavour, size or any special request..."
                 ></textarea>
 
               </div>
@@ -1991,6 +3078,7 @@
               >
                 Send Order on WhatsApp →
               </button>
+
 
             </div>
 
@@ -2005,21 +3093,26 @@
 
     <!-- OUR PROMISE -->
 
-    <section class="promise-section" id="promise">
+    <section
+      class="promise-section"
+      id="promise"
+    >
 
       <div class="promise-inner">
 
 
-        <div class="promise-header">
+        <div class="promise-header reveal">
 
           <span class="section-label">
             OUR PROMISE
           </span>
 
+
           <h2>
             Simple ingredients.<br>
             <em>Beautifully made.</em>
           </h2>
+
 
           <p>
             Everything we make reflects the way we bake at home:
@@ -2029,87 +3122,140 @@
         </div>
 
 
-        <div class="promise-photo">
+        <!-- KITCHEN PHOTO -->
+
+        <div class="promise-photo reveal">
 
           <img
-            src="images/our-promise.jpg"
-            alt="Fresh homemade baking at Home Style Bakery"
+            src="images/kitchen.jpg"
+            alt="Home Style Bakery kitchen"
             loading="lazy"
-            onerror="this.src='https://placehold.co/1200x600/292929/ffffff?text=Home+Style+Bakery'"
+            onerror="this.style.display='none';"
           >
 
         </div>
 
 
+        <!-- PROMISE CARDS -->
+
         <div class="promise-grid">
 
 
-          <div class="promise-card">
+          <div class="promise-card reveal">
 
-            <div class="promise-icon">
-              01
+            <div class="promise-card-image">
+
+              <img
+                src="images/classic-cake.jpg"
+                alt=""
+              >
+
             </div>
 
+
+            <div class="promise-number">
+              01 · QUALITY
+            </div>
+
+
             <h3>
-              Organic Ingredients
+              Carefully Selected
             </h3>
 
+
             <p>
-              Carefully selected ingredients chosen
-              for quality and flavour.
+              We choose ingredients thoughtfully,
+              focusing on quality, flavour and the
+              homemade experience.
             </p>
 
           </div>
 
 
-          <div class="promise-card">
+          <div class="promise-card reveal">
 
-            <div class="promise-icon">
-              02
+            <div class="promise-card-image">
+
+              <img
+                src="images/lemon-cake.jpg"
+                alt=""
+              >
+
             </div>
+
+
+            <div class="promise-number">
+              02 · EGGLESS
+            </div>
+
 
             <h3>
               100% Eggless
             </h3>
 
+
             <p>
-              Every product is made without eggs,
-              while keeping flavour and texture delicious.
+              Every item we make is prepared without eggs,
+              while keeping the flavour and texture delicious.
             </p>
 
           </div>
 
 
-          <div class="promise-card">
+          <div class="promise-card reveal">
 
-            <div class="promise-icon">
-              03
+            <div class="promise-card-image">
+
+              <img
+                src="images/cookies.jpg"
+                alt=""
+              >
+
             </div>
+
+
+            <div class="promise-number">
+              03 · NATURAL
+            </div>
+
 
             <h3>
               No Artificial Colours
             </h3>
 
+
             <p>
-              We keep our baking natural and avoid
+              We keep our baking simple and avoid
               unnecessary artificial colours.
             </p>
 
           </div>
 
 
-          <div class="promise-card">
+          <div class="promise-card reveal">
 
-            <div class="promise-icon">
-              04
+            <div class="promise-card-image">
+
+              <img
+                src="images/a2-ghee.jpg"
+                alt=""
+              >
+
             </div>
+
+
+            <div class="promise-number">
+              04 · FRESH
+            </div>
+
 
             <h3>
               No Preservatives
             </h3>
 
+
             <p>
-              Fresh homemade baking without
+              Homemade baking made fresh, without
               unnecessary preservatives.
             </p>
 
@@ -2123,38 +3269,44 @@
     </section>
 
 
-    <!-- OUR STORY -->
+    <!-- STORY -->
 
-    <section class="story" id="story">
+    <section
+      class="story"
+      id="story"
+    >
 
 
-      <div class="story-image">
+      <div class="story-image reveal">
 
         <img
-          src="images/our-kitchen.jpg"
+          src="images/kitchen.jpg"
           alt="Home Style Bakery kitchen"
           loading="lazy"
-          onerror="this.src='https://placehold.co/1000x900/e9e9e6/555555?text=Our+Kitchen'"
+          onerror="this.style.display='none';"
         >
 
       </div>
 
 
-      <div class="story-copy">
+      <div class="story-copy reveal">
 
         <span class="section-label">
           OUR STORY
         </span>
+
 
         <h2>
           Made at home.<br>
           <em>Made with heart.</em>
         </h2>
 
+
         <p>
           Home Style Bakery started with a simple idea:
           homemade food should taste homemade.
         </p>
+
 
         <p>
           We bake in small batches using carefully selected
@@ -2162,10 +3314,11 @@
           homemade methods.
         </p>
 
+
         <p>
-          From cakes and cheesecakes to breads, cookies and
-          desserts, everything is prepared with the same care
-          we would use for our own family.
+          From cakes and cheesecakes to breads, cookies,
+          desserts and more, everything is prepared with
+          the same care we would use for our own family.
         </p>
 
 
@@ -2264,6 +3417,7 @@
 
         </p>
 
+
         <p>
 
           <a href="tel:+15192008436">
@@ -2288,11 +3442,28 @@
   </footer>
 
 
+  <!-- MOBILE ORDER BUTTON -->
+
+  <a
+    href="#order"
+    class="mobile-order"
+  >
+    Start Your Order →
+  </a>
+
+
   <!-- JAVASCRIPT -->
 
   <script>
 
+
+    /* =========================
+       PRODUCT DATA
+    ========================= */
+
+
     const bakeryProducts = {
+
 
       cakes: [
 
@@ -2312,6 +3483,12 @@
           name: "Pecan Cake",
           price: 40,
           image: "images/03_pecan_cake.jpg"
+        },
+
+        {
+          name: "Classic Cake",
+          price: 35,
+          image: "images/classic-cake.jpg"
         }
 
       ],
@@ -2323,12 +3500,6 @@
           name: "Strawberry Cheesecake",
           price: 45,
           image: "images/04_strawberry_cheesecake.jpg"
-        },
-
-        {
-          name: "Classic Cheesecake",
-          price: 40,
-          image: "images/cheesecake.jpg"
         }
 
       ],
@@ -2378,7 +3549,7 @@
         {
           name: "A2 Desi Ghee",
           price: 0,
-          image: "images/ghee.jpg"
+          image: "images/a2-ghee.jpg"
         }
 
       ]
@@ -2389,10 +3560,17 @@
     let selectedProducts = {};
 
 
+    /* =========================
+       DISPLAY PRODUCTS
+    ========================= */
+
+
     function displayProducts(category, button) {
+
 
       const container =
         document.getElementById("orderProducts");
+
 
       if (!container) {
         return;
@@ -2422,11 +3600,15 @@
       container.innerHTML =
         products.map(function(product) {
 
+
           const selected =
             selectedProducts[product.name];
 
+
           const quantity =
-            selected ? selected.quantity : 0;
+            selected
+            ? selected.quantity
+            : 0;
 
 
           const safeName =
@@ -2442,13 +3624,14 @@
               onclick="toggleProduct('${safeName}')"
             >
 
+
               <div class="order-product-image">
 
                 <img
                   src="${product.image}"
                   alt="${product.name}"
                   loading="lazy"
-                  onerror="this.src='https://placehold.co/400x300/e9e9e6/555555?text=Bakery'"
+                  onerror="this.style.display='none';"
                 >
 
               </div>
@@ -2472,9 +3655,7 @@
 
 
               <div class="selected-check">
-
-                ${selected ? "✓" : "+"}
-
+                ✓
               </div>
 
 
@@ -2491,7 +3672,9 @@
                       Quantity
                     </span>
 
+
                     <div class="quantity-controls">
+
 
                       <button
                         type="button"
@@ -2501,9 +3684,11 @@
                         −
                       </button>
 
+
                       <span class="qty-number">
                         ${quantity}
                       </span>
+
 
                       <button
                         type="button"
@@ -2512,6 +3697,7 @@
                       >
                         +
                       </button>
+
 
                     </div>
 
@@ -2530,7 +3716,13 @@
     }
 
 
+    /* =========================
+       TOGGLE PRODUCT
+    ========================= */
+
+
     function toggleProduct(name) {
+
 
       if (selectedProducts[name]) {
 
@@ -2540,12 +3732,14 @@
 
       else {
 
+
         let product = null;
 
 
         for (
           const category in bakeryProducts
         ) {
+
 
           const found =
             bakeryProducts[category].find(
@@ -2587,40 +3781,14 @@
       updateSummary();
 
 
-      const activeButton =
-        document.querySelector(
-          ".category-button.active"
-        );
-
-
-      if (activeButton) {
-
-        const categoryText =
-          activeButton.textContent
-            .trim()
-            .toLowerCase();
-
-
-        const categoryMap = {
-
-          cakes: "cakes",
-          cheesecakes: "cheesecakes",
-          breads: "breads",
-          desserts: "desserts",
-          cookies: "cookies",
-          other: "other"
-
-        };
-
-
-        displayProducts(
-          categoryMap[categoryText] || "cakes",
-          activeButton
-        );
-
-      }
+      refreshCurrentCategory();
 
     }
+
+
+    /* =========================
+       CHANGE QUANTITY
+    ========================= */
 
 
     function changeQuantity(
@@ -2628,6 +3796,7 @@
       amount,
       event
     ) {
+
 
       if (event) {
 
@@ -2637,9 +3806,7 @@
 
 
       if (!selectedProducts[name]) {
-
         return;
-
       }
 
 
@@ -2658,65 +3825,115 @@
       updateSummary();
 
 
+      refreshCurrentCategory();
+
+    }
+
+
+    /* =========================
+       REFRESH CATEGORY
+    ========================= */
+
+
+    function refreshCurrentCategory() {
+
+
       const activeButton =
         document.querySelector(
           ".category-button.active"
         );
 
 
-      if (activeButton) {
-
-        const categoryText =
-          activeButton.textContent
-            .trim()
-            .toLowerCase();
-
-
-        const categoryMap = {
-
-          cakes: "cakes",
-          cheesecakes: "cheesecakes",
-          breads: "breads",
-          desserts: "desserts",
-          cookies: "cookies",
-          other: "other"
-
-        };
-
-
-        displayProducts(
-          categoryMap[categoryText] || "cakes",
-          activeButton
-        );
-
+      if (!activeButton) {
+        return;
       }
 
-    }
+
+      const category =
+        activeButton.dataset.category;
 
 
-    function updateSummary() {
+      if (category) {
 
-      const summary =
-        document.getElementById("summaryList");
-
-      const orderSummary =
-        document.getElementById("orderSummary");
-
-
-      if (!summary || !orderSummary) {
+        displayProducts(
+          category,
+          activeButton
+        );
 
         return;
 
       }
 
 
+      const categoryButtons =
+        Array.from(
+          document.querySelectorAll(
+            ".category-button"
+          )
+        );
+
+
+      const index =
+        categoryButtons.indexOf(
+          activeButton
+        );
+
+
+      const categories = [
+        "cakes",
+        "cheesecakes",
+        "breads",
+        "desserts",
+        "cookies",
+        "other"
+      ];
+
+
+      displayProducts(
+        categories[index] || "cakes",
+        activeButton
+      );
+
+    }
+
+
+    /* =========================
+       UPDATE SUMMARY
+    ========================= */
+
+
+    function updateSummary() {
+
+
+      const summary =
+        document.getElementById(
+          "summaryList"
+        );
+
+
+      const orderSummary =
+        document.getElementById(
+          "orderSummary"
+        );
+
+
+      if (!summary || !orderSummary) {
+        return;
+      }
+
+
       const items =
-        Object.values(selectedProducts);
+        Object.values(
+          selectedProducts
+        );
 
 
       if (items.length === 0) {
 
-        orderSummary.classList.remove("visible");
+
+        orderSummary.classList.remove(
+          "visible"
+        );
 
 
         summary.innerHTML = `
@@ -2727,12 +3944,15 @@
 
         `;
 
+
         return;
 
       }
 
 
-      orderSummary.classList.add("visible");
+      orderSummary.classList.add(
+        "visible"
+      );
 
 
       let total = 0;
@@ -2741,8 +3961,10 @@
       summary.innerHTML =
         items.map(function(item) {
 
+
           const itemTotal =
-            item.price * item.quantity;
+            item.price *
+            item.quantity;
 
 
           total += itemTotal;
@@ -2763,6 +3985,7 @@
                 </span>
 
               </div>
+
 
               <strong>
 
@@ -2816,10 +4039,18 @@
     }
 
 
+    /* =========================
+       WHATSAPP ORDER
+    ========================= */
+
+
     function sendWhatsAppOrder() {
 
+
       const items =
-        Object.values(selectedProducts);
+        Object.values(
+          selectedProducts
+        );
 
 
       if (items.length === 0) {
@@ -2835,46 +4066,54 @@
 
       const name =
         document
-          .getElementById("customerName")
+          .getElementById(
+            "customerName"
+          )
           .value
           .trim();
 
 
       const phone =
         document
-          .getElementById("customerPhone")
+          .getElementById(
+            "customerPhone"
+          )
           .value
           .trim();
 
 
       const notes =
         document
-          .getElementById("customerNotes")
+          .getElementById(
+            "customerNotes"
+          )
           .value
           .trim();
 
 
       let message =
-        "Hi Home Style Bakery!\n\n";
+        "Hi Home Style Bakery!\\n\\n";
 
 
       message +=
-        "I'd like to place an order:\n\n";
+        "I'd like to place an order:\\n\\n";
 
 
-      items.forEach(function(item) {
+      items.forEach(
+        function(item) {
 
-        message +=
-          "• " +
-          item.name +
-          " × " +
-          item.quantity +
-          "\n";
+          message +=
+            "• " +
+            item.name +
+            " × " +
+            item.quantity +
+            "\\n";
 
-      });
+        }
+      );
 
 
-      message += "\n";
+      message += "\\n";
 
 
       if (name) {
@@ -2882,7 +4121,7 @@
         message +=
           "Name: " +
           name +
-          "\n";
+          "\\n";
 
       }
 
@@ -2892,7 +4131,7 @@
         message +=
           "Phone: " +
           phone +
-          "\n";
+          "\\n";
 
       }
 
@@ -2902,18 +4141,20 @@
         message +=
           "Notes: " +
           notes +
-          "\n";
+          "\\n";
 
       }
 
 
       message +=
-        "\nPlease let me know availability and the final price. Thank you!";
+        "\\nPlease let me know availability and the final price. Thank you!";
 
 
       const whatsappURL =
         "https://wa.me/15192008436?text=" +
-        encodeURIComponent(message);
+        encodeURIComponent(
+          message
+        );
 
 
       window.open(
@@ -2925,22 +4166,108 @@
     }
 
 
-    /* Load cakes when page opens */
+    /* =========================
+       SCROLL REVEAL
+    ========================= */
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        function(entries) {
+
+          entries.forEach(
+            function(entry) {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add(
+                  "visible"
+                );
+
+                revealObserver.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+          );
+
+        },
+        {
+          threshold: .12
+        }
+      );
+
 
     document.addEventListener(
       "DOMContentLoaded",
       function() {
 
-        displayProducts("cakes");
+
+        /* Category mapping */
+
+        document
+          .querySelectorAll(
+            ".category-button"
+          )
+          .forEach(
+            function(button, index) {
+
+
+              const categories = [
+                "cakes",
+                "cheesecakes",
+                "breads",
+                "desserts",
+                "cookies",
+                "other"
+              ];
+
+
+              button.dataset.category =
+                categories[index];
+
+            }
+          );
+
+
+        /* Load first category */
+
+        displayProducts(
+          "cakes",
+          document.querySelector(
+            ".category-button.active"
+          )
+        );
+
 
         updateSummary();
 
+
+        /* Start animations */
+
+        document
+          .querySelectorAll(
+            ".reveal"
+          )
+          .forEach(
+            function(element) {
+
+              revealObserver.observe(
+                element
+              );
+
+            }
+          );
+
       }
     );
+
 
   </script>
 
 
 </body>
-
 </html>
+```
