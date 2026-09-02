@@ -1,5 +1,5 @@
-```html
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 
@@ -8,16 +8,17 @@
 
   <title>Home Style Bakery | Eggless. Homemade. Made Beautifully.</title>
 
-  <meta
-    name="description"
-    content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes, cheesecakes, breads, cookies, desserts and A2 ghee made with carefully selected ingredients."
-  >
+<meta
+name="description"
+content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes, cheesecakes, breads, cookies, desserts and A2 ghee made with carefully selected ingredients."
+
+>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
 
@@ -25,11 +26,13 @@
 
     :root {
       --bg: #0d0e0d;
-      --bg-2: #121412;
+      --bg-2: #111311;
       --panel: #171a17;
       --panel-2: #1d211d;
+
       --cream: #f3eee5;
       --cream-soft: #d8d1c5;
+
       --muted: #9a9c96;
       --muted-2: #737770;
 
@@ -40,6 +43,7 @@
       --gold-soft: #ead8b8;
 
       --white: #ffffff;
+
       --border: rgba(255,255,255,.10);
       --border-light: rgba(255,255,255,.16);
 
@@ -64,6 +68,7 @@
 
     body {
       font-family: "DM Sans", sans-serif;
+
       background:
         radial-gradient(
           circle at 15% 10%,
@@ -78,23 +83,31 @@
         var(--bg);
 
       color: var(--cream);
+
       line-height: 1.6;
+
       -webkit-font-smoothing: antialiased;
+
       overflow-x: hidden;
     }
 
 
     body::before {
       content: "";
+
       position: fixed;
+
       inset: 0;
+
       pointer-events: none;
+
       opacity: .025;
 
       background-image:
         radial-gradient(#fff 1px, transparent 1px);
 
       background-size: 4px 4px;
+
       z-index: 9999;
     }
 
@@ -126,7 +139,9 @@
 
     .reveal {
       opacity: 0;
+
       transform: translateY(30px);
+
       transition:
         opacity .8s ease,
         transform .8s ease;
@@ -135,6 +150,7 @@
 
     .reveal.visible {
       opacity: 1;
+
       transform: translateY(0);
     }
 
@@ -156,15 +172,47 @@
     @keyframes pulse {
 
       0% {
-        box-shadow: 0 0 0 0 rgba(197,169,123,.25);
+        box-shadow:
+          0 0 0 0 rgba(197,169,123,.25);
       }
 
       70% {
-        box-shadow: 0 0 0 14px rgba(197,169,123,0);
+        box-shadow:
+          0 0 0 14px rgba(197,169,123,0);
       }
 
       100% {
-        box-shadow: 0 0 0 0 rgba(197,169,123,0);
+        box-shadow:
+          0 0 0 0 rgba(197,169,123,0);
+      }
+
+    }
+
+
+    @keyframes emojiFloat {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-5px) rotate(2deg);
+      }
+
+    }
+
+
+    @keyframes fadeUp {
+
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
 
     }
@@ -177,16 +225,32 @@
 
     .announcement {
       background: #080908;
+
       color: #aaa99f;
+
       text-align: center;
+
       padding: 10px 15px;
 
       font-size: 10px;
-      font-weight: 700;
+
+      font-weight: 800;
+
       letter-spacing: 1.5px;
+
       text-transform: uppercase;
 
-      border-bottom: 1px solid rgba(255,255,255,.06);
+      border-bottom:
+        1px solid rgba(255,255,255,.06);
+
+      overflow: hidden;
+    }
+
+
+    .announcement span {
+      display: inline-block;
+
+      margin: 0 5px;
     }
 
 
@@ -197,34 +261,49 @@
 
     nav {
       position: sticky;
+
       top: 0;
+
       z-index: 1000;
 
-      background: rgba(13,14,13,.76);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
+      background:
+        rgba(13,14,13,.76);
 
-      border-bottom: 1px solid rgba(255,255,255,.07);
+      backdrop-filter:
+        blur(24px);
+
+      -webkit-backdrop-filter:
+        blur(24px);
+
+      border-bottom:
+        1px solid rgba(255,255,255,.07);
     }
 
 
     .nav-container {
       max-width: 1380px;
+
       margin: auto;
 
       padding: 18px 30px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 30px;
     }
 
 
     .logo {
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
       font-size: 22px;
+
       font-weight: 700;
 
       letter-spacing: -.5px;
@@ -242,12 +321,15 @@
 
     .nav-links {
       display: flex;
+
       align-items: center;
+
       gap: 28px;
 
       list-style: none;
 
       font-size: 12px;
+
       font-weight: 600;
 
       color: #a9aaa4;
@@ -255,7 +337,8 @@
 
 
     .nav-links a {
-      transition: color .25s ease;
+      transition:
+        color .25s ease;
     }
 
 
@@ -266,6 +349,7 @@
 
     .nav-order {
       background: var(--cream);
+
       color: #111 !important;
 
       padding: 11px 20px;
@@ -280,6 +364,7 @@
 
     .nav-order:hover {
       background: var(--gold-soft);
+
       transform: translateY(-2px);
     }
 
@@ -291,6 +376,7 @@
 
     .hero {
       max-width: 1380px;
+
       min-height: 780px;
 
       margin: auto;
@@ -298,6 +384,7 @@
       padding: 90px 30px 100px;
 
       display: grid;
+
       grid-template-columns: .9fr 1.1fr;
 
       align-items: center;
@@ -313,15 +400,19 @@
 
     .eyebrow {
       display: inline-flex;
+
       align-items: center;
+
       gap: 10px;
 
       color: var(--gold);
 
       font-size: 10px;
+
       font-weight: 800;
 
       letter-spacing: 2px;
+
       text-transform: uppercase;
 
       margin-bottom: 25px;
@@ -332,6 +423,7 @@
       content: "";
 
       width: 30px;
+
       height: 1px;
 
       background: var(--gold);
@@ -339,9 +431,12 @@
 
 
     .hero h1 {
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
-      font-size: clamp(55px, 7vw, 94px);
+      font-size:
+        clamp(55px, 7vw, 94px);
 
       line-height: .94;
 
@@ -355,6 +450,7 @@
 
     .hero h1 em {
       color: var(--green);
+
       font-style: normal;
     }
 
@@ -365,14 +461,21 @@
       color: var(--muted);
 
       font-size: 16px;
+
       line-height: 1.9;
 
       margin-bottom: 35px;
     }
 
 
+    .hero-description strong {
+      color: var(--cream);
+    }
+
+
     .hero-buttons {
       display: flex;
+
       flex-wrap: wrap;
 
       gap: 12px;
@@ -383,7 +486,9 @@
 
     .button {
       display: inline-flex;
+
       align-items: center;
+
       justify-content: center;
 
       padding: 14px 23px;
@@ -391,6 +496,7 @@
       border-radius: 100px;
 
       font-size: 12px;
+
       font-weight: 800;
 
       transition:
@@ -402,34 +508,45 @@
 
     .button-primary {
       background: var(--cream);
+
       color: #111;
 
-      box-shadow: 0 15px 40px rgba(0,0,0,.25);
+      box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
     }
 
 
     .button-primary:hover {
       background: var(--gold-soft);
+
       transform: translateY(-3px);
     }
 
 
     .button-secondary {
-      border: 1px solid var(--border-light);
+      border:
+        1px solid var(--border-light);
+
       color: var(--cream);
-      background: rgba(255,255,255,.025);
+
+      background:
+        rgba(255,255,255,.025);
     }
 
 
     .button-secondary:hover {
-      background: rgba(255,255,255,.08);
+      background:
+        rgba(255,255,255,.08);
+
       transform: translateY(-3px);
     }
 
 
     .hero-features {
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 8px;
     }
 
@@ -437,15 +554,18 @@
     .hero-features span {
       padding: 7px 11px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: 100px;
 
-      background: rgba(255,255,255,.025);
+      background:
+        rgba(255,255,255,.025);
 
       color: #aaa;
 
       font-size: 10px;
+
       font-weight: 700;
     }
 
@@ -462,6 +582,7 @@
 
     .hero-image {
       position: absolute;
+
       inset: 0;
 
       overflow: hidden;
@@ -470,7 +591,8 @@
 
       background: #191c19;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       box-shadow: var(--shadow);
     }
@@ -478,13 +600,16 @@
 
     .hero-image img {
       height: 100%;
+
       object-fit: cover;
 
-      transition: transform 1s ease;
+      transition:
+        transform 1s ease;
     }
 
 
-    .hero-visual:hover .hero-image img {
+    .hero-visual:hover
+    .hero-image img {
       transform: scale(1.025);
     }
 
@@ -493,6 +618,7 @@
       content: "";
 
       position: absolute;
+
       inset: 0;
 
       background:
@@ -508,6 +634,7 @@
       position: absolute;
 
       left: -35px;
+
       bottom: 35px;
 
       z-index: 3;
@@ -516,17 +643,21 @@
 
       padding: 22px;
 
-      background: rgba(23,26,23,.90);
+      background:
+        rgba(23,26,23,.90);
 
-      backdrop-filter: blur(20px);
+      backdrop-filter:
+        blur(20px);
 
-      border: 1px solid var(--border-light);
+      border:
+        1px solid var(--border-light);
 
       border-radius: 22px;
 
       box-shadow: var(--shadow);
 
-      animation: float 5s ease-in-out infinite;
+      animation:
+        float 5s ease-in-out infinite;
     }
 
 
@@ -534,9 +665,11 @@
       color: var(--gold);
 
       font-size: 9px;
+
       font-weight: 800;
 
       letter-spacing: 1.5px;
+
       text-transform: uppercase;
     }
 
@@ -544,7 +677,9 @@
     .hero-card strong {
       display: block;
 
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
       font-size: 22px;
 
@@ -563,16 +698,19 @@
       position: absolute;
 
       right: -20px;
+
       top: 40px;
 
       z-index: 3;
 
       width: 115px;
+
       height: 115px;
 
       border-radius: 50%;
 
       display: grid;
+
       place-items: center;
 
       text-align: center;
@@ -582,6 +720,7 @@
       color: #17140f;
 
       font-size: 9px;
+
       font-weight: 900;
 
       letter-spacing: 1px;
@@ -590,7 +729,8 @@
 
       padding: 18px;
 
-      animation: pulse 3s infinite;
+      animation:
+        pulse 3s infinite;
     }
 
 
@@ -600,8 +740,11 @@
 
 
     .marquee {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      border-top:
+        1px solid var(--border);
+
+      border-bottom:
+        1px solid var(--border);
 
       background: #101210;
 
@@ -614,28 +757,49 @@
 
       width: max-content;
 
-      animation: marquee 25s linear infinite;
+      animation:
+        marquee 28s linear infinite;
     }
 
 
     .marquee-item {
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
       padding: 18px 35px;
 
       color: #878a83;
 
       font-size: 10px;
+
       font-weight: 800;
 
       letter-spacing: 2px;
+
       text-transform: uppercase;
 
       white-space: nowrap;
     }
 
 
+    .marquee-icon {
+      font-size: 17px;
+
+      letter-spacing: 0;
+
+      animation:
+        emojiFloat 3s ease-in-out infinite;
+    }
+
+
     .marquee-item::after {
       content: "✦";
-      margin-left: 35px;
+
+      margin-left: 27px;
+
       color: var(--gold);
     }
 
@@ -671,9 +835,11 @@
       color: var(--gold);
 
       font-size: 10px;
+
       font-weight: 800;
 
       letter-spacing: 2px;
+
       text-transform: uppercase;
     }
 
@@ -689,14 +855,18 @@
       text-align: center;
 
       margin-left: auto;
+
       margin-right: auto;
     }
 
 
     .section-header h2 {
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
-      font-size: clamp(40px, 5vw, 68px);
+      font-size:
+        clamp(40px, 5vw, 68px);
 
       line-height: 1;
 
@@ -710,6 +880,7 @@
 
     .section-header h2 em {
       color: var(--green);
+
       font-style: normal;
     }
 
@@ -731,7 +902,8 @@
     .products {
       display: grid;
 
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns:
+        repeat(3,1fr);
 
       gap: 18px;
     }
@@ -749,9 +921,11 @@
           #111311
         );
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
-      border-radius: var(--radius);
+      border-radius:
+        var(--radius);
 
       transition:
         transform .35s ease,
@@ -763,7 +937,8 @@
     .product-card:hover {
       transform: translateY(-8px);
 
-      border-color: rgba(197,169,123,.35);
+      border-color:
+        rgba(197,169,123,.35);
 
       box-shadow: var(--shadow);
     }
@@ -783,17 +958,20 @@
 
       object-fit: cover;
 
-      transition: transform .7s ease;
+      transition:
+        transform .7s ease;
     }
 
 
-    .product-card:hover .product-image img {
+    .product-card:hover
+    .product-image img {
       transform: scale(1.06);
     }
 
 
     .product-info {
-      padding: 25px 25px 28px;
+      padding:
+        25px 25px 28px;
     }
 
 
@@ -802,15 +980,18 @@
 
       color: var(--green);
 
-      background: rgba(169,181,161,.10);
+      background:
+        rgba(169,181,161,.10);
 
-      border: 1px solid rgba(169,181,161,.15);
+      border:
+        1px solid rgba(169,181,161,.15);
 
       padding: 5px 9px;
 
       border-radius: 100px;
 
       font-size: 8px;
+
       font-weight: 900;
 
       letter-spacing: 1.4px;
@@ -820,7 +1001,9 @@
 
 
     .product-info h3 {
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
       color: var(--cream);
 
@@ -853,9 +1036,11 @@
       color: var(--cream);
 
       font-size: 11px;
+
       font-weight: 800;
 
-      transition: color .2s ease;
+      transition:
+        color .2s ease;
     }
 
 
@@ -865,7 +1050,7 @@
 
 
     /* =========================
-       CATEGORY ORDER BUILDER
+       ORDER BUILDER
     ========================= */
 
 
@@ -878,8 +1063,11 @@
         ),
         #111411;
 
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      border-top:
+        1px solid var(--border);
+
+      border-bottom:
+        1px solid var(--border);
 
       padding: 120px 30px;
     }
@@ -897,16 +1085,20 @@
 
       max-width: 760px;
 
-      margin: 0 auto 55px;
+      margin:
+        0 auto 55px;
     }
 
 
     .order-builder-header h2 {
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
       color: var(--cream);
 
-      font-size: clamp(42px,5vw,66px);
+      font-size:
+        clamp(42px,5vw,66px);
 
       line-height: 1;
 
@@ -938,7 +1130,8 @@
           rgba(255,255,255,.015)
         );
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: 28px;
 
@@ -946,17 +1139,20 @@
 
       margin-bottom: 18px;
 
-      box-shadow: 0 20px 70px rgba(0,0,0,.16);
+      box-shadow:
+        0 20px 70px rgba(0,0,0,.16);
     }
 
 
     .step-number {
       width: 35px;
+
       height: 35px;
 
       border-radius: 50%;
 
       display: grid;
+
       place-items: center;
 
       background: var(--gold);
@@ -964,6 +1160,7 @@
       color: #17140f;
 
       font-size: 10px;
+
       font-weight: 900;
 
       margin-bottom: 17px;
@@ -971,7 +1168,9 @@
 
 
     .step-content h3 {
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
       color: var(--cream);
 
@@ -981,13 +1180,16 @@
     }
 
 
-    /* CATEGORY CARDS */
+    /* =========================
+       CATEGORY CARDS
+    ========================= */
 
 
     .category-grid {
       display: grid;
 
-      grid-template-columns: repeat(6,1fr);
+      grid-template-columns:
+        repeat(6,1fr);
 
       gap: 10px;
     }
@@ -1000,7 +1202,8 @@
 
       overflow: hidden;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: 18px;
 
@@ -1012,14 +1215,19 @@
 
       transition:
         transform .3s ease,
-        border-color .3s ease;
+        border-color .3s ease,
+        box-shadow .3s ease;
     }
 
 
     .category-button:hover {
       transform: translateY(-4px);
 
-      border-color: rgba(197,169,123,.5);
+      border-color:
+        rgba(197,169,123,.5);
+
+      box-shadow:
+        0 15px 35px rgba(0,0,0,.25);
     }
 
 
@@ -1038,6 +1246,7 @@
       inset: 0;
 
       width: 100%;
+
       height: 100%;
 
       object-fit: cover;
@@ -1078,25 +1287,31 @@
       position: absolute;
 
       left: 14px;
+
       right: 14px;
+
       bottom: 13px;
 
       z-index: 2;
 
       font-size: 11px;
+
       font-weight: 800;
 
       text-align: left;
     }
 
 
-    /* ORDER PRODUCTS */
+    /* =========================
+       ORDER PRODUCTS
+    ========================= */
 
 
     .order-products {
       display: grid;
 
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns:
+        repeat(3,1fr);
 
       gap: 14px;
     }
@@ -1107,7 +1322,8 @@
 
       overflow: hidden;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       background: #171a17;
 
@@ -1127,7 +1343,8 @@
     .order-product:hover {
       transform: translateY(-4px);
 
-      border-color: rgba(197,169,123,.45);
+      border-color:
+        rgba(197,169,123,.45);
     }
 
 
@@ -1159,7 +1376,9 @@
 
 
     .order-product-info h4 {
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
       color: var(--cream);
 
@@ -1180,9 +1399,11 @@
       position: absolute;
 
       top: 12px;
+
       right: 12px;
 
       width: 29px;
+
       height: 29px;
 
       border-radius: 50%;
@@ -1201,7 +1422,8 @@
     }
 
 
-    .order-product.selected .selected-check {
+    .order-product.selected
+    .selected-check {
       display: grid;
     }
 
@@ -1217,7 +1439,8 @@
 
       padding-top: 13px;
 
-      border-top: 1px solid var(--border);
+      border-top:
+        1px solid var(--border);
 
       color: var(--muted);
 
@@ -1225,7 +1448,8 @@
     }
 
 
-    .order-product.selected .quantity-row {
+    .order-product.selected
+    .quantity-row {
       display: flex;
     }
 
@@ -1241,9 +1465,11 @@
 
     .qty-button {
       width: 29px;
+
       height: 29px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: 50%;
 
@@ -1279,22 +1505,8 @@
     .order-summary.visible {
       display: block;
 
-      animation: fadeUp .4s ease;
-    }
-
-
-    @keyframes fadeUp {
-
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
+      animation:
+        fadeUp .4s ease;
     }
 
 
@@ -1320,7 +1532,8 @@
 
       background: #171a17;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: 13px;
     }
@@ -1349,7 +1562,8 @@
 
       padding: 18px 16px;
 
-      border-top: 1px solid var(--border);
+      border-top:
+        1px solid var(--border);
 
       margin-top: 5px;
     }
@@ -1378,13 +1592,16 @@
     }
 
 
-    /* FORM */
+    /* =========================
+       FORM
+    ========================= */
 
 
     .customer-form {
       display: grid;
 
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:
+        1fr 1fr;
 
       gap: 14px;
     }
@@ -1408,6 +1625,7 @@
       color: var(--cream);
 
       font-size: 10px;
+
       font-weight: 800;
     }
 
@@ -1417,7 +1635,8 @@
     .form-group select {
       width: 100%;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       background: #111411;
 
@@ -1471,6 +1690,7 @@
       padding: 17px;
 
       font-size: 12px;
+
       font-weight: 900;
 
       cursor: pointer;
@@ -1496,7 +1716,8 @@
     .promise-section {
       background: #080908;
 
-      border-bottom: 1px solid var(--border);
+      border-bottom:
+        1px solid var(--border);
     }
 
 
@@ -1519,11 +1740,14 @@
 
 
     .promise-header h2 {
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
       color: var(--cream);
 
-      font-size: clamp(42px,5vw,70px);
+      font-size:
+        clamp(42px,5vw,70px);
 
       line-height: 1;
 
@@ -1560,7 +1784,8 @@
 
       border-radius: 30px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       background: #171a17;
     }
@@ -1571,13 +1796,17 @@
 
       object-fit: cover;
 
-      transition: transform .8s ease;
+      transition:
+        transform .8s ease;
     }
 
 
     .promise-photo:hover img {
       transform: scale(1.025);
     }
+
+
+    /* PROMISE CARDS */
 
 
     .promise-grid {
@@ -1587,7 +1816,8 @@
 
       display: grid;
 
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns:
+        repeat(4,1fr);
 
       gap: 1px;
 
@@ -1598,33 +1828,98 @@
     .promise-card {
       position: relative;
 
-      min-height: 280px;
+      min-height: 320px;
 
-      padding: 28px;
-
-      overflow: hidden;
-
-      background: #101210;
-    }
-
-
-    .promise-card-image {
-      height: 100px;
-
-      margin: -28px -28px 22px;
+      padding: 32px 28px;
 
       overflow: hidden;
 
-      opacity: .65;
+      background:
+        linear-gradient(
+          145deg,
+          #121512,
+          #0d0f0d
+        );
+
+      transition:
+        transform .35s ease,
+        background .35s ease;
     }
 
 
-    .promise-card-image img {
-      height: 100%;
+    .promise-card:hover {
+      transform: translateY(-5px);
 
-      object-fit: cover;
+      background:
+        linear-gradient(
+          145deg,
+          #191c19,
+          #101310
+        );
 
-      filter: saturate(.7);
+      z-index: 2;
+    }
+
+
+    /* BIG EMOJI */
+
+
+    .promise-emoji {
+      width: 78px;
+
+      height: 78px;
+
+      border-radius: 23px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      font-size: 48px;
+
+      line-height: 1;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.09),
+          rgba(255,255,255,.025)
+        );
+
+      border:
+        1px solid rgba(255,255,255,.12);
+
+      margin-bottom: 27px;
+
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 15px 35px rgba(0,0,0,.20);
+
+      transition:
+        transform .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+    }
+
+
+    .promise-card:hover
+    .promise-emoji {
+      transform:
+        translateY(-6px)
+        scale(1.06)
+        rotate(2deg);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(197,169,123,.16),
+          rgba(255,255,255,.035)
+        );
+
+      box-shadow:
+        0 18px 40px rgba(0,0,0,.30);
     }
 
 
@@ -1632,22 +1927,27 @@
       color: var(--gold);
 
       font-size: 9px;
+
       font-weight: 900;
 
       letter-spacing: 1.5px;
 
-      margin-bottom: 17px;
+      margin-bottom: 13px;
     }
 
 
     .promise-card h3 {
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
       color: var(--cream);
 
       font-size: 22px;
 
-      margin-bottom: 9px;
+      line-height: 1.15;
+
+      margin-bottom: 10px;
     }
 
 
@@ -1656,7 +1956,7 @@
 
       font-size: 11px;
 
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
 
@@ -1674,7 +1974,8 @@
 
       display: grid;
 
-      grid-template-columns: .95fr 1.05fr;
+      grid-template-columns:
+        .95fr 1.05fr;
 
       gap: 90px;
 
@@ -1689,7 +1990,8 @@
 
       border-radius: 32px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       box-shadow: var(--shadow);
     }
@@ -1700,7 +2002,8 @@
 
       object-fit: cover;
 
-      transition: transform .8s ease;
+      transition:
+        transform .8s ease;
     }
 
 
@@ -1715,11 +2018,14 @@
 
 
     .story-copy h2 {
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
       color: var(--cream);
 
-      font-size: clamp(42px,5vw,67px);
+      font-size:
+        clamp(42px,5vw,67px);
 
       line-height: 1;
 
@@ -1758,11 +2064,13 @@
 
       padding: 17px 20px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: 18px;
 
-      background: rgba(255,255,255,.025);
+      background:
+        rgba(255,255,255,.025);
     }
 
 
@@ -1792,7 +2100,8 @@
 
       padding: 70px 30px 25px;
 
-      border-top: 1px solid var(--border);
+      border-top:
+        1px solid var(--border);
     }
 
 
@@ -1803,7 +2112,8 @@
 
       display: grid;
 
-      grid-template-columns: 1.6fr 1fr 1fr;
+      grid-template-columns:
+        1.6fr 1fr 1fr;
 
       gap: 70px;
 
@@ -1812,7 +2122,9 @@
 
 
     footer h3 {
-      font-family: "Playfair Display", serif;
+      font-family:
+        "Playfair Display",
+        serif;
 
       font-size: 23px;
 
@@ -1860,7 +2172,8 @@
 
       padding-top: 20px;
 
-      border-top: 1px solid var(--border);
+      border-top:
+        1px solid var(--border);
 
       text-align: center;
 
@@ -1881,7 +2194,9 @@
       position: fixed;
 
       left: 15px;
+
       right: 15px;
+
       bottom: 15px;
 
       z-index: 5000;
@@ -1897,9 +2212,11 @@
       color: #111;
 
       font-size: 11px;
+
       font-weight: 900;
 
-      box-shadow: 0 15px 40px rgba(0,0,0,.4);
+      box-shadow:
+        0 15px 40px rgba(0,0,0,.4);
     }
 
 
@@ -1928,17 +2245,20 @@
 
 
       .products {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
 
       .category-grid {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns:
+          repeat(3,1fr);
       }
 
 
       .promise-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
 
@@ -1955,7 +2275,8 @@
 
 
       .order-products {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
     }
@@ -1972,6 +2293,8 @@
         font-size: 8px;
 
         letter-spacing: 1px;
+
+        padding: 9px 10px;
       }
 
 
@@ -2038,6 +2361,7 @@
         top: 20px;
 
         width: 90px;
+
         height: 90px;
 
         font-size: 7px;
@@ -2077,7 +2401,8 @@
 
 
       .category-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
 
@@ -2130,6 +2455,17 @@
 
       .promise-card {
         min-height: auto;
+
+        padding: 30px 25px;
+      }
+
+
+      .promise-emoji {
+        width: 72px;
+
+        height: 72px;
+
+        font-size: 44px;
       }
 
 
@@ -2170,212 +2506,861 @@
 
 </head>
 
-
 <body>
 
-
-  <!-- TOP BAR -->
+  <!-- TOP ANNOUNCEMENT -->
 
   <div class="announcement">
-    Eggless · Vegetarian · Carefully Selected Ingredients · No Preservatives · No Artificial Colours
-  </div>
 
+```
+<span>🍰 Eggless</span>
+·
+<span>🌿 Vegetarian</span>
+·
+<span>✨ Carefully Selected</span>
+·
+<span>🚫 No Preservatives</span>
+·
+<span>🎨 No Artificial Colours</span>
+```
+
+  </div>
 
   <!-- NAVIGATION -->
 
   <nav>
 
-    <div class="nav-container">
+```
+<div class="nav-container">
 
-      <a href="#home" class="logo">
-        Home Style <span>Bakery</span>
+  <a href="#home" class="logo">
+    Home Style <span>Bakery</span>
+  </a>
+
+
+  <ul class="nav-links">
+
+    <li>
+      <a href="#home">Home</a>
+    </li>
+
+    <li>
+      <a href="#products">Bakery</a>
+    </li>
+
+    <li>
+      <a href="#promise">Our Promise</a>
+    </li>
+
+    <li>
+      <a href="#story">Our Story</a>
+    </li>
+
+    <li>
+      <a href="#order" class="nav-order">
+        Order Now
       </a>
+    </li>
 
+  </ul>
 
-      <ul class="nav-links">
-
-        <li>
-          <a href="#home">Home</a>
-        </li>
-
-        <li>
-          <a href="#products">Bakery</a>
-        </li>
-
-        <li>
-          <a href="#promise">Our Promise</a>
-        </li>
-
-        <li>
-          <a href="#story">Our Story</a>
-        </li>
-
-        <li>
-          <a href="#order" class="nav-order">
-            Order Now
-          </a>
-        </li>
-
-      </ul>
-
-    </div>
+</div>
+```
 
   </nav>
 
-
   <main id="home">
 
+```
+<!-- HERO -->
 
-    <!-- HERO -->
-
-    <section class="hero">
-
-
-      <div class="hero-content reveal">
-
-        <div class="eyebrow">
-          Fresh from our kitchen
-        </div>
+<section class="hero">
 
 
-        <h1>
-          Homemade food.<br>
-          <em>Made beautifully.</em>
-        </h1>
+  <div class="hero-content reveal">
+
+    <div class="eyebrow">
+      Fresh from our kitchen
+    </div>
 
 
-        <p class="hero-description">
+    <h1>
+      Homemade food.<br>
+      <em>Made beautifully.</em>
+    </h1>
 
-          Cakes, cheesecakes, breads, cookies and desserts
-          made in small batches in London, Ontario.
 
-          <strong>
-            Eggless. Vegetarian. Homemade.
-          </strong>
+    <p class="hero-description">
 
-          Made with carefully selected ingredients and genuine care.
+      Cakes, cheesecakes, breads, cookies and desserts
+      made in small batches in London, Ontario.
 
+      <strong>
+        Eggless. Vegetarian. Homemade.
+      </strong>
+
+      Made with carefully selected ingredients and genuine care.
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+      <a
+        href="#order"
+        class="button button-primary"
+      >
+        Start Your Order →
+      </a>
+
+
+      <a
+        href="#products"
+        class="button button-secondary"
+      >
+        Explore the Bakery
+      </a>
+
+    </div>
+
+
+    <div class="hero-features">
+
+      <span>100% Eggless</span>
+
+      <span>Vegetarian</span>
+
+      <span>Organic Ingredients</span>
+
+      <span>No Preservatives</span>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-visual reveal">
+
+
+    <div class="hero-image">
+
+      <img
+        src="images/lemon-cake.jpg"
+        alt="Fresh homemade cake from Home Style Bakery"
+        onerror="this.style.display='none';"
+      >
+
+    </div>
+
+
+    <div class="hero-card">
+
+      <small>
+        Home Style Bakery
+      </small>
+
+      <strong>
+        Made fresh.
+      </strong>
+
+      <span>
+        London, Ontario · Homemade with care
+      </span>
+
+    </div>
+
+
+    <div class="hero-stamp">
+
+      100%<br>
+      Eggless<br>
+      Bakery
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ANIMATED MARQUEE -->
+
+<div class="marquee">
+
+  <div class="marquee-track">
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">🍰</span>
+      Eggless
+    </div>
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">🌿</span>
+      Vegetarian
+    </div>
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">🏠</span>
+      Homemade
+    </div>
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">✨</span>
+      Carefully Selected Ingredients
+    </div>
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">🚫</span>
+      No Preservatives
+    </div>
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">🎨</span>
+      No Artificial Colours
+    </div>
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">📍</span>
+      London Ontario
+    </div>
+
+
+    <!-- DUPLICATE FOR SMOOTH LOOP -->
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">🍰</span>
+      Eggless
+    </div>
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">🌿</span>
+      Vegetarian
+    </div>
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">🏠</span>
+      Homemade
+    </div>
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">✨</span>
+      Carefully Selected Ingredients
+    </div>
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">🚫</span>
+      No Preservatives
+    </div>
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">🎨</span>
+      No Artificial Colours
+    </div>
+
+
+    <div class="marquee-item">
+      <span class="marquee-icon">📍</span>
+      London Ontario
+    </div>
+
+
+  </div>
+
+</div>
+
+
+<!-- PRODUCTS -->
+
+<section
+  class="section"
+  id="products"
+>
+
+
+  <div class="section-header center reveal">
+
+    <span class="section-label">
+      The Bakery
+    </span>
+
+    <h2>
+      Made for moments<br>
+      <em>worth remembering.</em>
+    </h2>
+
+    <p>
+      From everyday favourites to something special
+      for a celebration, every item is prepared with
+      the care you'd expect from homemade food.
+    </p>
+
+  </div>
+
+
+  <div class="products">
+
+
+    <!-- LEMON -->
+
+    <article class="product-card reveal">
+
+      <div class="product-image">
+
+        <img
+          src="images/lemon-cake.jpg"
+          alt="Eggless homemade lemon cake"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="product-info">
+
+        <span class="tag">
+          EGGLESS
+        </span>
+
+        <h3>
+          Lemon Cake
+        </h3>
+
+        <p>
+          Light, fresh and full of natural lemon flavour.
+          A bright homemade favourite.
         </p>
 
-
-        <div class="hero-buttons">
-
-          <a
-            href="#order"
-            class="button button-primary"
-          >
-            Start Your Order →
-          </a>
-
-
-          <a
-            href="#products"
-            class="button button-secondary"
-          >
-            Explore the Bakery
-          </a>
-
-        </div>
-
-
-        <div class="hero-features">
-
-          <span>100% Eggless</span>
-          <span>Vegetarian</span>
-          <span>Organic Ingredients</span>
-          <span>No Preservatives</span>
-
-        </div>
+        <a href="#order" class="product-button">
+          Order this →
+        </a>
 
       </div>
 
-
-      <div class="hero-visual reveal">
-
-
-        <div class="hero-image">
-
-          <img
-            src="images/lemon-cake.jpg"
-            alt="Fresh homemade cake from Home Style Bakery"
-            onerror="this.style.display='none';"
-          >
-
-        </div>
+    </article>
 
 
-        <div class="hero-card">
+    <!-- BANANA WALNUT -->
 
-          <small>
-            Home Style Bakery
-          </small>
+    <article class="product-card reveal">
 
-          <strong>
-            Made fresh.
-          </strong>
+      <div class="product-image">
 
-          <span>
-            London, Ontario · Homemade with care
-          </span>
-
-        </div>
-
-
-        <div class="hero-stamp">
-          100%<br>
-          Eggless<br>
-          Bakery
-        </div>
+        <img
+          src="images/02_banana_walnut_cake.jpg"
+          alt="Homemade banana walnut cake"
+          loading="lazy"
+        >
 
       </div>
 
-    </section>
+      <div class="product-info">
+
+        <span class="tag">
+          HOMEMADE
+        </span>
+
+        <h3>
+          Banana Walnut Cake
+        </h3>
+
+        <p>
+          Moist banana cake with delicious walnuts,
+          baked fresh with homemade goodness.
+        </p>
+
+        <a href="#order" class="product-button">
+          Order this →
+        </a>
+
+      </div>
+
+    </article>
 
 
-    <!-- MARQUEE -->
+    <!-- PECAN -->
 
-    <div class="marquee">
+    <article class="product-card reveal">
 
-      <div class="marquee-track">
+      <div class="product-image">
 
-        <div class="marquee-item">
-          Eggless
-        </div>
+        <img
+          src="images/03_pecan_cake.jpg"
+          alt="Homemade pecan cake"
+          loading="lazy"
+        >
 
-        <div class="marquee-item">
-          Vegetarian
-        </div>
+      </div>
 
-        <div class="marquee-item">
-          Homemade
-        </div>
+      <div class="product-info">
 
-        <div class="marquee-item">
-          Carefully Selected Ingredients
-        </div>
+        <span class="tag">
+          PREMIUM
+        </span>
 
-        <div class="marquee-item">
-          No Preservatives
-        </div>
+        <h3>
+          Pecan Cake
+        </h3>
 
-        <div class="marquee-item">
-          No Artificial Colours
-        </div>
+        <p>
+          Rich homemade cake with the delicious flavour
+          and texture of pecans.
+        </p>
 
-        <div class="marquee-item">
-          London Ontario
-        </div>
+        <a href="#order" class="product-button">
+          Order this →
+        </a>
 
-        <div class="marquee-item">
-          Eggless
-        </div>
+      </div>
 
-        <div class="marquee-item">
-          Vegetarian
-        </div>
+    </article>
 
-        <div class="marquee-item">
-          Homemade
+
+    <!-- STRAWBERRY CHEESECAKE -->
+
+    <article class="product-card reveal">
+
+      <div class="product-image">
+
+        <img
+          src="images/04_strawberry_cheesecake.jpg"
+          alt="Fresh strawberry cheesecake"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="product-info">
+
+        <span class="tag">
+          FRESH
+        </span>
+
+        <h3>
+          Strawberry Cheesecake
+        </h3>
+
+        <p>
+          Creamy, rich and finished with the bright
+          flavour of strawberries.
+        </p>
+
+        <a href="#order" class="product-button">
+          Order this →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- CLASSIC CAKE -->
+
+    <article class="product-card reveal">
+
+      <div class="product-image">
+
+        <img
+          src="images/Classic%20cake.jpg"
+          alt="Homemade classic cake"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="product-info">
+
+        <span class="tag">
+          CLASSIC
+        </span>
+
+        <h3>
+          Classic Cake
+        </h3>
+
+        <p>
+          Simple, elegant and homemade — a timeless
+          favourite for everyday celebrations.
+        </p>
+
+        <a href="#order" class="product-button">
+          Order this →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- COOKIES -->
+
+    <article class="product-card reveal">
+
+      <div class="product-image">
+
+        <img
+          src="images/Cookies.jpg"
+          alt="Homemade cookies"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="product-info">
+
+        <span class="tag">
+          BAKED FRESH
+        </span>
+
+        <h3>
+          Homemade Cookies
+        </h3>
+
+        <p>
+          Simple, comforting cookies made with quality
+          ingredients and homemade goodness.
+        </p>
+
+        <a href="#order" class="product-button">
+          Order this →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- FOCACCIA -->
+
+    <article class="product-card reveal">
+
+      <div class="product-image">
+
+        <img
+          src="images/06_focaccia_bread.jpg"
+          alt="Fresh homemade focaccia bread"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="product-info">
+
+        <span class="tag">
+          FRESH BAKED
+        </span>
+
+        <h3>
+          Focaccia Bread
+        </h3>
+
+        <p>
+          Freshly baked focaccia with a soft centre
+          and delicious golden crust.
+        </p>
+
+        <a href="#order" class="product-button">
+          Order this →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- BREAD -->
+
+    <article class="product-card reveal">
+
+      <div class="product-image">
+
+        <img
+          src="images/07_homemade_bread.jpg"
+          alt="Fresh homemade bread"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="product-info">
+
+        <span class="tag">
+          HOMEMADE
+        </span>
+
+        <h3>
+          Homemade Bread
+        </h3>
+
+        <p>
+          Soft, fresh and made with the simple goodness
+          of homemade bread.
+        </p>
+
+        <a href="#order" class="product-button">
+          Order this →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- CUSTARD -->
+
+    <article class="product-card reveal">
+
+      <div class="product-image">
+
+        <img
+          src="images/05_custard.jpg"
+          alt="Homemade fruit custard"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="product-info">
+
+        <span class="tag">
+          HOMEMADE
+        </span>
+
+        <h3>
+          Homemade Fruit Custard
+        </h3>
+
+        <p>
+          Silky, comforting fruit custard prepared
+          with care for a delicious homemade treat.
+        </p>
+
+        <a href="#order" class="product-button">
+          Order this →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- A2 GHEE -->
+
+    <article class="product-card reveal">
+
+      <div class="product-image">
+
+        <img
+          src="images/A2%20ghee.jpg"
+          alt="A2 Desi Ghee"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="product-info">
+
+        <span class="tag">
+          A2 GHEE
+        </span>
+
+        <h3>
+          A2 Desi Ghee
+        </h3>
+
+        <p>
+          A premium pantry favourite selected for
+          traditional homemade cooking and baking.
+        </p>
+
+        <a href="#order" class="product-button">
+          Ask about this →
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<!-- ORDER BUILDER -->
+
+<section
+  class="order-builder-section"
+  id="order"
+>
+
+  <div class="order-builder">
+
+
+    <div class="order-builder-header reveal">
+
+      <span class="section-label">
+        ORDER FROM HOME STYLE BAKERY
+      </span>
+
+      <h2>
+        Build your order.<br>
+        <em>We'll take care of the rest.</em>
+      </h2>
+
+      <p>
+        Choose a category, select your items,
+        choose your quantities and send your order
+        directly through WhatsApp.
+      </p>
+
+    </div>
+
+
+    <!-- CATEGORY -->
+
+    <div class="order-step reveal">
+
+      <div class="step-number">
+        01
+      </div>
+
+
+      <div class="step-content">
+
+        <h3>
+          Choose a category
+        </h3>
+
+
+        <div class="category-grid">
+
+
+          <button
+            type="button"
+            class="category-button active"
+            data-category="cakes"
+            onclick="displayProducts('cakes', this)"
+          >
+
+            <img
+              src="images/Classic%20cake.jpg"
+              alt=""
+            >
+
+            <span class="category-name">
+              Cakes
+            </span>
+
+          </button>
+
+
+          <button
+            type="button"
+            class="category-button"
+            data-category="cheesecakes"
+            onclick="displayProducts('cheesecakes', this)"
+          >
+
+            <img
+              src="images/04_strawberry_cheesecake.jpg"
+              alt=""
+            >
+
+            <span class="category-name">
+              Cheesecakes
+            </span>
+
+          </button>
+
+
+          <button
+            type="button"
+            class="category-button"
+            data-category="breads"
+            onclick="displayProducts('breads', this)"
+          >
+
+            <img
+              src="images/06_focaccia_bread.jpg"
+              alt=""
+            >
+
+            <span class="category-name">
+              Breads
+            </span>
+
+          </button>
+
+
+          <button
+            type="button"
+            class="category-button"
+            data-category="desserts"
+            onclick="displayProducts('desserts', this)"
+          >
+
+            <img
+              src="images/05_custard.jpg"
+              alt=""
+            >
+
+            <span class="category-name">
+              Desserts
+            </span>
+
+          </button>
+
+
+          <button
+            type="button"
+            class="category-button"
+            data-category="cookies"
+            onclick="displayProducts('cookies', this)"
+          >
+
+            <img
+              src="images/Cookies.jpg"
+              alt=""
+            >
+
+            <span class="category-name">
+              Cookies
+            </span>
+
+          </button>
+
+
+          <button
+            type="button"
+            class="category-button"
+            data-category="other"
+            onclick="displayProducts('other', this)"
+          >
+
+            <img
+              src="images/A2%20ghee.jpg"
+              alt=""
+            >
+
+            <span class="category-name">
+              Other
+            </span>
+
+          </button>
+
+
         </div>
 
       </div>
@@ -2383,1074 +3368,481 @@
     </div>
 
 
-    <!-- PRODUCTS -->
+    <!-- SELECT ITEMS -->
 
-    <section
-      class="section"
-      id="products"
-    >
+    <div class="order-step reveal">
 
-
-      <div class="section-header center reveal">
-
-        <span class="section-label">
-          The Bakery
-        </span>
-
-        <h2>
-          Made for moments<br>
-          <em>worth remembering.</em>
-        </h2>
-
-        <p>
-          From everyday favourites to something special
-          for a celebration, every item is prepared with
-          the care you'd expect from homemade food.
-        </p>
-
+      <div class="step-number">
+        02
       </div>
 
 
-      <div class="products">
+      <div class="step-content">
 
+        <h3>
+          Select your items
+        </h3>
 
-        <!-- LEMON -->
-
-        <article class="product-card reveal">
-
-          <div class="product-image">
-
-            <img
-              src="images/lemon-cake.jpg"
-              alt="Eggless homemade lemon cake"
-              onerror="this.style.display='none';"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <span class="tag">
-              EGGLESS
-            </span>
-
-            <h3>
-              Lemon Cake
-            </h3>
-
-            <p>
-              Light, fresh and full of natural lemon flavour.
-              A bright homemade favourite.
-            </p>
-
-            <a
-              href="#order"
-              class="product-button"
-            >
-              Order this →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- BANANA WALNUT -->
-
-        <article class="product-card reveal">
-
-          <div class="product-image">
-
-            <img
-              src="images/02_banana_walnut_cake.jpg"
-              alt="Homemade banana walnut cake"
-              onerror="this.style.display='none';"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <span class="tag">
-              HOMEMADE
-            </span>
-
-            <h3>
-              Banana Walnut Cake
-            </h3>
-
-            <p>
-              Moist banana cake with delicious walnuts,
-              baked fresh with homemade goodness.
-            </p>
-
-            <a href="#order" class="product-button">
-              Order this →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- PECAN -->
-
-        <article class="product-card reveal">
-
-          <div class="product-image">
-
-            <img
-              src="images/03_pecan_cake.jpg"
-              alt="Homemade pecan cake"
-              onerror="this.style.display='none';"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <span class="tag">
-              PREMIUM
-            </span>
-
-            <h3>
-              Pecan Cake
-            </h3>
-
-            <p>
-              Rich homemade cake with the delicious flavour
-              and texture of pecans.
-            </p>
-
-            <a href="#order" class="product-button">
-              Order this →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- STRAWBERRY CHEESECAKE -->
-
-        <article class="product-card reveal">
-
-          <div class="product-image">
-
-            <img
-              src="images/04_strawberry_cheesecake.jpg"
-              alt="Fresh strawberry cheesecake"
-              onerror="this.style.display='none';"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <span class="tag">
-              FRESH
-            </span>
-
-            <h3>
-              Strawberry Cheesecake
-            </h3>
-
-            <p>
-              Creamy, rich and finished with the bright
-              flavour of strawberries.
-            </p>
-
-            <a href="#order" class="product-button">
-              Order this →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- CLASSIC CAKE -->
-
-        <article class="product-card reveal">
-
-          <div class="product-image">
-
-            <img
-              src="images/classic-cake.jpg"
-              alt="Homemade classic cake"
-              onerror="this.style.display='none';"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <span class="tag">
-              CLASSIC
-            </span>
-
-            <h3>
-              Classic Cake
-            </h3>
-
-            <p>
-              Simple, elegant and homemade — a timeless
-              favourite for everyday celebrations.
-            </p>
-
-            <a href="#order" class="product-button">
-              Order this →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- COOKIES -->
-
-        <article class="product-card reveal">
-
-          <div class="product-image">
-
-            <img
-              src="images/cookies.jpg"
-              alt="Homemade cookies"
-              onerror="this.style.display='none';"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <span class="tag">
-              BAKED FRESH
-            </span>
-
-            <h3>
-              Homemade Cookies
-            </h3>
-
-            <p>
-              Simple, comforting cookies made with quality
-              ingredients and homemade goodness.
-            </p>
-
-            <a href="#order" class="product-button">
-              Order this →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- FOCACCIA -->
-
-        <article class="product-card reveal">
-
-          <div class="product-image">
-
-            <img
-              src="images/06_focaccia_bread.jpg"
-              alt="Fresh homemade focaccia bread"
-              onerror="this.style.display='none';"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <span class="tag">
-              FRESH BAKED
-            </span>
-
-            <h3>
-              Focaccia Bread
-            </h3>
-
-            <p>
-              Freshly baked focaccia with a soft centre
-              and delicious golden crust.
-            </p>
-
-            <a href="#order" class="product-button">
-              Order this →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- BREAD -->
-
-        <article class="product-card reveal">
-
-          <div class="product-image">
-
-            <img
-              src="images/07_homemade_bread.jpg"
-              alt="Fresh homemade bread"
-              onerror="this.style.display='none';"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <span class="tag">
-              HOMEMADE
-            </span>
-
-            <h3>
-              Homemade Bread
-            </h3>
-
-            <p>
-              Soft, fresh and made with the simple goodness
-              of homemade bread.
-            </p>
-
-            <a href="#order" class="product-button">
-              Order this →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- CUSTARD -->
-
-        <article class="product-card reveal">
-
-          <div class="product-image">
-
-            <img
-              src="images/05_custard.jpg"
-              alt="Homemade fruit custard"
-              onerror="this.style.display='none';"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <span class="tag">
-              HOMEMADE
-            </span>
-
-            <h3>
-              Homemade Fruit Custard
-            </h3>
-
-            <p>
-              Silky, comforting fruit custard prepared
-              with care for a delicious homemade treat.
-            </p>
-
-            <a href="#order" class="product-button">
-              Order this →
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- A2 GHEE -->
-
-        <article class="product-card reveal">
-
-          <div class="product-image">
-
-            <img
-              src="images/a2-ghee.jpg"
-              alt="A2 Desi Ghee"
-              onerror="this.style.display='none';"
-            >
-
-          </div>
-
-          <div class="product-info">
-
-            <span class="tag">
-              A2 GHEE
-            </span>
-
-            <h3>
-              A2 Desi Ghee
-            </h3>
-
-            <p>
-              A premium pantry favourite selected for
-              traditional homemade cooking and baking.
-            </p>
-
-            <a href="#order" class="product-button">
-              Ask about this →
-            </a>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- ORDER BUILDER -->
-
-    <section
-      class="order-builder-section"
-      id="order"
-    >
-
-      <div class="order-builder">
-
-
-        <div class="order-builder-header reveal">
-
-          <span class="section-label">
-            ORDER FROM HOME STYLE BAKERY
-          </span>
-
-          <h2>
-            Build your order.<br>
-            <em>We'll take care of the rest.</em>
-          </h2>
-
-          <p>
-            Choose a category, select your items,
-            choose your quantities and send your order
-            directly through WhatsApp.
-          </p>
-
-        </div>
-
-
-        <!-- CATEGORY -->
-
-        <div class="order-step reveal">
-
-          <div class="step-number">
-            01
-          </div>
-
-
-          <div class="step-content">
-
-            <h3>
-              Choose a category
-            </h3>
-
-
-            <div class="category-grid">
-
-
-              <button
-                type="button"
-                class="category-button active"
-                onclick="displayProducts('cakes', this)"
-              >
-
-                <img
-                  src="images/classic-cake.jpg"
-                  alt=""
-                >
-
-                <span class="category-name">
-                  Cakes
-                </span>
-
-              </button>
-
-
-              <button
-                type="button"
-                class="category-button"
-                onclick="displayProducts('cheesecakes', this)"
-              >
-
-                <img
-                  src="images/04_strawberry_cheesecake.jpg"
-                  alt=""
-                >
-
-                <span class="category-name">
-                  Cheesecakes
-                </span>
-
-              </button>
-
-
-              <button
-                type="button"
-                class="category-button"
-                onclick="displayProducts('breads', this)"
-              >
-
-                <img
-                  src="images/06_focaccia_bread.jpg"
-                  alt=""
-                >
-
-                <span class="category-name">
-                  Breads
-                </span>
-
-              </button>
-
-
-              <button
-                type="button"
-                class="category-button"
-                onclick="displayProducts('desserts', this)"
-              >
-
-                <img
-                  src="images/05_custard.jpg"
-                  alt=""
-                >
-
-                <span class="category-name">
-                  Desserts
-                </span>
-
-              </button>
-
-
-              <button
-                type="button"
-                class="category-button"
-                onclick="displayProducts('cookies', this)"
-              >
-
-                <img
-                  src="images/cookies.jpg"
-                  alt=""
-                >
-
-                <span class="category-name">
-                  Cookies
-                </span>
-
-              </button>
-
-
-              <button
-                type="button"
-                class="category-button"
-                onclick="displayProducts('other', this)"
-              >
-
-                <img
-                  src="images/a2-ghee.jpg"
-                  alt=""
-                >
-
-                <span class="category-name">
-                  Other
-                </span>
-
-              </button>
-
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- SELECT ITEMS -->
-
-        <div class="order-step reveal">
-
-          <div class="step-number">
-            02
-          </div>
-
-
-          <div class="step-content">
-
-            <h3>
-              Select your items
-            </h3>
-
-
-            <div
-              class="order-products"
-              id="orderProducts"
-            ></div>
-
-          </div>
-
-        </div>
-
-
-        <!-- SUMMARY -->
 
         <div
-          class="order-step order-summary"
-          id="orderSummary"
-        >
-
-          <div class="step-number">
-            03
-          </div>
-
-
-          <div class="step-content">
-
-            <h3>
-              Your order
-            </h3>
-
-
-            <div
-              class="summary-list"
-              id="summaryList"
-            >
-
-              <p class="empty-summary">
-                Your selected items will appear here.
-              </p>
-
-            </div>
-
-
-            <div class="customer-form">
-
-
-              <div class="form-group">
-
-                <label for="customerName">
-                  Your name
-                </label>
-
-                <input
-                  type="text"
-                  id="customerName"
-                  placeholder="Enter your name"
-                >
-
-              </div>
-
-
-              <div class="form-group">
-
-                <label for="customerPhone">
-                  Phone number
-                </label>
-
-                <input
-                  type="tel"
-                  id="customerPhone"
-                  placeholder="519 200 8436"
-                >
-
-              </div>
-
-
-              <div class="form-group full">
-
-                <label for="customerNotes">
-                  Notes / special requests
-                </label>
-
-                <textarea
-                  id="customerNotes"
-                  rows="4"
-                  placeholder="Preferred date, flavour, size or any special request..."
-                ></textarea>
-
-              </div>
-
-
-              <button
-                type="button"
-                class="send-order"
-                onclick="sendWhatsAppOrder()"
-              >
-                Send Order on WhatsApp →
-              </button>
-
-
-            </div>
-
-          </div>
-
-        </div>
+          class="order-products"
+          id="orderProducts"
+        ></div>
 
       </div>
 
-    </section>
+    </div>
 
 
-    <!-- OUR PROMISE -->
+    <!-- SUMMARY -->
 
-    <section
-      class="promise-section"
-      id="promise"
+    <div
+      class="order-step order-summary"
+      id="orderSummary"
     >
 
-      <div class="promise-inner">
+      <div class="step-number">
+        03
+      </div>
 
 
-        <div class="promise-header reveal">
+      <div class="step-content">
 
-          <span class="section-label">
-            OUR PROMISE
-          </span>
-
-
-          <h2>
-            Simple ingredients.<br>
-            <em>Beautifully made.</em>
-          </h2>
+        <h3>
+          Your order
+        </h3>
 
 
-          <p>
-            Everything we make reflects the way we bake at home:
-            carefully, thoughtfully and without unnecessary ingredients.
+        <div
+          class="summary-list"
+          id="summaryList"
+        >
+
+          <p class="empty-summary">
+            Your selected items will appear here.
           </p>
 
         </div>
 
 
-        <!-- KITCHEN PHOTO -->
+        <div class="customer-form">
 
-        <div class="promise-photo reveal">
 
-          <img
-            src="images/kitchen.jpg"
-            alt="Home Style Bakery kitchen"
-            loading="lazy"
-            onerror="this.style.display='none';"
+          <div class="form-group">
+
+            <label for="customerName">
+              Your name
+            </label>
+
+            <input
+              type="text"
+              id="customerName"
+              placeholder="Enter your name"
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="customerPhone">
+              Phone number
+            </label>
+
+            <input
+              type="tel"
+              id="customerPhone"
+              placeholder="519 200 8436"
+            >
+
+          </div>
+
+
+          <div class="form-group full">
+
+            <label for="customerNotes">
+              Notes / special requests
+            </label>
+
+            <textarea
+              id="customerNotes"
+              rows="4"
+              placeholder="Preferred date, flavour, size or any special request..."
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="send-order"
+            onclick="sendWhatsAppOrder()"
           >
-
-        </div>
-
-
-        <!-- PROMISE CARDS -->
-
-        <div class="promise-grid">
-
-
-          <div class="promise-card reveal">
-
-            <div class="promise-card-image">
-
-              <img
-                src="images/classic-cake.jpg"
-                alt=""
-              >
-
-            </div>
-
-
-            <div class="promise-number">
-              01 · QUALITY
-            </div>
-
-
-            <h3>
-              Carefully Selected
-            </h3>
-
-
-            <p>
-              We choose ingredients thoughtfully,
-              focusing on quality, flavour and the
-              homemade experience.
-            </p>
-
-          </div>
-
-
-          <div class="promise-card reveal">
-
-            <div class="promise-card-image">
-
-              <img
-                src="images/lemon-cake.jpg"
-                alt=""
-              >
-
-            </div>
-
-
-            <div class="promise-number">
-              02 · EGGLESS
-            </div>
-
-
-            <h3>
-              100% Eggless
-            </h3>
-
-
-            <p>
-              Every item we make is prepared without eggs,
-              while keeping the flavour and texture delicious.
-            </p>
-
-          </div>
-
-
-          <div class="promise-card reveal">
-
-            <div class="promise-card-image">
-
-              <img
-                src="images/cookies.jpg"
-                alt=""
-              >
-
-            </div>
-
-
-            <div class="promise-number">
-              03 · NATURAL
-            </div>
-
-
-            <h3>
-              No Artificial Colours
-            </h3>
-
-
-            <p>
-              We keep our baking simple and avoid
-              unnecessary artificial colours.
-            </p>
-
-          </div>
-
-
-          <div class="promise-card reveal">
-
-            <div class="promise-card-image">
-
-              <img
-                src="images/a2-ghee.jpg"
-                alt=""
-              >
-
-            </div>
-
-
-            <div class="promise-number">
-              04 · FRESH
-            </div>
-
-
-            <h3>
-              No Preservatives
-            </h3>
-
-
-            <p>
-              Homemade baking made fresh, without
-              unnecessary preservatives.
-            </p>
-
-          </div>
+            Send Order on WhatsApp →
+          </button>
 
 
         </div>
 
       </div>
 
-    </section>
+    </div>
+
+  </div>
+
+</section>
 
 
-    <!-- STORY -->
+<!-- OUR PROMISE -->
 
-    <section
-      class="story"
-      id="story"
+<section
+  class="promise-section"
+  id="promise"
+>
+
+  <div class="promise-inner">
+
+
+    <div class="promise-header reveal">
+
+      <span class="section-label">
+        OUR PROMISE
+      </span>
+
+
+      <h2>
+        Simple ingredients.<br>
+        <em>Beautifully made.</em>
+      </h2>
+
+
+      <p>
+        Everything we make reflects the way we bake at home:
+        carefully, thoughtfully and without unnecessary ingredients.
+      </p>
+
+    </div>
+
+
+    <!-- KITCHEN PHOTO -->
+
+    <div class="promise-photo reveal">
+
+      <img
+        src="images/kitchen.jpg"
+        alt="Home Style Bakery kitchen"
+        loading="lazy"
+      >
+
+    </div>
+
+
+    <!-- PROMISE CARDS -->
+
+    <div class="promise-grid">
+
+
+      <!-- QUALITY -->
+
+      <div class="promise-card reveal">
+
+        <div class="promise-emoji">
+          🍰
+        </div>
+
+
+        <div class="promise-number">
+          01 · QUALITY
+        </div>
+
+
+        <h3>
+          Carefully Selected
+        </h3>
+
+
+        <p>
+          We choose ingredients thoughtfully,
+          focusing on quality, flavour and the
+          homemade experience.
+        </p>
+
+      </div>
+
+
+      <!-- EGGLESS -->
+
+      <div class="promise-card reveal">
+
+        <div class="promise-emoji">
+          🥚🚫
+        </div>
+
+
+        <div class="promise-number">
+          02 · EGGLESS
+        </div>
+
+
+        <h3>
+          100% Eggless
+        </h3>
+
+
+        <p>
+          Every item we make is prepared without eggs,
+          while keeping the flavour and texture delicious.
+        </p>
+
+      </div>
+
+
+      <!-- NATURAL -->
+
+      <div class="promise-card reveal">
+
+        <div class="promise-emoji">
+          🌿
+        </div>
+
+
+        <div class="promise-number">
+          03 · NATURAL
+        </div>
+
+
+        <h3>
+          No Artificial Colours
+        </h3>
+
+
+        <p>
+          We keep our baking simple and avoid
+          unnecessary artificial colours.
+        </p>
+
+      </div>
+
+
+      <!-- FRESH -->
+
+      <div class="promise-card reveal">
+
+        <div class="promise-emoji">
+          ✨
+        </div>
+
+
+        <div class="promise-number">
+          04 · FRESH
+        </div>
+
+
+        <h3>
+          No Preservatives
+        </h3>
+
+
+        <p>
+          Homemade baking made fresh, without
+          unnecessary preservatives.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- STORY -->
+
+<section
+  class="story"
+  id="story"
+>
+
+
+  <div class="story-image reveal">
+
+    <img
+      src="images/kitchen.jpg"
+      alt="Home Style Bakery kitchen"
+      loading="lazy"
     >
 
-
-      <div class="story-image reveal">
-
-        <img
-          src="images/kitchen.jpg"
-          alt="Home Style Bakery kitchen"
-          loading="lazy"
-          onerror="this.style.display='none';"
-        >
-
-      </div>
+  </div>
 
 
-      <div class="story-copy reveal">
+  <div class="story-copy reveal">
 
-        <span class="section-label">
-          OUR STORY
-        </span>
-
-
-        <h2>
-          Made at home.<br>
-          <em>Made with heart.</em>
-        </h2>
+    <span class="section-label">
+      OUR STORY
+    </span>
 
 
-        <p>
-          Home Style Bakery started with a simple idea:
-          homemade food should taste homemade.
-        </p>
+    <h2>
+      Made at home.<br>
+      <em>Made with heart.</em>
+    </h2>
 
 
-        <p>
-          We bake in small batches using carefully selected
-          ingredients, premium quality butter and traditional
-          homemade methods.
-        </p>
+    <p>
+      Home Style Bakery started with a simple idea:
+      homemade food should taste homemade.
+    </p>
 
 
-        <p>
-          From cakes and cheesecakes to breads, cookies,
-          desserts and more, everything is prepared with
-          the same care we would use for our own family.
-        </p>
+    <p>
+      We bake in small batches using carefully selected
+      ingredients, premium quality butter and traditional
+      homemade methods.
+    </p>
 
 
-        <div class="story-highlight">
+    <p>
+      From cakes and cheesecakes to breads, cookies,
+      desserts and more, everything is prepared with
+      the same care we would use for our own family.
+    </p>
 
-          <strong>
-            Home Style Bakery
-          </strong>
 
-          <span>
-            London, Ontario
-          </span>
+    <div class="story-highlight">
 
-        </div>
+      <strong>
+        Home Style Bakery
+      </strong>
 
-      </div>
+      <span>
+        London, Ontario
+      </span>
 
-    </section>
+    </div>
 
+  </div>
+
+</section>
+```
 
   </main>
-
 
   <!-- FOOTER -->
 
   <footer>
 
-    <div class="footer-inner">
+```
+<div class="footer-inner">
 
 
-      <div>
+  <div>
 
-        <h3>
-          Home Style Bakery
-        </h3>
+    <h3>
+      Home Style Bakery
+    </h3>
 
-        <p>
-          Homemade · Eggless · Vegetarian
-        </p>
+    <p>
+      Homemade · Eggless · Vegetarian
+    </p>
 
-        <div class="footer-location">
-          London, Ontario
-        </div>
+    <div class="footer-location">
+      London, Ontario
+    </div>
 
-      </div>
-
-
-      <div>
-
-        <h3>
-          Explore
-        </h3>
-
-        <div class="footer-links">
-
-          <a href="#home">
-            Home
-          </a>
-
-          <a href="#products">
-            Our Baking
-          </a>
-
-          <a href="#promise">
-            Our Promise
-          </a>
-
-          <a href="#story">
-            Our Story
-          </a>
-
-          <a href="#order">
-            Order
-          </a>
-
-        </div>
-
-      </div>
+  </div>
 
 
-      <div>
+  <div>
 
-        <h3>
-          Order
-        </h3>
+    <h3>
+      Explore
+    </h3>
 
-        <p>
+    <div class="footer-links">
 
-          <a
-            href="https://wa.me/15192008436?text=Hi%20Home%20Style%20Bakery%2C%20I%20would%20like%20to%20place%20an%20order."
-            target="_blank"
-            rel="noopener"
-          >
-            WhatsApp us
-          </a>
+      <a href="#home">
+        Home
+      </a>
 
-        </p>
+      <a href="#products">
+        Our Baking
+      </a>
 
+      <a href="#promise">
+        Our Promise
+      </a>
 
-        <p>
+      <a href="#story">
+        Our Story
+      </a>
 
-          <a href="tel:+15192008436">
-            +1 519 200 8436
-          </a>
-
-        </p>
-
-      </div>
-
+      <a href="#order">
+        Order
+      </a>
 
     </div>
 
+  </div>
 
-    <div class="copyright">
 
-      © 2026 Home Style Bakery ·
-      Made with care in London, Ontario
+  <div>
 
-    </div>
+    <h3>
+      Order
+    </h3>
+
+    <p>
+
+      <a
+        href="https://wa.me/15192008436?text=Hi%20Home%20Style%20Bakery%2C%20I%20would%20like%20to%20place%20an%20order."
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp us
+      </a>
+
+    </p>
+
+
+    <p>
+
+      <a href="tel:+15192008436">
+        +1 519 200 8436
+      </a>
+
+    </p>
+
+  </div>
+
+
+</div>
+
+
+<div class="copyright">
+
+  © 2026 Home Style Bakery ·
+  Made with care in London, Ontario
+
+</div>
+```
 
   </footer>
 
-
   <!-- MOBILE ORDER BUTTON -->
 
-  <a
-    href="#order"
-    class="mobile-order"
-  >
-    Start Your Order →
-  </a>
+<a
+href="#order"
+class="mobile-order"
 
+>
+
+```
+Start Your Order →
+```
+
+  </a>
 
   <!-- JAVASCRIPT -->
 
@@ -3488,7 +3880,7 @@
         {
           name: "Classic Cake",
           price: 35,
-          image: "images/classic-cake.jpg"
+          image: "images/Classic%20cake.jpg"
         }
 
       ],
@@ -3538,7 +3930,7 @@
         {
           name: "Homemade Cookies",
           price: 10,
-          image: "images/cookies.jpg"
+          image: "images/Cookies.jpg"
         }
 
       ],
@@ -3549,7 +3941,7 @@
         {
           name: "A2 Desi Ghee",
           price: 0,
-          image: "images/a2-ghee.jpg"
+          image: "images/A2%20ghee.jpg"
         }
 
       ]
@@ -3607,8 +3999,8 @@
 
           const quantity =
             selected
-            ? selected.quantity
-            : 0;
+              ? selected.quantity
+              : 0;
 
 
           const safeName =
@@ -3624,14 +4016,12 @@
               onclick="toggleProduct('${safeName}')"
             >
 
-
               <div class="order-product-image">
 
                 <img
                   src="${product.image}"
                   alt="${product.name}"
                   loading="lazy"
-                  onerror="this.style.display='none';"
                 >
 
               </div>
@@ -3646,8 +4036,8 @@
                 <p>
                   ${
                     product.price > 0
-                    ? "$" + product.price
-                    : "Contact for price"
+                      ? "$" + product.price
+                      : "Contact for price"
                   }
                 </p>
 
@@ -3661,50 +4051,50 @@
 
               ${
                 selected
-                ? `
+                  ? `
 
-                  <div
-                    class="quantity-row"
-                    onclick="event.stopPropagation()"
-                  >
+                    <div
+                      class="quantity-row"
+                      onclick="event.stopPropagation()"
+                    >
 
-                    <span>
-                      Quantity
-                    </span>
-
-
-                    <div class="quantity-controls">
-
-
-                      <button
-                        type="button"
-                        class="qty-button"
-                        onclick="changeQuantity('${safeName}', -1, event)"
-                      >
-                        −
-                      </button>
-
-
-                      <span class="qty-number">
-                        ${quantity}
+                      <span>
+                        Quantity
                       </span>
 
 
-                      <button
-                        type="button"
-                        class="qty-button"
-                        onclick="changeQuantity('${safeName}', 1, event)"
-                      >
-                        +
-                      </button>
+                      <div class="quantity-controls">
 
+
+                        <button
+                          type="button"
+                          class="qty-button"
+                          onclick="changeQuantity('${safeName}', -1, event)"
+                        >
+                          −
+                        </button>
+
+
+                        <span class="qty-number">
+                          ${quantity}
+                        </span>
+
+
+                        <button
+                          type="button"
+                          class="qty-button"
+                          onclick="changeQuantity('${safeName}', 1, event)"
+                        >
+                          +
+                        </button>
+
+
+                      </div>
 
                     </div>
 
-                  </div>
-
-                `
-                : ""
+                  `
+                  : ""
               }
 
             </div>
@@ -3780,7 +4170,6 @@
 
       updateSummary();
 
-
       refreshCurrentCategory();
 
     }
@@ -3824,7 +4213,6 @@
 
       updateSummary();
 
-
       refreshCurrentCategory();
 
     }
@@ -3860,39 +4248,7 @@
           activeButton
         );
 
-        return;
-
       }
-
-
-      const categoryButtons =
-        Array.from(
-          document.querySelectorAll(
-            ".category-button"
-          )
-        );
-
-
-      const index =
-        categoryButtons.indexOf(
-          activeButton
-        );
-
-
-      const categories = [
-        "cakes",
-        "cheesecakes",
-        "breads",
-        "desserts",
-        "cookies",
-        "other"
-      ];
-
-
-      displayProducts(
-        categories[index] || "cakes",
-        activeButton
-      );
 
     }
 
@@ -3991,8 +4347,8 @@
 
                 ${
                   item.price > 0
-                  ? "$" + itemTotal
-                  : "Contact"
+                    ? "$" + itemTotal
+                    : "Contact"
                 }
 
               </strong>
@@ -4026,8 +4382,8 @@
 
             ${
               hasPricedItems
-              ? "$" + total
-              : "Contact for price"
+                ? "$" + total
+                : "Contact for price"
             }
 
           </strong>
@@ -4200,52 +4556,15 @@
       );
 
 
+    /* =========================
+       INITIALIZE
+    ========================= */
+
+
     document.addEventListener(
       "DOMContentLoaded",
       function() {
 
-
-        /* Category mapping */
-
-        document
-          .querySelectorAll(
-            ".category-button"
-          )
-          .forEach(
-            function(button, index) {
-
-
-              const categories = [
-                "cakes",
-                "cheesecakes",
-                "breads",
-                "desserts",
-                "cookies",
-                "other"
-              ];
-
-
-              button.dataset.category =
-                categories[index];
-
-            }
-          );
-
-
-        /* Load first category */
-
-        displayProducts(
-          "cakes",
-          document.querySelector(
-            ".category-button.active"
-          )
-        );
-
-
-        updateSummary();
-
-
-        /* Start animations */
 
         document
           .querySelectorAll(
@@ -4261,13 +4580,26 @@
             }
           );
 
+
+        const firstCategory =
+          document.querySelector(
+            ".category-button.active"
+          );
+
+
+        displayProducts(
+          "cakes",
+          firstCategory
+        );
+
+
+        updateSummary();
+
       }
     );
 
 
   </script>
 
-
 </body>
 </html>
-```
