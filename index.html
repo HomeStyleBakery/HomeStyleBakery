@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Home Style Bakery | Homemade. Eggless. Made With Care.</title>
 
-<meta
-name="description"
-content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes, cheesecakes, breads, cookies and desserts made with carefully selected ingredients."
-
->
+  <meta
+    name="description"
+    content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes, cheesecakes, breads, cookies and desserts made with carefully selected ingredients."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,7 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
   >
 
   <style>
+
     :root {
       --background: #f5f5f3;
       --surface: #ffffff;
@@ -521,12 +522,15 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       place-items: center;
       font-size: 12px;
       font-weight: 700;
+      margin-bottom: 14px;
     }
 
-    .step-title h3 {
+    .step-title h3,
+    .step-content > h3 {
       font-family: "Playfair Display",serif;
       font-size: 25px;
       color: var(--black);
+      margin-bottom: 22px;
     }
 
     .category-grid {
@@ -609,6 +613,12 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       color: var(--black);
     }
 
+    .order-product-info p {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 0;
+    }
+
     .order-product small {
       color: var(--muted);
       font-size: 10px;
@@ -683,6 +693,7 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
     }
 
     @keyframes fadeUp {
+
       from {
         opacity: 0;
         transform: translateY(15px);
@@ -692,6 +703,7 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         opacity: 1;
         transform: translateY(0);
       }
+
     }
 
     .summary-list {
@@ -719,6 +731,32 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
     .summary-item span {
       color: var(--muted);
       font-size: 12px;
+    }
+
+    .summary-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 16px;
+      border-top: 1px solid var(--border);
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+
+    .summary-total span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .summary-total strong {
+      color: var(--black);
+      font-size: 18px;
+    }
+
+    .empty-summary {
+      color: var(--muted);
+      font-size: 13px;
+      padding: 15px 0;
     }
 
     .customer-form {
@@ -782,6 +820,7 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       font-size: 13px;
       cursor: pointer;
       transition: all .25s ease;
+      grid-column: 1 / -1;
     }
 
     .send-order:hover {
@@ -829,8 +868,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       line-height: 1.8;
     }
 
-    /* NEW PROMISE PHOTO */
-
     .promise-photo {
       max-width: 1100px;
       height: 380px;
@@ -847,8 +884,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       object-fit: cover;
       display: block;
     }
-
-    /* CENTERED PROMISE CARDS */
 
     .promise-grid {
       display: grid;
@@ -1054,6 +1089,7 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       .footer-inner {
         grid-template-columns: 1fr 1fr;
       }
+
     }
 
     /* =========================
@@ -1183,6 +1219,10 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         grid-column: auto;
       }
 
+      .send-order {
+        grid-column: auto;
+      }
+
       .footer-inner {
         grid-template-columns: 1fr;
         gap: 35px;
@@ -1191,1620 +1231,1716 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       footer {
         padding: 50px 18px 20px;
       }
+
     }
+
   </style>
 
 </head>
 
+
 <body>
+
+  <!-- ANNOUNCEMENT -->
 
   <div class="announcement">
     Eggless · Vegetarian · Carefully Selected Ingredients · No Preservatives · No Artificial Colours
   </div>
 
+
   <!-- NAVIGATION -->
 
   <nav>
+
     <div class="nav-container">
 
-```
-  <a href="#home" class="logo">
-    Home Style Bakery
-  </a>
-
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#products">Bakery</a></li>
-    <li><a href="#promise">Our Promise</a></li>
-    <li><a href="#story">Our Story</a></li>
-    <li>
-      <a href="#order" class="nav-order">
-        Order Now
+      <a href="#home" class="logo">
+        Home Style Bakery
       </a>
-    </li>
-  </ul>
 
-</div>
-```
+      <ul class="nav-links">
+
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#products">Bakery</a>
+        </li>
+
+        <li>
+          <a href="#promise">Our Promise</a>
+        </li>
+
+        <li>
+          <a href="#story">Our Story</a>
+        </li>
+
+        <li>
+          <a href="#order" class="nav-order">
+            Order Now
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
 
   </nav>
 
+
   <main id="home">
 
-```
-<!-- HERO -->
 
-<section class="hero">
+    <!-- HERO -->
 
-  <div class="hero-content">
+    <section class="hero">
 
-    <div class="hero-label">
-      Fresh from our kitchen
-    </div>
+      <div class="hero-content">
 
-    <h1>
-      Homemade food.<br>
-      <span>Made beautifully.</span>
-    </h1>
+        <div class="hero-label">
+          Fresh from our kitchen
+        </div>
 
-    <p class="hero-description">
-      Thoughtfully made cakes, cheesecakes, breads and desserts from
-      Home Style Bakery in London, Ontario. Eggless, vegetarian and
-      prepared with carefully selected ingredients.
-    </p>
+        <h1>
+          Homemade food.<br>
+          <span>Made beautifully.</span>
+        </h1>
 
-    <div class="hero-buttons">
+        <p class="hero-description">
+          Thoughtfully made cakes, cheesecakes, breads and desserts from
+          Home Style Bakery in London, Ontario. Eggless, vegetarian and
+          prepared with carefully selected ingredients.
+        </p>
 
-      <a href="#order" class="button button-primary">
-        Start Your Order →
-      </a>
+        <div class="hero-buttons">
 
-      <a href="#products" class="button button-secondary">
-        Explore the Bakery
-      </a>
+          <a href="#order" class="button button-primary">
+            Start Your Order →
+          </a>
 
-    </div>
+          <a href="#products" class="button button-secondary">
+            Explore the Bakery
+          </a>
 
-    <div class="hero-features">
-      <span>Eggless</span>
-      <span>Vegetarian</span>
-      <span>Organic Ingredients</span>
-      <span>No Preservatives</span>
-    </div>
+        </div>
 
-  </div>
+        <div class="hero-features">
 
-  <div class="hero-photo">
+          <span>Eggless</span>
+          <span>Vegetarian</span>
+          <span>Organic Ingredients</span>
+          <span>No Preservatives</span>
 
-    <img
-      src="images/lemon-cake.jpg"
-      alt="Fresh homemade cake from Home Style Bakery"
-      onerror="this.src='https://placehold.co/900x1100/e9e9e6/555555?text=Add+lemon-cake.jpg'"
-    >
+        </div>
 
-    <div class="hero-note">
-      <strong>Made fresh</strong>
-      <span>London, Ontario · Homemade with care</span>
-    </div>
+      </div>
 
-  </div>
 
-</section>
+      <div class="hero-photo">
 
-<!-- INTRO -->
-
-<section class="intro-strip">
-
-  <div class="intro-inner">
-
-    <div class="intro-item">
-      <strong>100% Eggless</strong>
-      <span>Every item is egg-free</span>
-    </div>
-
-    <div class="intro-item">
-      <strong>Vegetarian</strong>
-      <span>Made with care</span>
-    </div>
-
-    <div class="intro-item">
-      <strong>Freshly Prepared</strong>
-      <span>Made for your order</span>
-    </div>
-
-    <div class="intro-item">
-      <strong>London, Ontario</strong>
-      <span>Proudly local</span>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- PRODUCTS -->
-
-<section class="section" id="products">
-
-  <div class="section-header center">
-
-    <div class="section-label">
-      The Bakery
-    </div>
-
-    <h2>
-      Something worth<br>
-      slowing down for.
-    </h2>
-
-    <p>
-      From everyday favourites to something special for a celebration,
-      each item is prepared with the care you'd expect from homemade food.
-    </p>
-
-  </div>
-
-  <div class="products">
-
-    <!-- 01 LEMON -->
-
-    <article class="product-card">
-
-      <div class="product-image">
         <img
           src="images/lemon-cake.jpg"
-          alt="Eggless homemade lemon cake"
-          onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Lemon+Cake'"
-        >
-      </div>
-
-      <div class="product-info">
-        <span class="tag">EGGLESS</span>
-        <h3>Lemon Cake</h3>
-        <p>
-          Light, fresh and full of natural lemon flavour.
-          A bright homemade favourite.
-        </p>
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-      </div>
-
-    </article>
-
-    <!-- 02 BANANA WALNUT -->
-
-    <article class="product-card">
-
-      <div class="product-image">
-        <img
-          src="images/02_banana_walnut_cake.jpg"
-          alt="Homemade banana walnut cake"
-          onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Banana+Walnut+Cake'"
-        >
-      </div>
-
-      <div class="product-info">
-        <span class="tag">HOMEMADE</span>
-        <h3>Banana Walnut Cake</h3>
-        <p>
-          Moist banana cake with delicious walnuts,
-          baked fresh with homemade goodness.
-        </p>
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-      </div>
-
-    </article>
-
-    <!-- 03 PECAN -->
-
-    <article class="product-card">
-
-      <div class="product-image">
-        <img
-          src="images/03_pecan_cake.jpg"
-          alt="Homemade pecan cake"
-          onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Pecan+Cake'"
-        >
-      </div>
-
-      <div class="product-info">
-        <span class="tag">PREMIUM</span>
-        <h3>Pecan Cake</h3>
-        <p>
-          Rich homemade cake with the delicious flavour
-          and texture of pecans.
-        </p>
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-      </div>
-
-    </article>
-
-    <!-- 04 STRAWBERRY CHEESECAKE -->
-
-    <article class="product-card">
-
-      <div class="product-image">
-        <img
-          src="images/04_strawberry_cheesecake.jpg"
-          alt="Fresh strawberry cheesecake"
-          onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Strawberry+Cheesecake'"
-        >
-      </div>
-
-      <div class="product-info">
-        <span class="tag">FRESH</span>
-        <h3>Strawberry Cheesecake</h3>
-        <p>
-          Creamy, rich and finished with the bright
-          flavour of strawberries.
-        </p>
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-      </div>
-
-    </article>
-
-    <!-- CLASSIC CHEESECAKE -->
-
-    <article class="product-card">
-
-      <div class="product-image">
-        <img
-          src="images/cheesecake.jpg"
-          alt="Fresh homemade cheesecake"
-          onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Cheesecake'"
-        >
-      </div>
-
-      <div class="product-info">
-        <span class="tag">MADE FRESH</span>
-        <h3>Classic Cheesecake</h3>
-        <p>
-          Rich, creamy and made fresh to order for
-          a simple, delicious dessert.
-        </p>
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-      </div>
-
-    </article>
-
-    <!-- COOKIES -->
-
-    <article class="product-card">
-
-      <div class="product-image">
-        <img
-          src="images/cookies.jpg"
-          alt="Homemade cookies"
-          onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Cookies'"
-        >
-      </div>
-
-      <div class="product-info">
-        <span class="tag">BAKED FRESH</span>
-        <h3>Homemade Cookies</h3>
-        <p>
-          Simple, comforting cookies made with quality
-          ingredients and homemade goodness.
-        </p>
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-      </div>
-
-    </article>
-
-    <!-- 06 FOCACCIA -->
-
-    <article class="product-card">
-
-      <div class="product-image">
-        <img
-          src="images/06_focaccia_bread.jpg"
-          alt="Fresh homemade focaccia bread"
-          onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Focaccia'"
-        >
-      </div>
-
-      <div class="product-info">
-        <span class="tag">FRESH BAKED</span>
-        <h3>Focaccia Bread</h3>
-        <p>
-          Freshly baked focaccia with a soft centre
-          and delicious golden crust.
-        </p>
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-      </div>
-
-    </article>
-
-    <!-- 07 HOMEMADE BREAD -->
-
-    <article class="product-card">
-
-      <div class="product-image">
-        <img
-          src="images/07_homemade_bread.jpg"
-          alt="Fresh homemade bread"
-          onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Fresh+Bread'"
-        >
-      </div>
-
-      <div class="product-info">
-        <span class="tag">HOMEMADE</span>
-        <h3>Homemade Bread</h3>
-        <p>
-          Soft, fresh and made with the simple goodness
-          of homemade bread.
-        </p>
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-      </div>
-
-    </article>
-
-    <!-- 05 CUSTARD -->
-
-    <article class="product-card">
-
-      <div class="product-image">
-        <img
-          src="images/05_custard.jpg"
-          alt="Homemade fruit custard"
-          onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Fruit+Custard'"
-        >
-      </div>
-
-      <div class="product-info">
-        <span class="tag">HOMEMADE</span>
-        <h3>Homemade Fruit Custard</h3>
-        <p>
-          Silky, comforting fruit custard prepared
-          with care for a delicious homemade treat.
-        </p>
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-      </div>
-
-    </article>
-      <!-- 06 FOCACCIA BREAD -->
-
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="images/06_focaccia_bread.jpg"
-            alt="Homemade focaccia bread"
-            loading="lazy"
-            onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Focaccia+Bread'"
-          >
-        </div>
-
-        <div class="product-info">
-          <span class="tag">HOMEMADE</span>
-          <h3>Homemade Focaccia Bread</h3>
-          <p>
-            Freshly baked focaccia with a soft centre,
-            golden crust and a delicious homemade flavour.
-          </p>
-          <a href="#order" class="product-button">
-            Order this →
-          </a>
-        </div>
-
-      </article>
-
-
-      <!-- 07 HOMEMADE BREAD -->
-
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="images/07_homemade_bread.jpg"
-            alt="Homemade fresh bread"
-            loading="lazy"
-            onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Homemade+Bread'"
-          >
-        </div>
-
-        <div class="product-info">
-          <span class="tag">HOMEMADE</span>
-          <h3>Homemade Bread</h3>
-          <p>
-            Soft, fresh and comforting homemade bread
-            baked in small batches with care.
-          </p>
-          <a href="#order" class="product-button">
-            Order this →
-          </a>
-        </div>
-
-      </article>
-
-
-      <!-- 08 HOMEMADE COOKIES -->
-
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="images/cookies.jpg"
-            alt="Homemade cookies"
-            loading="lazy"
-            onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Homemade+Cookies'"
-          >
-        </div>
-
-        <div class="product-info">
-          <span class="tag">HOMEMADE</span>
-          <h3>Homemade Cookies</h3>
-          <p>
-            Freshly prepared cookies with a comforting
-            homemade taste, perfect with tea or coffee.
-          </p>
-          <a href="#order" class="product-button">
-            Order this →
-          </a>
-        </div>
-
-      </article>
-
-
-      <!-- 09 CLASSIC CHEESECAKE -->
-
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="images/cheesecake.jpg"
-            alt="Homemade classic cheesecake"
-            loading="lazy"
-            onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Cheesecake'"
-          >
-        </div>
-
-        <div class="product-info">
-          <span class="tag">EGGLESS</span>
-          <h3>Classic Cheesecake</h3>
-          <p>
-            Smooth, creamy and rich cheesecake made
-            completely eggless and with care.
-          </p>
-          <a href="#order" class="product-button">
-            Order this →
-          </a>
-        </div>
-
-      </article>
-
-
-      <!-- 10 A2 DESI GHEE -->
-
-      <article class="product-card">
-
-        <div class="product-image">
-          <img
-            src="images/ghee.jpg"
-            alt="A2 Desi Ghee"
-            loading="lazy"
-            onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=A2+Desi+Ghee'"
-          >
-        </div>
-
-        <div class="product-info">
-          <span class="tag">PREMIUM</span>
-          <h3>A2 Desi Ghee</h3>
-          <p>
-            Traditionally prepared A2 desi ghee with
-            a rich aroma and authentic homemade character.
-          </p>
-          <a href="#order" class="product-button">
-            Order this →
-          </a>
-        </div>
-
-      </article>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- =========================================================
-     ORDER BUILDER
-========================================================= -->
-
-<section class="order-builder-section" id="order">
-
-  <div class="order-builder">
-
-    <div class="order-builder-header">
-      <span class="section-label">ORDER FROM HOME STYLE BAKERY</span>
-
-      <h2>
-        Build your order.<br>
-        <em>We'll take care of the rest.</em>
-      </h2>
-
-      <p>
-        Select the items you'd like, choose your quantities,
-        and send us your order through WhatsApp.
-      </p>
-    </div>
-
-
-    <!-- STEP 1 -->
-
-    <div class="order-step">
-
-      <div class="step-number">01</div>
-
-      <div class="step-content">
-
-        <h3>Choose a category</h3>
-
-        <div class="category-grid">
-
-          <button
-            type="button"
-            class="category-button active"
-            onclick="displayProducts('cakes', this)"
-          >
-            Cakes
-          </button>
-
-          <button
-            type="button"
-            class="category-button"
-            onclick="displayProducts('cheesecakes', this)"
-          >
-            Cheesecakes
-          </button>
-
-          <button
-            type="button"
-            class="category-button"
-            onclick="displayProducts('breads', this)"
-          >
-            Breads
-          </button>
-
-          <button
-            type="button"
-            class="category-button"
-            onclick="displayProducts('desserts', this)"
-          >
-            Desserts
-          </button>
-
-          <button
-            type="button"
-            class="category-button"
-            onclick="displayProducts('cookies', this)"
-          >
-            Cookies
-          </button>
-
-          <button
-            type="button"
-            class="category-button"
-            onclick="displayProducts('other', this)"
-          >
-            Other
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- STEP 2 -->
-
-    <div class="order-step">
-
-      <div class="step-number">02</div>
-
-      <div class="step-content">
-
-        <h3>Select your items</h3>
-
-        <div
-          class="order-products"
-          id="orderProducts"
-        ></div>
-
-      </div>
-
-    </div>
-
-
-    <!-- STEP 3 -->
-
-    <div
-      class="order-step order-summary"
-      id="orderSummary"
-    >
-
-      <div class="step-number">03</div>
-
-      <div class="step-content">
-
-        <h3>Your order</h3>
-
-        <div
-          class="summary-list"
-          id="summaryList"
-        >
-          <p class="empty-summary">
-            Your selected items will appear here.
-          </p>
-        </div>
-
-
-        <div class="customer-form">
-
-          <div class="form-group">
-
-            <label for="customerName">
-              Your name
-            </label>
-
-            <input
-              type="text"
-              id="customerName"
-              placeholder="Enter your name"
-            >
-
-          </div>
-
-
-          <div class="form-group">
-
-            <label for="customerPhone">
-              Phone number
-            </label>
-
-            <input
-              type="tel"
-              id="customerPhone"
-              placeholder="519 200 8436"
-            >
-
-          </div>
-
-
-          <div class="form-group">
-
-            <label for="customerNotes">
-              Notes / special requests
-            </label>
-
-            <textarea
-              id="customerNotes"
-              rows="4"
-              placeholder="Tell us about your preferred date, flavour, size or any special request..."
-            ></textarea>
-
-          </div>
-
-
-          <button
-            type="button"
-            class="send-order"
-            onclick="sendWhatsAppOrder()"
-          >
-            Send Order on WhatsApp →
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     OUR PROMISE
-========================================================= -->
-
-<section class="promise-section" id="promise">
-
-  <div class="promise-inner">
-
-    <div class="promise-header">
-
-      <span class="section-label">
-        OUR PROMISE
-      </span>
-
-      <h2>
-        Simple ingredients.<br>
-        <em>Beautifully made.</em>
-      </h2>
-
-      <p>
-        Everything we make reflects the way we bake at home:
-        carefully, thoughtfully and without unnecessary ingredients.
-      </p>
-
-    </div>
-
-
-    <div class="promise-photo">
-
-      <img
-        src="images/our-promise.jpg"
-        alt="Fresh homemade baking at Home Style Bakery"
-        loading="lazy"
-        onerror="this.src='https://placehold.co/1200x600/292929/ffffff?text=Home+Style+Bakery'"
-      >
-
-    </div>
-
-
-    <div class="promise-grid">
-
-      <div class="promise-card">
-
-        <div class="promise-icon">01</div>
-
-        <h3>Organic Ingredients</h3>
-
-        <p>
-          Carefully selected ingredients chosen
-          for quality and flavour.
-        </p>
-
-      </div>
-
-
-      <div class="promise-card">
-
-        <div class="promise-icon">02</div>
-
-        <h3>100% Eggless</h3>
-
-        <p>
-          Every product is made without eggs,
-          while keeping flavour and texture delicious.
-        </p>
-
-      </div>
-
-
-      <div class="promise-card">
-
-        <div class="promise-icon">03</div>
-
-        <h3>No Artificial Colours</h3>
-
-        <p>
-          We keep our baking natural and avoid
-          unnecessary artificial colours.
-        </p>
-
-      </div>
-
-
-      <div class="promise-card">
-
-        <div class="promise-icon">04</div>
-
-        <h3>No Preservatives</h3>
-
-        <p>
-          Fresh homemade baking without
-          unnecessary preservatives.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     OUR STORY
-========================================================= -->
-
-<section class="story" id="story">
-
-  <div class="story-image">
-
-    <img
-      src="images/our-kitchen.jpg"
-      alt="Home Style Bakery kitchen"
-      loading="lazy"
-      onerror="this.src='https://placehold.co/1000x900/e9e9e6/555555?text=Our+Kitchen'"
-    >
-
-  </div>
-
-
-  <div class="story-copy">
-
-    <span class="section-label">
-      OUR STORY
-    </span>
-
-    <h2>
-      Made at home.<br>
-      <em>Made with heart.</em>
-    </h2>
-
-    <p>
-      Home Style Bakery started with a simple idea:
-      homemade food should taste homemade.
-    </p>
-
-    <p>
-      We bake in small batches using carefully selected
-      ingredients, premium quality butter and traditional
-      homemade methods.
-    </p>
-
-    <p>
-      From cakes and cheesecakes to breads, cookies and
-      desserts, everything is prepared with the same care
-      we would use for our own family.
-    </p>
-
-
-    <div class="story-highlight">
-
-      <strong>
-        Home Style Bakery
-      </strong>
-
-      <span>
-        London, Ontario
-      </span>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer>
-
-  <div class="footer-inner">
-
-
-    <div>
-
-      <h3>
-        Home Style Bakery
-      </h3>
-
-      <p>
-        Homemade · Eggless · Vegetarian
-      </p>
-
-      <div class="footer-location">
-        London, Ontario
-      </div>
-
-    </div>
-
-
-    <div>
-
-      <h3>
-        Explore
-      </h3>
-
-      <div class="footer-links">
-
-        <a href="#home">
-          Home
-        </a>
-
-        <a href="#products">
-          Our Baking
-        </a>
-
-        <a href="#promise">
-          Our Promise
-        </a>
-
-        <a href="#story">
-          Our Story
-        </a>
-
-        <a href="#order">
-          Order
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <div>
-
-      <h3>
-        Order
-      </h3>
-
-      <p>
-        <a
-          href="https://wa.me/15192008436?text=Hi%20Home%20Style%20Bakery%2C%20I%20would%20like%20to%20place%20an%20order."
-          target="_blank"
-          rel="noopener"
-        >
-          WhatsApp us
-        </a>
-      </p>
-
-      <p>
-        <a href="tel:+15192008436">
-          +1 519 200 8436
-        </a>
-      </p>
-
-    </div>
-
-  </div>
-
-
-  <div class="copyright">
-
-    © 2026 Home Style Bakery ·
-    Made with care in London, Ontario
-
-  </div>
-
-</footer>
-
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
-<script>
-
-const bakeryProducts = {
-
-  cakes: [
-
-    {
-      name: "Lemon Cake",
-      price: 35,
-      image: "images/lemon-cake.jpg"
-    },
-
-    {
-      name: "Banana Walnut Cake",
-      price: 35,
-      image: "images/02_banana_walnut_cake.jpg"
-    },
-
-    {
-      name: "Pecan Cake",
-      price: 40,
-      image: "images/03_pecan_cake.jpg"
-    }
-
-  ],
-
-
-  cheesecakes: [
-
-    {
-      name: "Strawberry Cheesecake",
-      price: 45,
-      image: "images/04_strawberry_cheesecake.jpg"
-    },
-
-    {
-      name: "Classic Cheesecake",
-      price: 40,
-      image: "images/cheesecake.jpg"
-    }
-
-  ],
-
-
-  breads: [
-
-    {
-      name: "Homemade Focaccia Bread",
-      price: 12,
-      image: "images/06_focaccia_bread.jpg"
-    },
-
-    {
-      name: "Homemade Bread",
-      price: 8,
-      image: "images/07_homemade_bread.jpg"
-    }
-
-  ],
-
-
-  desserts: [
-
-    {
-      name: "Homemade Fruit Custard",
-      price: 12,
-      image: "images/05_custard.jpg"
-    }
-
-  ],
-
-
-  cookies: [
-
-    {
-      name: "Homemade Cookies",
-      price: 10,
-      image: "images/cookies.jpg"
-    }
-
-  ],
-
-
-  other: [
-
-    {
-      name: "A2 Desi Ghee",
-      price: 0,
-      image: "images/ghee.jpg"
-    }
-
-  ]
-
-};
-
-
-let selectedProducts = {};
-
-
-function displayProducts(category, button) {
-
-  const container =
-    document.getElementById("orderProducts");
-
-  if (!container) return;
-
-
-  document
-    .querySelectorAll(".category-button")
-    .forEach(function(btn) {
-
-      btn.classList.remove("active");
-
-    });
-
-
-  if (button) {
-    button.classList.add("active");
-  }
-
-
-  const products =
-    bakeryProducts[category] || [];
-
-
-  container.innerHTML =
-    products.map(function(product) {
-
-      const selected =
-        selectedProducts[product.name];
-
-      const quantity =
-        selected ? selected.quantity : 0;
-
-
-      return `
-
-        <div
-          class="order-product ${selected ? "selected" : ""}"
-          onclick="toggleProduct('${product.name.replace(/'/g, "\\'")}')"
+          alt="Fresh homemade cake from Home Style Bakery"
+          onerror="this.src='https://placehold.co/900x1100/e9e9e6/555555?text=Add+lemon-cake.jpg'"
         >
 
-          <div class="order-product-image">
+        <div class="hero-note">
+
+          <strong>Made fresh</strong>
+
+          <span>
+            London, Ontario · Homemade with care
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+
+    <section class="intro-strip">
+
+      <div class="intro-inner">
+
+        <div class="intro-item">
+
+          <strong>100% Eggless</strong>
+
+          <span>
+            Every item is egg-free
+          </span>
+
+        </div>
+
+
+        <div class="intro-item">
+
+          <strong>Vegetarian</strong>
+
+          <span>
+            Made with care
+          </span>
+
+        </div>
+
+
+        <div class="intro-item">
+
+          <strong>Freshly Prepared</strong>
+
+          <span>
+            Made for your order
+          </span>
+
+        </div>
+
+
+        <div class="intro-item">
+
+          <strong>London, Ontario</strong>
+
+          <span>
+            Proudly local
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section class="section" id="products">
+
+      <div class="section-header center">
+
+        <div class="section-label">
+          The Bakery
+        </div>
+
+        <h2>
+          Something worth<br>
+          slowing down for.
+        </h2>
+
+        <p>
+          From everyday favourites to something special for a celebration,
+          each item is prepared with the care you'd expect from homemade food.
+        </p>
+
+      </div>
+
+
+      <div class="products">
+
+
+        <!-- 01 LEMON -->
+
+        <article class="product-card">
+
+          <div class="product-image">
 
             <img
-              src="${product.image}"
-              alt="${product.name}"
-              loading="lazy"
-              onerror="this.src='https://placehold.co/400x300/e9e9e6/555555?text=Bakery'"
+              src="images/lemon-cake.jpg"
+              alt="Eggless homemade lemon cake"
+              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Lemon+Cake'"
             >
 
           </div>
 
+          <div class="product-info">
 
-          <div class="order-product-info">
+            <span class="tag">
+              EGGLESS
+            </span>
 
-            <h4>
-              ${product.name}
-            </h4>
+            <h3>
+              Lemon Cake
+            </h3>
 
             <p>
-              ${
-                product.price > 0
-                ? "$" + product.price
-                : "Contact for price"
-              }
+              Light, fresh and full of natural lemon flavour.
+              A bright homemade favourite.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 02 BANANA WALNUT -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="images/02_banana_walnut_cake.jpg"
+              alt="Homemade banana walnut cake"
+              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Banana+Walnut+Cake'"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              HOMEMADE
+            </span>
+
+            <h3>
+              Banana Walnut Cake
+            </h3>
+
+            <p>
+              Moist banana cake with delicious walnuts,
+              baked fresh with homemade goodness.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 03 PECAN -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="images/03_pecan_cake.jpg"
+              alt="Homemade pecan cake"
+              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Pecan+Cake'"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              PREMIUM
+            </span>
+
+            <h3>
+              Pecan Cake
+            </h3>
+
+            <p>
+              Rich homemade cake with the delicious flavour
+              and texture of pecans.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 04 STRAWBERRY CHEESECAKE -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="images/04_strawberry_cheesecake.jpg"
+              alt="Fresh strawberry cheesecake"
+              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Strawberry+Cheesecake'"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              FRESH
+            </span>
+
+            <h3>
+              Strawberry Cheesecake
+            </h3>
+
+            <p>
+              Creamy, rich and finished with the bright
+              flavour of strawberries.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 05 CLASSIC CHEESECAKE -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="images/cheesecake.jpg"
+              alt="Fresh homemade cheesecake"
+              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Cheesecake'"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              MADE FRESH
+            </span>
+
+            <h3>
+              Classic Cheesecake
+            </h3>
+
+            <p>
+              Rich, creamy and made fresh to order for
+              a simple, delicious dessert.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 06 COOKIES -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="images/cookies.jpg"
+              alt="Homemade cookies"
+              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Cookies'"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              BAKED FRESH
+            </span>
+
+            <h3>
+              Homemade Cookies
+            </h3>
+
+            <p>
+              Simple, comforting cookies made with quality
+              ingredients and homemade goodness.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 07 FOCACCIA -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="images/06_focaccia_bread.jpg"
+              alt="Fresh homemade focaccia bread"
+              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Focaccia'"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              FRESH BAKED
+            </span>
+
+            <h3>
+              Focaccia Bread
+            </h3>
+
+            <p>
+              Freshly baked focaccia with a soft centre
+              and delicious golden crust.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 08 HOMEMADE BREAD -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="images/07_homemade_bread.jpg"
+              alt="Fresh homemade bread"
+              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Fresh+Bread'"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              HOMEMADE
+            </span>
+
+            <h3>
+              Homemade Bread
+            </h3>
+
+            <p>
+              Soft, fresh and made with the simple goodness
+              of homemade bread.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- 09 CUSTARD -->
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="images/05_custard.jpg"
+              alt="Homemade fruit custard"
+              onerror="this.src='https://placehold.co/800x600/e9e9e6/555555?text=Fruit+Custard'"
+            >
+
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              HOMEMADE
+            </span>
+
+            <h3>
+              Homemade Fruit Custard
+            </h3>
+
+            <p>
+              Silky, comforting fruit custard prepared
+              with care for a delicious homemade treat.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ORDER BUILDER -->
+
+    <section class="order-builder-section" id="order">
+
+      <div class="order-builder">
+
+
+        <div class="order-builder-header">
+
+          <span class="section-label">
+            ORDER FROM HOME STYLE BAKERY
+          </span>
+
+          <h2>
+            Build your order.<br>
+            <em>We'll take care of the rest.</em>
+          </h2>
+
+          <p>
+            Select the items you'd like, choose your quantities,
+            and send us your order through WhatsApp.
+          </p>
+
+        </div>
+
+
+        <!-- STEP 1 -->
+
+        <div class="order-step">
+
+          <div class="step-number">
+            01
+          </div>
+
+          <div class="step-content">
+
+            <h3>
+              Choose a category
+            </h3>
+
+            <div class="category-grid">
+
+              <button
+                type="button"
+                class="category-button active"
+                onclick="displayProducts('cakes', this)"
+              >
+                Cakes
+              </button>
+
+              <button
+                type="button"
+                class="category-button"
+                onclick="displayProducts('cheesecakes', this)"
+              >
+                Cheesecakes
+              </button>
+
+              <button
+                type="button"
+                class="category-button"
+                onclick="displayProducts('breads', this)"
+              >
+                Breads
+              </button>
+
+              <button
+                type="button"
+                class="category-button"
+                onclick="displayProducts('desserts', this)"
+              >
+                Desserts
+              </button>
+
+              <button
+                type="button"
+                class="category-button"
+                onclick="displayProducts('cookies', this)"
+              >
+                Cookies
+              </button>
+
+              <button
+                type="button"
+                class="category-button"
+                onclick="displayProducts('other', this)"
+              >
+                Other
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div class="order-step">
+
+          <div class="step-number">
+            02
+          </div>
+
+          <div class="step-content">
+
+            <h3>
+              Select your items
+            </h3>
+
+            <div
+              class="order-products"
+              id="orderProducts"
+            ></div>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+
+        <div
+          class="order-step order-summary"
+          id="orderSummary"
+        >
+
+          <div class="step-number">
+            03
+          </div>
+
+          <div class="step-content">
+
+            <h3>
+              Your order
+            </h3>
+
+            <div
+              class="summary-list"
+              id="summaryList"
+            >
+
+              <p class="empty-summary">
+                Your selected items will appear here.
+              </p>
+
+            </div>
+
+
+            <div class="customer-form">
+
+              <div class="form-group">
+
+                <label for="customerName">
+                  Your name
+                </label>
+
+                <input
+                  type="text"
+                  id="customerName"
+                  placeholder="Enter your name"
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="customerPhone">
+                  Phone number
+                </label>
+
+                <input
+                  type="tel"
+                  id="customerPhone"
+                  placeholder="519 200 8436"
+                >
+
+              </div>
+
+
+              <div class="form-group full">
+
+                <label for="customerNotes">
+                  Notes / special requests
+                </label>
+
+                <textarea
+                  id="customerNotes"
+                  rows="4"
+                  placeholder="Tell us about your preferred date, flavour, size or any special request..."
+                ></textarea>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="send-order"
+                onclick="sendWhatsAppOrder()"
+              >
+                Send Order on WhatsApp →
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- OUR PROMISE -->
+
+    <section class="promise-section" id="promise">
+
+      <div class="promise-inner">
+
+
+        <div class="promise-header">
+
+          <span class="section-label">
+            OUR PROMISE
+          </span>
+
+          <h2>
+            Simple ingredients.<br>
+            <em>Beautifully made.</em>
+          </h2>
+
+          <p>
+            Everything we make reflects the way we bake at home:
+            carefully, thoughtfully and without unnecessary ingredients.
+          </p>
+
+        </div>
+
+
+        <div class="promise-photo">
+
+          <img
+            src="images/our-promise.jpg"
+            alt="Fresh homemade baking at Home Style Bakery"
+            loading="lazy"
+            onerror="this.src='https://placehold.co/1200x600/292929/ffffff?text=Home+Style+Bakery'"
+          >
+
+        </div>
+
+
+        <div class="promise-grid">
+
+
+          <div class="promise-card">
+
+            <div class="promise-icon">
+              01
+            </div>
+
+            <h3>
+              Organic Ingredients
+            </h3>
+
+            <p>
+              Carefully selected ingredients chosen
+              for quality and flavour.
             </p>
 
           </div>
 
 
-          <div class="selected-check">
+          <div class="promise-card">
 
-            ${selected ? "✓" : "+"}
+            <div class="promise-icon">
+              02
+            </div>
+
+            <h3>
+              100% Eggless
+            </h3>
+
+            <p>
+              Every product is made without eggs,
+              while keeping flavour and texture delicious.
+            </p>
 
           </div>
 
 
-          ${
-            selected
-            ? `
+          <div class="promise-card">
 
-              <div
-                class="quantity-row"
-                onclick="event.stopPropagation()"
-              >
+            <div class="promise-icon">
+              03
+            </div>
 
-                <span>
-                  Quantity
-                </span>
+            <h3>
+              No Artificial Colours
+            </h3>
 
-                <div class="quantity-controls">
+            <p>
+              We keep our baking natural and avoid
+              unnecessary artificial colours.
+            </p>
 
-                  <button
-                    type="button"
-                    class="qty-button"
-                    onclick="changeQuantity('${product.name.replace(/'/g, "\\'")}', -1, event)"
-                  >
-                    −
-                  </button>
+          </div>
 
-                  <span class="qty-number">
-                    ${quantity}
-                  </span>
 
-                  <button
-                    type="button"
-                    class="qty-button"
-                    onclick="changeQuantity('${product.name.replace(/'/g, "\\'")}', 1, event)"
-                  >
-                    +
-                  </button>
+          <div class="promise-card">
 
-                </div>
+            <div class="promise-icon">
+              04
+            </div>
 
-              </div>
+            <h3>
+              No Preservatives
+            </h3>
 
-            `
-            : ""
-          }
+            <p>
+              Fresh homemade baking without
+              unnecessary preservatives.
+            </p>
+
+          </div>
+
 
         </div>
 
-      `;
+      </div>
 
-    }).join("");
-
-}
+    </section>
 
 
-function toggleProduct(name) {
+    <!-- OUR STORY -->
 
-  if (selectedProducts[name]) {
-
-    delete selectedProducts[name];
-
-  } else {
-
-    let product = null;
+    <section class="story" id="story">
 
 
-    for (
-      const category in bakeryProducts
-    ) {
+      <div class="story-image">
 
-      const found =
-        bakeryProducts[category].find(
-          function(item) {
-            return item.name === name;
+        <img
+          src="images/our-kitchen.jpg"
+          alt="Home Style Bakery kitchen"
+          loading="lazy"
+          onerror="this.src='https://placehold.co/1000x900/e9e9e6/555555?text=Our+Kitchen'"
+        >
+
+      </div>
+
+
+      <div class="story-copy">
+
+        <span class="section-label">
+          OUR STORY
+        </span>
+
+        <h2>
+          Made at home.<br>
+          <em>Made with heart.</em>
+        </h2>
+
+        <p>
+          Home Style Bakery started with a simple idea:
+          homemade food should taste homemade.
+        </p>
+
+        <p>
+          We bake in small batches using carefully selected
+          ingredients, premium quality butter and traditional
+          homemade methods.
+        </p>
+
+        <p>
+          From cakes and cheesecakes to breads, cookies and
+          desserts, everything is prepared with the same care
+          we would use for our own family.
+        </p>
+
+
+        <div class="story-highlight">
+
+          <strong>
+            Home Style Bakery
+          </strong>
+
+          <span>
+            London, Ontario
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+
+      <div>
+
+        <h3>
+          Home Style Bakery
+        </h3>
+
+        <p>
+          Homemade · Eggless · Vegetarian
+        </p>
+
+        <div class="footer-location">
+          London, Ontario
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Explore
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="#home">
+            Home
+          </a>
+
+          <a href="#products">
+            Our Baking
+          </a>
+
+          <a href="#promise">
+            Our Promise
+          </a>
+
+          <a href="#story">
+            Our Story
+          </a>
+
+          <a href="#order">
+            Order
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Order
+        </h3>
+
+        <p>
+
+          <a
+            href="https://wa.me/15192008436?text=Hi%20Home%20Style%20Bakery%2C%20I%20would%20like%20to%20place%20an%20order."
+            target="_blank"
+            rel="noopener"
+          >
+            WhatsApp us
+          </a>
+
+        </p>
+
+        <p>
+
+          <a href="tel:+15192008436">
+            +1 519 200 8436
+          </a>
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Home Style Bakery ·
+      Made with care in London, Ontario
+
+    </div>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    const bakeryProducts = {
+
+      cakes: [
+
+        {
+          name: "Lemon Cake",
+          price: 35,
+          image: "images/lemon-cake.jpg"
+        },
+
+        {
+          name: "Banana Walnut Cake",
+          price: 35,
+          image: "images/02_banana_walnut_cake.jpg"
+        },
+
+        {
+          name: "Pecan Cake",
+          price: 40,
+          image: "images/03_pecan_cake.jpg"
+        }
+
+      ],
+
+
+      cheesecakes: [
+
+        {
+          name: "Strawberry Cheesecake",
+          price: 45,
+          image: "images/04_strawberry_cheesecake.jpg"
+        },
+
+        {
+          name: "Classic Cheesecake",
+          price: 40,
+          image: "images/cheesecake.jpg"
+        }
+
+      ],
+
+
+      breads: [
+
+        {
+          name: "Focaccia Bread",
+          price: 12,
+          image: "images/06_focaccia_bread.jpg"
+        },
+
+        {
+          name: "Homemade Bread",
+          price: 8,
+          image: "images/07_homemade_bread.jpg"
+        }
+
+      ],
+
+
+      desserts: [
+
+        {
+          name: "Homemade Fruit Custard",
+          price: 12,
+          image: "images/05_custard.jpg"
+        }
+
+      ],
+
+
+      cookies: [
+
+        {
+          name: "Homemade Cookies",
+          price: 10,
+          image: "images/cookies.jpg"
+        }
+
+      ],
+
+
+      other: [
+
+        {
+          name: "A2 Desi Ghee",
+          price: 0,
+          image: "images/ghee.jpg"
+        }
+
+      ]
+
+    };
+
+
+    let selectedProducts = {};
+
+
+    function displayProducts(category, button) {
+
+      const container =
+        document.getElementById("orderProducts");
+
+      if (!container) {
+        return;
+      }
+
+
+      document
+        .querySelectorAll(".category-button")
+        .forEach(function(btn) {
+
+          btn.classList.remove("active");
+
+        });
+
+
+      if (button) {
+
+        button.classList.add("active");
+
+      }
+
+
+      const products =
+        bakeryProducts[category] || [];
+
+
+      container.innerHTML =
+        products.map(function(product) {
+
+          const selected =
+            selectedProducts[product.name];
+
+          const quantity =
+            selected ? selected.quantity : 0;
+
+
+          const safeName =
+            product.name
+              .replace(/\\/g, "\\\\")
+              .replace(/'/g, "\\'");
+
+
+          return `
+
+            <div
+              class="order-product ${selected ? "selected" : ""}"
+              onclick="toggleProduct('${safeName}')"
+            >
+
+              <div class="order-product-image">
+
+                <img
+                  src="${product.image}"
+                  alt="${product.name}"
+                  loading="lazy"
+                  onerror="this.src='https://placehold.co/400x300/e9e9e6/555555?text=Bakery'"
+                >
+
+              </div>
+
+
+              <div class="order-product-info">
+
+                <h4>
+                  ${product.name}
+                </h4>
+
+                <p>
+                  ${
+                    product.price > 0
+                    ? "$" + product.price
+                    : "Contact for price"
+                  }
+                </p>
+
+              </div>
+
+
+              <div class="selected-check">
+
+                ${selected ? "✓" : "+"}
+
+              </div>
+
+
+              ${
+                selected
+                ? `
+
+                  <div
+                    class="quantity-row"
+                    onclick="event.stopPropagation()"
+                  >
+
+                    <span>
+                      Quantity
+                    </span>
+
+                    <div class="quantity-controls">
+
+                      <button
+                        type="button"
+                        class="qty-button"
+                        onclick="changeQuantity('${safeName}', -1, event)"
+                      >
+                        −
+                      </button>
+
+                      <span class="qty-number">
+                        ${quantity}
+                      </span>
+
+                      <button
+                        type="button"
+                        class="qty-button"
+                        onclick="changeQuantity('${safeName}', 1, event)"
+                      >
+                        +
+                      </button>
+
+                    </div>
+
+                  </div>
+
+                `
+                : ""
+              }
+
+            </div>
+
+          `;
+
+        }).join("");
+
+    }
+
+
+    function toggleProduct(name) {
+
+      if (selectedProducts[name]) {
+
+        delete selectedProducts[name];
+
+      }
+
+      else {
+
+        let product = null;
+
+
+        for (
+          const category in bakeryProducts
+        ) {
+
+          const found =
+            bakeryProducts[category].find(
+              function(item) {
+
+                return item.name === name;
+
+              }
+            );
+
+
+          if (found) {
+
+            product = found;
+
+            break;
+
           }
+
+        }
+
+
+        if (!product) {
+          return;
+        }
+
+
+        selectedProducts[name] = {
+
+          ...product,
+
+          quantity: 1
+
+        };
+
+      }
+
+
+      updateSummary();
+
+
+      const activeButton =
+        document.querySelector(
+          ".category-button.active"
         );
 
 
-      if (found) {
-        product = found;
-        break;
+      if (activeButton) {
+
+        const categoryText =
+          activeButton.textContent
+            .trim()
+            .toLowerCase();
+
+
+        const categoryMap = {
+
+          cakes: "cakes",
+          cheesecakes: "cheesecakes",
+          breads: "breads",
+          desserts: "desserts",
+          cookies: "cookies",
+          other: "other"
+
+        };
+
+
+        displayProducts(
+          categoryMap[categoryText] || "cakes",
+          activeButton
+        );
+
       }
 
     }
 
 
-    if (!product) return;
+    function changeQuantity(
+      name,
+      amount,
+      event
+    ) {
 
+      if (event) {
 
-    selectedProducts[name] = {
+        event.stopPropagation();
 
-      ...product,
+      }
 
-      quantity: 1
 
-    };
+      if (!selectedProducts[name]) {
 
-  }
+        return;
 
+      }
 
-  updateSummary();
 
+      selectedProducts[name].quantity += amount;
 
-  const activeButton =
-    document.querySelector(
-      ".category-button.active"
-    );
 
+      if (
+        selectedProducts[name].quantity <= 0
+      ) {
 
-  if (activeButton) {
+        delete selectedProducts[name];
 
-    const category =
-      activeButton.textContent
-        .trim()
-        .toLowerCase();
+      }
 
 
-    const categoryMap = {
+      updateSummary();
 
-      cakes: "cakes",
 
-      cheesecakes: "cheesecakes",
+      const activeButton =
+        document.querySelector(
+          ".category-button.active"
+        );
 
-      breads: "breads",
 
-      desserts: "desserts",
+      if (activeButton) {
 
-      cookies: "cookies",
+        const categoryText =
+          activeButton.textContent
+            .trim()
+            .toLowerCase();
 
-      other: "other"
 
-    };
+        const categoryMap = {
 
+          cakes: "cakes",
+          cheesecakes: "cheesecakes",
+          breads: "breads",
+          desserts: "desserts",
+          cookies: "cookies",
+          other: "other"
 
-    displayProducts(
-      categoryMap[category] || "cakes",
-      activeButton
-    );
+        };
 
-  }
 
-}
+        displayProducts(
+          categoryMap[categoryText] || "cakes",
+          activeButton
+        );
 
+      }
 
-function changeQuantity(
-  name,
-  amount,
-  event
-) {
+    }
 
-  if (event) {
-    event.stopPropagation();
-  }
 
+    function updateSummary() {
 
-  if (!selectedProducts[name]) {
-    return;
-  }
+      const summary =
+        document.getElementById("summaryList");
 
+      const orderSummary =
+        document.getElementById("orderSummary");
 
-  selectedProducts[name].quantity += amount;
 
+      if (!summary || !orderSummary) {
 
-  if (
-    selectedProducts[name].quantity <= 0
-  ) {
+        return;
 
-    delete selectedProducts[name];
+      }
 
-  }
 
+      const items =
+        Object.values(selectedProducts);
 
-  updateSummary();
 
+      if (items.length === 0) {
 
-  const activeButton =
-    document.querySelector(
-      ".category-button.active"
-    );
+        orderSummary.classList.remove("visible");
 
 
-  if (activeButton) {
+        summary.innerHTML = `
 
-    const category =
-      activeButton.textContent
-        .trim()
-        .toLowerCase();
+          <p class="empty-summary">
+            Your selected items will appear here.
+          </p>
 
+        `;
 
-    const categoryMap = {
+        return;
 
-      cakes: "cakes",
+      }
 
-      cheesecakes: "cheesecakes",
 
-      breads: "breads",
+      orderSummary.classList.add("visible");
 
-      desserts: "desserts",
 
-      cookies: "cookies",
+      let total = 0;
 
-      other: "other"
 
-    };
+      summary.innerHTML =
+        items.map(function(item) {
 
+          const itemTotal =
+            item.price * item.quantity;
 
-    displayProducts(
-      categoryMap[category] || "cakes",
-      activeButton
-    );
 
-  }
+          total += itemTotal;
 
-}
 
+          return `
 
-function updateSummary() {
+            <div class="summary-item">
 
-  const summary =
-    document.getElementById("summaryList");
+              <div>
 
-  if (!summary) return;
+                <strong>
+                  ${item.name}
+                </strong>
 
+                <span>
+                  × ${item.quantity}
+                </span>
 
-  const items =
-    Object.values(selectedProducts);
+              </div>
 
+              <strong>
 
-  if (items.length === 0) {
+                ${
+                  item.price > 0
+                  ? "$" + itemTotal
+                  : "Contact"
+                }
 
-    summary.innerHTML = `
-      <p class="empty-summary">
-        Your selected items will appear here.
-      </p>
-    `;
+              </strong>
 
-    return;
+            </div>
 
-  }
+          `;
 
+        }).join("");
 
-  let total = 0;
 
+      const hasPricedItems =
+        items.some(
+          function(item) {
 
-  summary.innerHTML =
-    items.map(function(item) {
+            return item.price > 0;
 
-      const itemTotal =
-        item.price * item.quantity;
+          }
+        );
 
 
-      total += itemTotal;
+      summary.innerHTML += `
 
+        <div class="summary-total">
 
-      return `
-
-        <div class="summary-item">
-
-          <div>
-
-            <strong>
-              ${item.name}
-            </strong>
-
-            <span>
-              × ${item.quantity}
-            </span>
-
-          </div>
+          <span>
+            Estimated total
+          </span>
 
           <strong>
+
             ${
-              item.price > 0
-              ? "$" + itemTotal
-              : "Contact"
+              hasPricedItems
+              ? "$" + total
+              : "Contact for price"
             }
+
           </strong>
 
         </div>
 
       `;
 
-    }).join("");
+    }
 
 
-  const hasPricedItems =
-    items.some(
-      function(item) {
-        return item.price > 0;
+    function sendWhatsAppOrder() {
+
+      const items =
+        Object.values(selectedProducts);
+
+
+      if (items.length === 0) {
+
+        alert(
+          "Please select at least one item before sending your order."
+        );
+
+        return;
+
+      }
+
+
+      const name =
+        document
+          .getElementById("customerName")
+          .value
+          .trim();
+
+
+      const phone =
+        document
+          .getElementById("customerPhone")
+          .value
+          .trim();
+
+
+      const notes =
+        document
+          .getElementById("customerNotes")
+          .value
+          .trim();
+
+
+      let message =
+        "Hi Home Style Bakery!\n\n";
+
+
+      message +=
+        "I'd like to place an order:\n\n";
+
+
+      items.forEach(function(item) {
+
+        message +=
+          "• " +
+          item.name +
+          " × " +
+          item.quantity +
+          "\n";
+
+      });
+
+
+      message += "\n";
+
+
+      if (name) {
+
+        message +=
+          "Name: " +
+          name +
+          "\n";
+
+      }
+
+
+      if (phone) {
+
+        message +=
+          "Phone: " +
+          phone +
+          "\n";
+
+      }
+
+
+      if (notes) {
+
+        message +=
+          "Notes: " +
+          notes +
+          "\n";
+
+      }
+
+
+      message +=
+        "\nPlease let me know availability and the final price. Thank you!";
+
+
+      const whatsappURL =
+        "https://wa.me/15192008436?text=" +
+        encodeURIComponent(message);
+
+
+      window.open(
+        whatsappURL,
+        "_blank",
+        "noopener"
+      );
+
+    }
+
+
+    /* Load cakes when page opens */
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function() {
+
+        displayProducts("cakes");
+
+        updateSummary();
+
       }
     );
 
-
-  summary.innerHTML += `
-
-    <div class="summary-total">
-
-      <span>
-        Estimated total
-      </span>
-
-      <strong>
-        ${
-          hasPricedItems
-          ? "$" + total
-          : "Contact for price"
-        }
-      </strong>
-
-    </div>
-
-  `;
-
-}
-
-
-function sendWhatsAppOrder() {
-
-  const items =
-    Object.values(selectedProducts);
-
-
-  if (items.length === 0) {
-
-    alert(
-      "Please select at least one item before sending your order."
-    );
-
-    return;
-
-  }
-
-
-  const name =
-    document
-      .getElementById("customerName")
-      .value
-      .trim();
-
-
-  const phone =
-    document
-      .getElementById("customerPhone")
-      .value
-      .trim();
-
-
-  const notes =
-    document
-      .getElementById("customerNotes")
-      .value
-      .trim();
-
-
-  let message =
-    "Hi Home Style Bakery!%0A%0A";
-
-
-  message +=
-    "*I'd like to place an order:*%0A%0A";
-
-
-  items.forEach(function(item) {
-
-    message +=
-      "• " +
-      encodeURIComponent(item.name) +
-      " × " +
-      item.quantity +
-      "%0A";
-
-  });
-
-
-  message += "%0A";
-
-
-  if (name) {
-
-    message +=
-      "*Name:* " +
-      encodeURIComponent(name) +
-      "%0A";
-
-  }
-
-
-  if (phone) {
-
-    message +=
-      "*Phone:* " +
-      encodeURIComponent(phone) +
-      "%0A";
-
-  }
-
-
-  if (notes) {
-
-    message +=
-      "*Notes:* " +
-      encodeURIComponent(notes) +
-      "%0A";
-
-  }
-
-
-  message +=
-    "%0APlease let me know availability and the final price. Thank you!";
-
-
-  const whatsappURL =
-    "https://wa.me/15192008436?text=" +
-    message;
-
-
-  window.open(
-    whatsappURL,
-    "_blank",
-    "noopener"
-  );
-
-}
-
-
-/* Load cakes when the page opens */
-
-document.addEventListener(
-  "DOMContentLoaded",
-  function() {
-
-    displayProducts("cakes");
-
-    updateSummary();
-
-  }
-);
-
-</script>
+  </script>
 
 
 </body>
+
 </html>
-    
-```
