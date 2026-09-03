@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 
@@ -8,11 +7,10 @@
 
   <title>Home Style Bakery | Eggless. Homemade. Made Beautifully.</title>
 
-<meta
-name="description"
-content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes, cheesecakes, breads, cookies, desserts and A2 ghee made with carefully selected ingredients."
-
->
+  <meta
+    name="description"
+    content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes, cheesecakes, breads, cookies, desserts and A2 ghee made with carefully selected ingredients."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,18 +51,15 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       --radius: 28px;
     }
 
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
-
 
     body {
       font-family: "DM Sans", sans-serif;
@@ -83,46 +78,37 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         var(--bg);
 
       color: var(--cream);
-
       line-height: 1.6;
 
       -webkit-font-smoothing: antialiased;
-
       overflow-x: hidden;
     }
-
 
     body::before {
       content: "";
 
       position: fixed;
-
       inset: 0;
 
       pointer-events: none;
-
       opacity: .025;
 
       background-image:
         radial-gradient(#fff 1px, transparent 1px);
 
       background-size: 4px 4px;
-
       z-index: 9999;
     }
-
 
     img {
       width: 100%;
       display: block;
     }
 
-
     a {
       color: inherit;
       text-decoration: none;
     }
-
 
     button,
     input,
@@ -131,15 +117,12 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       font-family: inherit;
     }
 
-
     /* =========================
        ANIMATIONS
     ========================= */
 
-
     .reveal {
       opacity: 0;
-
       transform: translateY(30px);
 
       transition:
@@ -147,30 +130,22 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         transform .8s ease;
     }
 
-
     .reveal.visible {
       opacity: 1;
-
       transform: translateY(0);
     }
 
-
     @keyframes float {
-
-      0%,
-      100% {
+      0%, 100% {
         transform: translateY(0);
       }
 
       50% {
         transform: translateY(-8px);
       }
-
     }
 
-
     @keyframes pulse {
-
       0% {
         box-shadow:
           0 0 0 0 rgba(197,169,123,.25);
@@ -185,26 +160,19 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         box-shadow:
           0 0 0 0 rgba(197,169,123,0);
       }
-
     }
 
-
     @keyframes emojiFloat {
-
-      0%,
-      100% {
+      0%, 100% {
         transform: translateY(0) rotate(0deg);
       }
 
       50% {
         transform: translateY(-5px) rotate(2deg);
       }
-
     }
 
-
     @keyframes fadeUp {
-
       from {
         opacity: 0;
         transform: translateY(15px);
@@ -214,30 +182,22 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         opacity: 1;
         transform: translateY(0);
       }
-
     }
-
 
     /* =========================
        TOP BAR
     ========================= */
 
-
     .announcement {
       background: #080908;
-
       color: #aaa99f;
-
       text-align: center;
 
       padding: 10px 15px;
 
       font-size: 10px;
-
       font-weight: 800;
-
       letter-spacing: 1.5px;
-
       text-transform: uppercase;
 
       border-bottom:
@@ -246,24 +206,18 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       overflow: hidden;
     }
 
-
     .announcement span {
       display: inline-block;
-
       margin: 0 5px;
     }
-
 
     /* =========================
        NAVIGATION
     ========================= */
 
-
     nav {
       position: sticky;
-
       top: 0;
-
       z-index: 1000;
 
       background:
@@ -279,49 +233,47 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         1px solid rgba(255,255,255,.07);
     }
 
-
     .nav-container {
       max-width: 1380px;
-
       margin: auto;
 
-      padding: 18px 30px;
+      padding: 14px 30px;
 
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
 
       gap: 30px;
     }
 
+    /* =========================
+       LOGO
+    ========================= */
 
     .logo {
-      font-family:
-        "Playfair Display",
-        serif;
+      display: flex;
+      align-items: center;
 
-      font-size: 22px;
+      width: 150px;
+      height: 55px;
 
-      font-weight: 700;
-
-      letter-spacing: -.5px;
-
-      color: var(--cream);
-
-      white-space: nowrap;
+      flex-shrink: 0;
+      overflow: hidden;
     }
 
+    .logo img {
+      width: 150px;
+      height: auto;
+      max-height: 55px;
 
-    .logo span {
-      color: var(--gold);
+      object-fit: contain;
+      object-position: left center;
+
+      display: block;
     }
-
 
     .nav-links {
       display: flex;
-
       align-items: center;
 
       gap: 28px;
@@ -329,27 +281,22 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       list-style: none;
 
       font-size: 12px;
-
       font-weight: 600;
 
       color: #a9aaa4;
     }
-
 
     .nav-links a {
       transition:
         color .25s ease;
     }
 
-
     .nav-links a:hover {
       color: var(--cream);
     }
 
-
     .nav-order {
       background: var(--cream);
-
       color: #111 !important;
 
       padding: 11px 20px;
@@ -361,22 +308,17 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         background .25s ease;
     }
 
-
     .nav-order:hover {
       background: var(--gold-soft);
-
       transform: translateY(-2px);
     }
-
 
     /* =========================
        HERO
     ========================= */
 
-
     .hero {
       max-width: 1380px;
-
       min-height: 780px;
 
       margin: auto;
@@ -392,15 +334,12 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       gap: 70px;
     }
 
-
     .hero-content {
       max-width: 610px;
     }
 
-
     .eyebrow {
       display: inline-flex;
-
       align-items: center;
 
       gap: 10px;
@@ -408,27 +347,22 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       color: var(--gold);
 
       font-size: 10px;
-
       font-weight: 800;
 
       letter-spacing: 2px;
-
       text-transform: uppercase;
 
       margin-bottom: 25px;
     }
 
-
     .eyebrow::before {
       content: "";
 
       width: 30px;
-
       height: 1px;
 
       background: var(--gold);
     }
-
 
     .hero h1 {
       font-family:
@@ -447,13 +381,10 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin-bottom: 30px;
     }
 
-
     .hero h1 em {
       color: var(--green);
-
       font-style: normal;
     }
-
 
     .hero-description {
       max-width: 540px;
@@ -467,15 +398,12 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin-bottom: 35px;
     }
 
-
     .hero-description strong {
       color: var(--cream);
     }
 
-
     .hero-buttons {
       display: flex;
-
       flex-wrap: wrap;
 
       gap: 12px;
@@ -483,12 +411,10 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin-bottom: 30px;
     }
 
-
     .button {
       display: inline-flex;
 
       align-items: center;
-
       justify-content: center;
 
       padding: 14px 23px;
@@ -496,7 +422,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       border-radius: 100px;
 
       font-size: 12px;
-
       font-weight: 800;
 
       transition:
@@ -505,23 +430,18 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         border-color .25s ease;
     }
 
-
     .button-primary {
       background: var(--cream);
-
       color: #111;
 
       box-shadow:
         0 15px 40px rgba(0,0,0,.25);
     }
 
-
     .button-primary:hover {
       background: var(--gold-soft);
-
       transform: translateY(-3px);
     }
-
 
     .button-secondary {
       border:
@@ -533,7 +453,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         rgba(255,255,255,.025);
     }
 
-
     .button-secondary:hover {
       background:
         rgba(255,255,255,.08);
@@ -541,15 +460,12 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       transform: translateY(-3px);
     }
 
-
     .hero-features {
       display: flex;
-
       flex-wrap: wrap;
 
       gap: 8px;
     }
-
 
     .hero-features span {
       padding: 7px 11px;
@@ -565,24 +481,18 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       color: #aaa;
 
       font-size: 10px;
-
       font-weight: 700;
     }
 
-
     /* HERO IMAGE */
-
 
     .hero-visual {
       position: relative;
-
       min-height: 620px;
     }
 
-
     .hero-image {
       position: absolute;
-
       inset: 0;
 
       overflow: hidden;
@@ -597,28 +507,23 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       box-shadow: var(--shadow);
     }
 
-
     .hero-image img {
       height: 100%;
-
       object-fit: cover;
 
       transition:
         transform 1s ease;
     }
 
-
     .hero-visual:hover
     .hero-image img {
       transform: scale(1.025);
     }
 
-
     .hero-image::after {
       content: "";
 
       position: absolute;
-
       inset: 0;
 
       background:
@@ -629,12 +534,10 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         );
     }
 
-
     .hero-card {
       position: absolute;
 
       left: -35px;
-
       bottom: 35px;
 
       z-index: 3;
@@ -660,19 +563,15 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         float 5s ease-in-out infinite;
     }
 
-
     .hero-card small {
       color: var(--gold);
 
       font-size: 9px;
-
       font-weight: 800;
 
       letter-spacing: 1.5px;
-
       text-transform: uppercase;
     }
-
 
     .hero-card strong {
       display: block;
@@ -686,45 +585,36 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin: 7px 0 4px;
     }
 
-
     .hero-card span {
       color: var(--muted);
-
       font-size: 10px;
     }
-
 
     .hero-stamp {
       position: absolute;
 
       right: -20px;
-
       top: 40px;
 
       z-index: 3;
 
       width: 115px;
-
       height: 115px;
 
       border-radius: 50%;
 
       display: grid;
-
       place-items: center;
 
       text-align: center;
 
       background: var(--gold);
-
       color: #17140f;
 
       font-size: 9px;
-
       font-weight: 900;
 
       letter-spacing: 1px;
-
       text-transform: uppercase;
 
       padding: 18px;
@@ -733,11 +623,9 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         pulse 3s infinite;
     }
 
-
     /* =========================
        MARQUEE
     ========================= */
-
 
     .marquee {
       border-top:
@@ -751,7 +639,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       overflow: hidden;
     }
 
-
     .marquee-track {
       display: flex;
 
@@ -761,10 +648,8 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         marquee 28s linear infinite;
     }
 
-
     .marquee-item {
       display: flex;
-
       align-items: center;
 
       gap: 8px;
@@ -774,26 +659,21 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       color: #878a83;
 
       font-size: 10px;
-
       font-weight: 800;
 
       letter-spacing: 2px;
-
       text-transform: uppercase;
 
       white-space: nowrap;
     }
 
-
     .marquee-icon {
       font-size: 17px;
-
       letter-spacing: 0;
 
       animation:
         emojiFloat 3s ease-in-out infinite;
     }
-
 
     .marquee-item::after {
       content: "✦";
@@ -803,9 +683,7 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       color: var(--gold);
     }
 
-
     @keyframes marquee {
-
       from {
         transform: translateX(0);
       }
@@ -813,14 +691,11 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       to {
         transform: translateX(-50%);
       }
-
     }
-
 
     /* =========================
        SECTION
     ========================= */
-
 
     .section {
       max-width: 1380px;
@@ -830,19 +705,15 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       padding: 120px 30px;
     }
 
-
     .section-label {
       color: var(--gold);
 
       font-size: 10px;
-
       font-weight: 800;
 
       letter-spacing: 2px;
-
       text-transform: uppercase;
     }
-
 
     .section-header {
       max-width: 720px;
@@ -850,15 +721,12 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin-bottom: 55px;
     }
 
-
     .section-header.center {
       text-align: center;
 
       margin-left: auto;
-
       margin-right: auto;
     }
-
 
     .section-header h2 {
       font-family:
@@ -877,13 +745,10 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin: 13px 0 20px;
     }
 
-
     .section-header h2 em {
       color: var(--green);
-
       font-style: normal;
     }
-
 
     .section-header p {
       color: var(--muted);
@@ -893,11 +758,9 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       line-height: 1.85;
     }
 
-
     /* =========================
        PRODUCTS
     ========================= */
-
 
     .products {
       display: grid;
@@ -907,7 +770,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
       gap: 18px;
     }
-
 
     .product-card {
       position: relative;
@@ -933,7 +795,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         box-shadow .35s ease;
     }
 
-
     .product-card:hover {
       transform: translateY(-8px);
 
@@ -943,7 +804,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       box-shadow: var(--shadow);
     }
 
-
     .product-image {
       height: 330px;
 
@@ -951,7 +811,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
       background: #20231f;
     }
-
 
     .product-image img {
       height: 100%;
@@ -962,18 +821,15 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         transform .7s ease;
     }
 
-
     .product-card:hover
     .product-image img {
       transform: scale(1.06);
     }
 
-
     .product-info {
       padding:
         25px 25px 28px;
     }
-
 
     .tag {
       display: inline-block;
@@ -991,14 +847,12 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       border-radius: 100px;
 
       font-size: 8px;
-
       font-weight: 900;
 
       letter-spacing: 1.4px;
 
       margin-bottom: 13px;
     }
-
 
     .product-info h3 {
       font-family:
@@ -1014,7 +868,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin-bottom: 9px;
     }
 
-
     .product-info p {
       color: var(--muted);
 
@@ -1024,7 +877,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
       margin-bottom: 18px;
     }
-
 
     .product-button {
       display: inline-flex;
@@ -1036,23 +888,19 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       color: var(--cream);
 
       font-size: 11px;
-
       font-weight: 800;
 
       transition:
         color .2s ease;
     }
 
-
     .product-button:hover {
       color: var(--gold);
     }
 
-
     /* =========================
        ORDER BUILDER
     ========================= */
-
 
     .order-builder-section {
       background:
@@ -1072,13 +920,10 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       padding: 120px 30px;
     }
 
-
     .order-builder {
       max-width: 1120px;
-
       margin: auto;
     }
-
 
     .order-builder-header {
       text-align: center;
@@ -1088,7 +933,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin:
         0 auto 55px;
     }
-
 
     .order-builder-header h2 {
       font-family:
@@ -1107,20 +951,15 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin: 13px 0 17px;
     }
 
-
     .order-builder-header h2 em {
       color: var(--green);
-
       font-style: normal;
     }
 
-
     .order-builder-header p {
       color: var(--muted);
-
       font-size: 13px;
     }
-
 
     .order-step {
       background:
@@ -1143,16 +982,13 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         0 20px 70px rgba(0,0,0,.16);
     }
 
-
     .step-number {
       width: 35px;
-
       height: 35px;
 
       border-radius: 50%;
 
       display: grid;
-
       place-items: center;
 
       background: var(--gold);
@@ -1160,12 +996,10 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       color: #17140f;
 
       font-size: 10px;
-
       font-weight: 900;
 
       margin-bottom: 17px;
     }
-
 
     .step-content h3 {
       font-family:
@@ -1179,11 +1013,9 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin-bottom: 25px;
     }
 
-
     /* =========================
        CATEGORY CARDS
     ========================= */
-
 
     .category-grid {
       display: grid;
@@ -1193,7 +1025,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
       gap: 10px;
     }
-
 
     .category-button {
       position: relative;
@@ -1219,7 +1050,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         box-shadow .3s ease;
     }
 
-
     .category-button:hover {
       transform: translateY(-4px);
 
@@ -1230,7 +1060,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         0 15px 35px rgba(0,0,0,.25);
     }
 
-
     .category-button.active {
       border-color: var(--gold);
 
@@ -1239,14 +1068,12 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         0 15px 35px rgba(0,0,0,.2);
     }
 
-
     .category-button img {
       position: absolute;
 
       inset: 0;
 
       width: 100%;
-
       height: 100%;
 
       object-fit: cover;
@@ -1258,14 +1085,12 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         opacity .3s ease;
     }
 
-
     .category-button:hover img,
     .category-button.active img {
       transform: scale(1.08);
 
       opacity: .65;
     }
-
 
     .category-button::after {
       content: "";
@@ -1282,30 +1107,24 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         );
     }
 
-
     .category-name {
       position: absolute;
 
       left: 14px;
-
       right: 14px;
-
       bottom: 13px;
 
       z-index: 2;
 
       font-size: 11px;
-
       font-weight: 800;
 
       text-align: left;
     }
 
-
     /* =========================
        ORDER PRODUCTS
     ========================= */
-
 
     .order-products {
       display: grid;
@@ -1315,7 +1134,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
       gap: 14px;
     }
-
 
     .order-product {
       position: relative;
@@ -1339,7 +1157,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         background .25s ease;
     }
 
-
     .order-product:hover {
       transform: translateY(-4px);
 
@@ -1347,13 +1164,10 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         rgba(197,169,123,.45);
     }
 
-
     .order-product.selected {
       border-color: var(--gold);
-
       background: #1b1d19;
     }
-
 
     .order-product-image {
       height: 160px;
@@ -1367,13 +1181,10 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       background: #20231f;
     }
 
-
     .order-product-image img {
       height: 100%;
-
       object-fit: cover;
     }
-
 
     .order-product-info h4 {
       font-family:
@@ -1387,23 +1198,18 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin-bottom: 3px;
     }
 
-
     .order-product-info p {
       color: var(--muted);
-
       font-size: 11px;
     }
-
 
     .selected-check {
       position: absolute;
 
       top: 12px;
-
       right: 12px;
 
       width: 29px;
-
       height: 29px;
 
       border-radius: 50%;
@@ -1421,18 +1227,15 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       z-index: 3;
     }
 
-
     .order-product.selected
     .selected-check {
       display: grid;
     }
 
-
     .quantity-row {
       display: none;
 
       align-items: center;
-
       justify-content: space-between;
 
       margin-top: 15px;
@@ -1447,25 +1250,19 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       font-size: 11px;
     }
 
-
     .order-product.selected
     .quantity-row {
       display: flex;
     }
 
-
     .quantity-controls {
       display: flex;
-
       align-items: center;
-
       gap: 9px;
     }
 
-
     .qty-button {
       width: 29px;
-
       height: 29px;
 
       border:
@@ -1480,7 +1277,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       cursor: pointer;
     }
 
-
     .qty-number {
       min-width: 18px;
 
@@ -1491,16 +1287,13 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       font-weight: 800;
     }
 
-
     /* =========================
        ORDER SUMMARY
     ========================= */
 
-
     .order-summary {
       display: none;
     }
-
 
     .order-summary.visible {
       display: block;
@@ -1508,7 +1301,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       animation:
         fadeUp .4s ease;
     }
-
 
     .summary-list {
       display: flex;
@@ -1520,12 +1312,10 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin-bottom: 25px;
     }
 
-
     .summary-item {
       display: flex;
 
       align-items: center;
-
       justify-content: space-between;
 
       padding: 14px 16px;
@@ -1538,26 +1328,19 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       border-radius: 13px;
     }
 
-
     .summary-item strong {
       color: var(--cream);
-
       font-size: 12px;
     }
 
-
     .summary-item span {
       color: var(--muted);
-
       font-size: 11px;
-
       margin-left: 7px;
     }
 
-
     .summary-total {
       display: flex;
-
       justify-content: space-between;
 
       padding: 18px 16px;
@@ -1568,34 +1351,25 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin-top: 5px;
     }
 
-
     .summary-total span {
       color: var(--muted);
-
       font-size: 12px;
     }
-
 
     .summary-total strong {
       color: var(--gold-soft);
-
       font-size: 18px;
     }
 
-
     .empty-summary {
       color: var(--muted);
-
       font-size: 12px;
-
       padding: 15px 0;
     }
-
 
     /* =========================
        FORM
     ========================= */
-
 
     .customer-form {
       display: grid;
@@ -1606,29 +1380,23 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       gap: 14px;
     }
 
-
     .form-group {
       display: flex;
-
       flex-direction: column;
 
       gap: 7px;
     }
 
-
     .form-group.full {
       grid-column: 1 / -1;
     }
-
 
     .form-group label {
       color: var(--cream);
 
       font-size: 10px;
-
       font-weight: 800;
     }
-
 
     .form-group input,
     .form-group textarea,
@@ -1651,28 +1419,22 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       outline: none;
     }
 
-
     .form-group input::placeholder,
     .form-group textarea::placeholder {
       color: #666a64;
     }
 
-
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
       border-color: var(--gold);
-
       background: #151815;
     }
 
-
     .form-group textarea {
       min-height: 100px;
-
       resize: vertical;
     }
-
 
     .send-order {
       width: 100%;
@@ -1690,7 +1452,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       padding: 17px;
 
       font-size: 12px;
-
       font-weight: 900;
 
       cursor: pointer;
@@ -1700,18 +1461,14 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         background .25s ease;
     }
 
-
     .send-order:hover {
       background: var(--gold-soft);
-
       transform: translateY(-2px);
     }
-
 
     /* =========================
        PROMISE
     ========================= */
-
 
     .promise-section {
       background: #080908;
@@ -1719,7 +1476,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       border-bottom:
         1px solid var(--border);
     }
-
 
     .promise-inner {
       max-width: 1380px;
@@ -1729,7 +1485,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       padding: 125px 30px;
     }
 
-
     .promise-header {
       max-width: 800px;
 
@@ -1737,7 +1492,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
       text-align: center;
     }
-
 
     .promise-header h2 {
       font-family:
@@ -1756,13 +1510,10 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin: 13px 0 18px;
     }
 
-
     .promise-header h2 em {
       color: var(--green);
-
       font-style: normal;
     }
-
 
     .promise-header p {
       color: var(--muted);
@@ -1771,7 +1522,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
       line-height: 1.8;
     }
-
 
     .promise-photo {
       max-width: 1120px;
@@ -1790,7 +1540,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       background: #171a17;
     }
 
-
     .promise-photo img {
       height: 100%;
 
@@ -1800,14 +1549,9 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         transform .8s ease;
     }
 
-
     .promise-photo:hover img {
       transform: scale(1.025);
     }
-
-
-    /* PROMISE CARDS */
-
 
     .promise-grid {
       max-width: 1120px;
@@ -1823,7 +1567,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
       background: var(--border);
     }
-
 
     .promise-card {
       position: relative;
@@ -1846,7 +1589,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         background .35s ease;
     }
 
-
     .promise-card:hover {
       transform: translateY(-5px);
 
@@ -1860,25 +1602,17 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       z-index: 2;
     }
 
-
-    /* BIG EMOJI */
-
-
     .promise-emoji {
       width: 78px;
-
       height: 78px;
 
       border-radius: 23px;
 
       display: flex;
-
       align-items: center;
-
       justify-content: center;
 
       font-size: 48px;
-
       line-height: 1;
 
       background:
@@ -1903,7 +1637,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         box-shadow .35s ease;
     }
 
-
     .promise-card:hover
     .promise-emoji {
       transform:
@@ -1922,19 +1655,16 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         0 18px 40px rgba(0,0,0,.30);
     }
 
-
     .promise-number {
       color: var(--gold);
 
       font-size: 9px;
-
       font-weight: 900;
 
       letter-spacing: 1.5px;
 
       margin-bottom: 13px;
     }
-
 
     .promise-card h3 {
       font-family:
@@ -1950,7 +1680,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin-bottom: 10px;
     }
 
-
     .promise-card p {
       color: var(--muted);
 
@@ -1959,11 +1688,9 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       line-height: 1.75;
     }
 
-
     /* =========================
        STORY
     ========================= */
-
 
     .story {
       max-width: 1380px;
@@ -1982,7 +1709,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       align-items: center;
     }
 
-
     .story-image {
       height: 620px;
 
@@ -1996,7 +1722,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       box-shadow: var(--shadow);
     }
 
-
     .story-image img {
       height: 100%;
 
@@ -2006,16 +1731,13 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         transform .8s ease;
     }
 
-
     .story-image:hover img {
       transform: scale(1.03);
     }
 
-
     .story-copy {
       max-width: 620px;
     }
-
 
     .story-copy h2 {
       font-family:
@@ -2034,13 +1756,10 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin: 13px 0 25px;
     }
 
-
     .story-copy h2 em {
       color: var(--green);
-
       font-style: normal;
     }
-
 
     .story-copy p {
       color: var(--muted);
@@ -2051,7 +1770,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
       margin-bottom: 17px;
     }
-
 
     .story-highlight {
       display: inline-flex;
@@ -2073,25 +1791,19 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         rgba(255,255,255,.025);
     }
 
-
     .story-highlight strong {
       color: var(--cream);
-
       font-size: 12px;
     }
 
-
     .story-highlight span {
       color: var(--gold);
-
       font-size: 10px;
     }
-
 
     /* =========================
        FOOTER
     ========================= */
-
 
     footer {
       background: #060706;
@@ -2103,7 +1815,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       border-top:
         1px solid var(--border);
     }
-
 
     .footer-inner {
       max-width: 1380px;
@@ -2120,7 +1831,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       padding-bottom: 60px;
     }
 
-
     footer h3 {
       font-family:
         "Playfair Display",
@@ -2131,7 +1841,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       margin-bottom: 12px;
     }
 
-
     footer p,
     footer a {
       color: #777a74;
@@ -2141,11 +1850,9 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       line-height: 1.8;
     }
 
-
     footer a:hover {
       color: var(--cream);
     }
-
 
     .footer-links {
       display: flex;
@@ -2155,7 +1862,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       gap: 5px;
     }
 
-
     .footer-location {
       margin-top: 17px;
 
@@ -2163,7 +1869,6 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
       font-size: 11px;
     }
-
 
     .copyright {
       max-width: 1380px;
@@ -2182,11 +1887,9 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       font-size: 9px;
     }
 
-
     /* =========================
        MOBILE FLOATING BUTTON
     ========================= */
-
 
     .mobile-order {
       display: none;
@@ -2194,9 +1897,7 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       position: fixed;
 
       left: 15px;
-
       right: 15px;
-
       bottom: 15px;
 
       z-index: 5000;
@@ -2212,67 +1913,54 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
       color: #111;
 
       font-size: 11px;
-
       font-weight: 900;
 
       box-shadow:
         0 15px 40px rgba(0,0,0,.4);
     }
 
-
     /* =========================
        TABLET
     ========================= */
-
 
     @media (max-width: 1000px) {
 
       .hero {
         grid-template-columns: 1fr;
-
         gap: 50px;
       }
-
 
       .hero-content {
         max-width: 700px;
       }
 
-
       .hero-visual {
         min-height: 550px;
       }
-
 
       .products {
         grid-template-columns:
           repeat(2,1fr);
       }
 
-
       .category-grid {
         grid-template-columns:
           repeat(3,1fr);
       }
-
 
       .promise-grid {
         grid-template-columns:
           repeat(2,1fr);
       }
 
-
       .story {
         grid-template-columns: 1fr;
-
         gap: 55px;
       }
-
 
       .story-copy {
         max-width: 800px;
       }
-
 
       .order-products {
         grid-template-columns:
@@ -2281,44 +1969,41 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
     }
 
-
     /* =========================
        MOBILE
     ========================= */
-
 
     @media (max-width: 680px) {
 
       .announcement {
         font-size: 8px;
-
         letter-spacing: 1px;
-
         padding: 9px 10px;
       }
 
-
       .nav-container {
-        padding: 14px 18px;
+        padding: 10px 18px;
       }
 
-
+      /* MOBILE LOGO */
       .logo {
-        font-size: 18px;
+        width: 125px;
+        height: 45px;
       }
 
+      .logo img {
+        width: 125px;
+        max-height: 45px;
+      }
 
       .nav-links li:not(:last-child) {
         display: none;
       }
 
-
       .nav-links {
         margin-left: auto;
-
         gap: 0;
       }
-
 
       .hero {
         min-height: auto;
@@ -2328,173 +2013,133 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
         gap: 35px;
       }
 
-
       .hero h1 {
         font-size: 51px;
-
         letter-spacing: -2.5px;
       }
-
 
       .hero-description {
         font-size: 13px;
       }
 
-
       .hero-visual {
         min-height: 430px;
       }
 
-
       .hero-card {
         left: 12px;
-
         bottom: 18px;
-
         width: 210px;
       }
 
-
       .hero-stamp {
         right: 8px;
-
         top: 20px;
 
         width: 90px;
-
         height: 90px;
 
         font-size: 7px;
       }
 
-
       .section {
         padding: 80px 18px;
       }
-
 
       .section-header h2 {
         font-size: 43px;
       }
 
-
       .products {
         grid-template-columns: 1fr;
       }
-
 
       .product-image {
         height: 310px;
       }
 
-
       .order-builder-section {
         padding: 80px 15px;
       }
 
-
       .order-step {
         padding: 23px 17px;
-
         border-radius: 22px;
       }
-
 
       .category-grid {
         grid-template-columns:
           repeat(2,1fr);
       }
 
-
       .category-button {
         min-height: 125px;
       }
-
 
       .order-products {
         grid-template-columns: 1fr;
       }
 
-
       .customer-form {
         grid-template-columns: 1fr;
       }
-
 
       .form-group.full {
         grid-column: auto;
       }
 
-
       .send-order {
         grid-column: auto;
       }
-
 
       .promise-inner {
         padding: 80px 18px;
       }
 
-
       .promise-header h2 {
         font-size: 43px;
       }
 
-
       .promise-photo {
         height: 300px;
-
         border-radius: 22px;
       }
-
 
       .promise-grid {
         grid-template-columns: 1fr;
       }
 
-
       .promise-card {
         min-height: auto;
-
         padding: 30px 25px;
       }
 
-
       .promise-emoji {
         width: 72px;
-
         height: 72px;
-
         font-size: 44px;
       }
-
 
       .story {
         padding: 80px 18px;
       }
 
-
       .story-image {
         height: 390px;
       }
-
 
       .story-copy h2 {
         font-size: 45px;
       }
 
-
       .footer-inner {
         grid-template-columns: 1fr;
-
         gap: 35px;
       }
-
 
       footer {
         padding: 55px 18px 25px;
       }
-
 
       .mobile-order {
         display: block;
@@ -2512,17 +2157,15 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
   <div class="announcement">
 
-
-<span>🍰 Eggless</span>
-·
-<span>🌿 Vegetarian</span>
-·
-<span>✨ Carefully Selected</span>
-·
-<span>🚫 No Preservatives</span>
-·
-<span>🎨 No Artificial Colours</span>
-
+    <span>🍰 Eggless</span>
+    ·
+    <span>🌿 Vegetarian</span>
+    ·
+    <span>✨ Carefully Selected</span>
+    ·
+    <span>🚫 No Preservatives</span>
+    ·
+    <span>🎨 No Artificial Colours</span>
 
   </div>
 
@@ -2530,1202 +2173,1039 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
   <nav>
 
+    <div class="nav-container">
 
-<div class="nav-container">
-
-  <a href="#home" class="logo">
-    Home Style <span>Bakery</span>
-  </a>
-
-
-  <ul class="nav-links">
-
-    <li>
-      <a href="#home">Home</a>
-    </li>
-
-    <li>
-      <a href="#products">Bakery</a>
-    </li>
-
-    <li>
-      <a href="#promise">Our Promise</a>
-    </li>
-
-    <li>
-      <a href="#story">Our Story</a>
-    </li>
-
-    <li>
-      <a href="#order" class="nav-order">
-        Order Now
+      <!-- LOGO -->
+      <a href="#home" class="logo">
+        <img
+          src="images/logo.jpg"
+          alt="Home Style Bakery Logo"
+        >
       </a>
-    </li>
 
-  </ul>
+      <ul class="nav-links">
 
-</div>
+        <li>
+          <a href="#home">Home</a>
+        </li>
 
+        <li>
+          <a href="#products">Bakery</a>
+        </li>
+
+        <li>
+          <a href="#promise">Our Promise</a>
+        </li>
+
+        <li>
+          <a href="#story">Our Story</a>
+        </li>
+
+        <li>
+          <a href="#order" class="nav-order">
+            Order Now
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
 
   </nav>
 
   <main id="home">
 
+    <!-- HERO -->
 
-<!-- HERO -->
+    <section class="hero">
 
-<section class="hero">
+      <div class="hero-content reveal">
 
+        <div class="eyebrow">
+          Fresh from our kitchen
+        </div>
 
-  <div class="hero-content reveal">
+        <h1>
+          Homemade food.<br>
+          <em>Made beautifully.</em>
+        </h1>
 
-    <div class="eyebrow">
-      Fresh from our kitchen
-    </div>
+        <p class="hero-description">
 
+          Cakes, cheesecakes, breads, cookies and desserts
+          made in small batches in London, Ontario.
 
-    <h1>
-      Homemade food.<br>
-      <em>Made beautifully.</em>
-    </h1>
+          <strong>
+            Eggless. Vegetarian. Homemade.
+          </strong>
 
+          Made with carefully selected ingredients and genuine care.
 
-    <p class="hero-description">
-
-      Cakes, cheesecakes, breads, cookies and desserts
-      made in small batches in London, Ontario.
-
-      <strong>
-        Eggless. Vegetarian. Homemade.
-      </strong>
-
-      Made with carefully selected ingredients and genuine care.
-
-    </p>
-
-
-    <div class="hero-buttons">
-
-      <a
-        href="#order"
-        class="button button-primary"
-      >
-        Start Your Order →
-      </a>
-
-
-      <a
-        href="#products"
-        class="button button-secondary"
-      >
-        Explore the Bakery
-      </a>
-
-    </div>
-
-
-    <div class="hero-features">
-
-      <span>100% Eggless</span>
-
-      <span>Vegetarian</span>
-
-      <span>Organic Ingredients</span>
-
-      <span>No Preservatives</span>
-
-    </div>
-
-  </div>
-
-
-  <div class="hero-visual reveal">
-
-
-    <div class="hero-image">
-
-      <img
-        src="images/lemon-cake.jpg"
-        alt="Fresh homemade cake from Home Style Bakery"
-        onerror="this.style.display='none';"
-      >
-
-    </div>
-
-
-    <div class="hero-card">
-
-      <small>
-        Home Style Bakery
-      </small>
-
-      <strong>
-        Made fresh.
-      </strong>
-
-      <span>
-        London, Ontario · Homemade with care
-      </span>
-
-    </div>
-
-
-    <div class="hero-stamp">
-
-      100%<br>
-      Eggless<br>
-      Bakery
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ANIMATED MARQUEE -->
-
-<div class="marquee">
-
-  <div class="marquee-track">
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">🍰</span>
-      Eggless
-    </div>
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">🌿</span>
-      Vegetarian
-    </div>
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">🏠</span>
-      Homemade
-    </div>
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">✨</span>
-      Carefully Selected Ingredients
-    </div>
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">🚫</span>
-      No Preservatives
-    </div>
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">🎨</span>
-      No Artificial Colours
-    </div>
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">📍</span>
-      London Ontario
-    </div>
-
-
-    <!-- DUPLICATE FOR SMOOTH LOOP -->
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">🍰</span>
-      Eggless
-    </div>
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">🌿</span>
-      Vegetarian
-    </div>
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">🏠</span>
-      Homemade
-    </div>
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">✨</span>
-      Carefully Selected Ingredients
-    </div>
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">🚫</span>
-      No Preservatives
-    </div>
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">🎨</span>
-      No Artificial Colours
-    </div>
-
-
-    <div class="marquee-item">
-      <span class="marquee-icon">📍</span>
-      London Ontario
-    </div>
-
-
-  </div>
-
-</div>
-
-
-<!-- PRODUCTS -->
-
-<section
-  class="section"
-  id="products"
->
-
-
-  <div class="section-header center reveal">
-
-    <span class="section-label">
-      The Bakery
-    </span>
-
-    <h2>
-      Made for moments<br>
-      <em>worth remembering.</em>
-    </h2>
-
-    <p>
-      From everyday favourites to something special
-      for a celebration, every item is prepared with
-      the care you'd expect from homemade food.
-    </p>
-
-  </div>
-
-
-  <div class="products">
-
-
-    <!-- LEMON -->
-
-    <article class="product-card reveal">
-
-      <div class="product-image">
-
-        <img
-          src="images/lemon-cake.jpg"
-          alt="Eggless homemade lemon cake"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <span class="tag">
-          EGGLESS
-        </span>
-
-        <h3>
-          Lemon Cake
-        </h3>
-
-        <p>
-          Light, fresh and full of natural lemon flavour.
-          A bright homemade favourite.
         </p>
 
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
+        <div class="hero-buttons">
+
+          <a
+            href="#order"
+            class="button button-primary"
+          >
+            Start Your Order →
+          </a>
+
+          <a
+            href="#products"
+            class="button button-secondary"
+          >
+            Explore the Bakery
+          </a>
+
+        </div>
+
+        <div class="hero-features">
+
+          <span>100% Eggless</span>
+          <span>Vegetarian</span>
+          <span>Organic Ingredients</span>
+          <span>No Preservatives</span>
+
+        </div>
 
       </div>
 
-    </article>
+      <div class="hero-visual reveal">
 
+        <div class="hero-image">
 
-    <!-- BANANA WALNUT -->
-
-    <article class="product-card reveal">
-
-      <div class="product-image">
-
-        <img
-          src="images/02_banana_walnut_cake.jpg"
-          alt="Homemade banana walnut cake"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <span class="tag">
-          HOMEMADE
-        </span>
-
-        <h3>
-          Banana Walnut Cake
-        </h3>
-
-        <p>
-          Moist banana cake with delicious walnuts,
-          baked fresh with homemade goodness.
-        </p>
-
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- PECAN -->
-
-    <article class="product-card reveal">
-
-      <div class="product-image">
-
-        <img
-          src="images/03_pecan_cake.jpg"
-          alt="Homemade pecan cake"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <span class="tag">
-          PREMIUM
-        </span>
-
-        <h3>
-          Pecan Cake
-        </h3>
-
-        <p>
-          Rich homemade cake with the delicious flavour
-          and texture of pecans.
-        </p>
-
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- STRAWBERRY CHEESECAKE -->
-
-    <article class="product-card reveal">
-
-      <div class="product-image">
-
-        <img
-          src="images/04_strawberry_cheesecake.jpg"
-          alt="Fresh strawberry cheesecake"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <span class="tag">
-          FRESH
-        </span>
-
-        <h3>
-          Strawberry Cheesecake
-        </h3>
-
-        <p>
-          Creamy, rich and finished with the bright
-          flavour of strawberries.
-        </p>
-
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- CLASSIC CAKE -->
-
-    <article class="product-card reveal">
-
-      <div class="product-image">
-
-        <img
-          src="images/Classic%20cake.jpg"
-          alt="Homemade classic cake"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <span class="tag">
-          CLASSIC
-        </span>
-
-        <h3>
-          Classic Cake
-        </h3>
-
-        <p>
-          Simple, elegant and homemade — a timeless
-          favourite for everyday celebrations.
-        </p>
-
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- COOKIES -->
-
-    <article class="product-card reveal">
-
-      <div class="product-image">
-
-        <img
-          src="images/Cookies.jpg"
-          alt="Homemade cookies"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <span class="tag">
-          BAKED FRESH
-        </span>
-
-        <h3>
-          Homemade Cookies
-        </h3>
-
-        <p>
-          Simple, comforting cookies made with quality
-          ingredients and homemade goodness.
-        </p>
-
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- FOCACCIA -->
-
-    <article class="product-card reveal">
-
-      <div class="product-image">
-
-        <img
-          src="images/06_focaccia_bread.jpg"
-          alt="Fresh homemade focaccia bread"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <span class="tag">
-          FRESH BAKED
-        </span>
-
-        <h3>
-          Focaccia Bread
-        </h3>
-
-        <p>
-          Freshly baked focaccia with a soft centre
-          and delicious golden crust.
-        </p>
-
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- BREAD -->
-
-    <article class="product-card reveal">
-
-      <div class="product-image">
-
-        <img
-          src="images/07_homemade_bread.jpg"
-          alt="Fresh homemade bread"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <span class="tag">
-          HOMEMADE
-        </span>
-
-        <h3>
-          Homemade Bread
-        </h3>
-
-        <p>
-          Soft, fresh and made with the simple goodness
-          of homemade bread.
-        </p>
-
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- CUSTARD -->
-
-    <article class="product-card reveal">
-
-      <div class="product-image">
-
-        <img
-          src="images/05_custard.jpg"
-          alt="Homemade fruit custard"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <span class="tag">
-          HOMEMADE
-        </span>
-
-        <h3>
-          Homemade Fruit Custard
-        </h3>
-
-        <p>
-          Silky, comforting fruit custard prepared
-          with care for a delicious homemade treat.
-        </p>
-
-        <a href="#order" class="product-button">
-          Order this →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- A2 GHEE -->
-
-    <article class="product-card reveal">
-
-      <div class="product-image">
-
-        <img
-          src="images/A2%20ghee.jpg"
-          alt="A2 Desi Ghee"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <span class="tag">
-          A2 GHEE
-        </span>
-
-        <h3>
-          A2 Desi Ghee
-        </h3>
-
-        <p>
-          A premium pantry favourite selected for
-          traditional homemade cooking and baking.
-        </p>
-
-        <a href="#order" class="product-button">
-          Ask about this →
-        </a>
-
-      </div>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-<!-- ORDER BUILDER -->
-
-<section
-  class="order-builder-section"
-  id="order"
->
-
-  <div class="order-builder">
-
-
-    <div class="order-builder-header reveal">
-
-      <span class="section-label">
-        ORDER FROM HOME STYLE BAKERY
-      </span>
-
-      <h2>
-        Build your order.<br>
-        <em>We'll take care of the rest.</em>
-      </h2>
-
-      <p>
-        Choose a category, select your items,
-        choose your quantities and send your order
-        directly through WhatsApp.
-      </p>
-
-    </div>
-
-
-    <!-- CATEGORY -->
-
-    <div class="order-step reveal">
-
-      <div class="step-number">
-        01
-      </div>
-
-
-      <div class="step-content">
-
-        <h3>
-          Choose a category
-        </h3>
-
-
-        <div class="category-grid">
-
-
-          <button
-            type="button"
-            class="category-button active"
-            data-category="cakes"
-            onclick="displayProducts('cakes', this)"
+          <img
+            src="images/lemon-cake.jpg"
+            alt="Fresh homemade cake from Home Style Bakery"
+            onerror="this.style.display='none';"
           >
 
-            <img
-              src="images/Classic%20cake.jpg"
-              alt=""
-            >
+        </div>
 
-            <span class="category-name">
-              Cakes
-            </span>
+        <div class="hero-card">
 
-          </button>
+          <small>
+            Home Style Bakery
+          </small>
 
+          <strong>
+            Made fresh.
+          </strong>
 
-          <button
-            type="button"
-            class="category-button"
-            data-category="cheesecakes"
-            onclick="displayProducts('cheesecakes', this)"
-          >
+          <span>
+            London, Ontario · Homemade with care
+          </span>
 
-            <img
-              src="images/04_strawberry_cheesecake.jpg"
-              alt=""
-            >
+        </div>
 
-            <span class="category-name">
-              Cheesecakes
-            </span>
+        <div class="hero-stamp">
 
-          </button>
+          100%<br>
+          Eggless<br>
+          Bakery
 
+        </div>
 
-          <button
-            type="button"
-            class="category-button"
-            data-category="breads"
-            onclick="displayProducts('breads', this)"
-          >
+      </div>
 
-            <img
-              src="images/06_focaccia_bread.jpg"
-              alt=""
-            >
+    </section>
 
-            <span class="category-name">
-              Breads
-            </span>
+    <!-- ANIMATED MARQUEE -->
 
-          </button>
+    <div class="marquee">
 
+      <div class="marquee-track">
 
-          <button
-            type="button"
-            class="category-button"
-            data-category="desserts"
-            onclick="displayProducts('desserts', this)"
-          >
+        <div class="marquee-item">
+          <span class="marquee-icon">🍰</span>
+          Eggless
+        </div>
 
-            <img
-              src="images/05_custard.jpg"
-              alt=""
-            >
+        <div class="marquee-item">
+          <span class="marquee-icon">🌿</span>
+          Vegetarian
+        </div>
 
-            <span class="category-name">
-              Desserts
-            </span>
+        <div class="marquee-item">
+          <span class="marquee-icon">🏠</span>
+          Homemade
+        </div>
 
-          </button>
+        <div class="marquee-item">
+          <span class="marquee-icon">✨</span>
+          Carefully Selected Ingredients
+        </div>
 
+        <div class="marquee-item">
+          <span class="marquee-icon">🚫</span>
+          No Preservatives
+        </div>
 
-          <button
-            type="button"
-            class="category-button"
-            data-category="cookies"
-            onclick="displayProducts('cookies', this)"
-          >
+        <div class="marquee-item">
+          <span class="marquee-icon">🎨</span>
+          No Artificial Colours
+        </div>
 
-            <img
-              src="images/Cookies.jpg"
-              alt=""
-            >
+        <div class="marquee-item">
+          <span class="marquee-icon">📍</span>
+          London Ontario
+        </div>
 
-            <span class="category-name">
-              Cookies
-            </span>
+        <div class="marquee-item">
+          <span class="marquee-icon">🍰</span>
+          Eggless
+        </div>
 
-          </button>
+        <div class="marquee-item">
+          <span class="marquee-icon">🌿</span>
+          Vegetarian
+        </div>
 
+        <div class="marquee-item">
+          <span class="marquee-icon">🏠</span>
+          Homemade
+        </div>
 
-          <button
-            type="button"
-            class="category-button"
-            data-category="other"
-            onclick="displayProducts('other', this)"
-          >
+        <div class="marquee-item">
+          <span class="marquee-icon">✨</span>
+          Carefully Selected Ingredients
+        </div>
 
-            <img
-              src="images/A2%20ghee.jpg"
-              alt=""
-            >
+        <div class="marquee-item">
+          <span class="marquee-icon">🚫</span>
+          No Preservatives
+        </div>
 
-            <span class="category-name">
-              Other
-            </span>
+        <div class="marquee-item">
+          <span class="marquee-icon">🎨</span>
+          No Artificial Colours
+        </div>
 
-          </button>
-
-
+        <div class="marquee-item">
+          <span class="marquee-icon">📍</span>
+          London Ontario
         </div>
 
       </div>
 
     </div>
 
+    <!-- PRODUCTS -->
 
-    <!-- SELECT ITEMS -->
+    <section class="section" id="products">
 
-    <div class="order-step reveal">
+      <div class="section-header center reveal">
 
-      <div class="step-number">
-        02
+        <span class="section-label">
+          The Bakery
+        </span>
+
+        <h2>
+          Made for moments<br>
+          <em>worth remembering.</em>
+        </h2>
+
+        <p>
+          From everyday favourites to something special
+          for a celebration, every item is prepared with
+          the care you'd expect from homemade food.
+        </p>
+
       </div>
 
+      <div class="products">
 
-      <div class="step-content">
+        <article class="product-card reveal">
 
-        <h3>
-          Select your items
-        </h3>
+          <div class="product-image">
+            <img
+              src="images/lemon-cake.jpg"
+              alt="Eggless homemade lemon cake"
+              loading="lazy"
+            >
+          </div>
 
+          <div class="product-info">
 
-        <div
-          class="order-products"
-          id="orderProducts"
-        ></div>
+            <span class="tag">
+              EGGLESS
+            </span>
+
+            <h3>
+              Lemon Cake
+            </h3>
+
+            <p>
+              Light, fresh and full of natural lemon flavour.
+              A bright homemade favourite.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+        <article class="product-card reveal">
+
+          <div class="product-image">
+            <img
+              src="images/02_banana_walnut_cake.jpg"
+              alt="Homemade banana walnut cake"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              HOMEMADE
+            </span>
+
+            <h3>
+              Banana Walnut Cake
+            </h3>
+
+            <p>
+              Moist banana cake with delicious walnuts,
+              baked fresh with homemade goodness.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+        <article class="product-card reveal">
+
+          <div class="product-image">
+            <img
+              src="images/03_pecan_cake.jpg"
+              alt="Homemade pecan cake"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              PREMIUM
+            </span>
+
+            <h3>
+              Pecan Cake
+            </h3>
+
+            <p>
+              Rich homemade cake with the delicious flavour
+              and texture of pecans.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+        <article class="product-card reveal">
+
+          <div class="product-image">
+            <img
+              src="images/04_strawberry_cheesecake.jpg"
+              alt="Fresh strawberry cheesecake"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              FRESH
+            </span>
+
+            <h3>
+              Strawberry Cheesecake
+            </h3>
+
+            <p>
+              Creamy, rich and finished with the bright
+              flavour of strawberries.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+        <article class="product-card reveal">
+
+          <div class="product-image">
+            <img
+              src="images/Classic%20cake.jpg"
+              alt="Homemade classic cake"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              CLASSIC
+            </span>
+
+            <h3>
+              Classic Cake
+            </h3>
+
+            <p>
+              Simple, elegant and homemade — a timeless
+              favourite for everyday celebrations.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+        <article class="product-card reveal">
+
+          <div class="product-image">
+            <img
+              src="images/Cookies.jpg"
+              alt="Homemade cookies"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              BAKED FRESH
+            </span>
+
+            <h3>
+              Homemade Cookies
+            </h3>
+
+            <p>
+              Simple, comforting cookies made with quality
+              ingredients and homemade goodness.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+        <article class="product-card reveal">
+
+          <div class="product-image">
+            <img
+              src="images/06_focaccia_bread.jpg"
+              alt="Fresh homemade focaccia bread"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              FRESH BAKED
+            </span>
+
+            <h3>
+              Focaccia Bread
+            </h3>
+
+            <p>
+              Freshly baked focaccia with a soft centre
+              and delicious golden crust.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+        <article class="product-card reveal">
+
+          <div class="product-image">
+            <img
+              src="images/07_homemade_bread.jpg"
+              alt="Fresh homemade bread"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              HOMEMADE
+            </span>
+
+            <h3>
+              Homemade Bread
+            </h3>
+
+            <p>
+              Soft, fresh and made with the simple goodness
+              of homemade bread.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+        <article class="product-card reveal">
+
+          <div class="product-image">
+            <img
+              src="images/05_custard.jpg"
+              alt="Homemade fruit custard"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              HOMEMADE
+            </span>
+
+            <h3>
+              Homemade Fruit Custard
+            </h3>
+
+            <p>
+              Silky, comforting fruit custard prepared
+              with care for a delicious homemade treat.
+            </p>
+
+            <a href="#order" class="product-button">
+              Order this →
+            </a>
+
+          </div>
+
+        </article>
+
+        <article class="product-card reveal">
+
+          <div class="product-image">
+            <img
+              src="images/A2%20ghee.jpg"
+              alt="A2 Desi Ghee"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+
+            <span class="tag">
+              A2 GHEE
+            </span>
+
+            <h3>
+              A2 Desi Ghee
+            </h3>
+
+            <p>
+              A premium pantry favourite selected for
+              traditional homemade cooking and baking.
+            </p>
+
+            <a href="#order" class="product-button">
+              Ask about this →
+            </a>
+
+          </div>
+
+        </article>
 
       </div>
 
-    </div>
+    </section>
 
+    <!-- ORDER BUILDER -->
 
-    <!-- SUMMARY -->
-
-    <div
-      class="order-step order-summary"
-      id="orderSummary"
+    <section
+      class="order-builder-section"
+      id="order"
     >
 
-      <div class="step-number">
-        03
-      </div>
+      <div class="order-builder">
 
+        <div class="order-builder-header reveal">
 
-      <div class="step-content">
+          <span class="section-label">
+            ORDER FROM HOME STYLE BAKERY
+          </span>
 
-        <h3>
-          Your order
-        </h3>
+          <h2>
+            Build your order.<br>
+            <em>We'll take care of the rest.</em>
+          </h2>
 
-
-        <div
-          class="summary-list"
-          id="summaryList"
-        >
-
-          <p class="empty-summary">
-            Your selected items will appear here.
+          <p>
+            Choose a category, select your items,
+            choose your quantities and send your order
+            directly through WhatsApp.
           </p>
 
         </div>
 
+        <div class="order-step reveal">
 
-        <div class="customer-form">
+          <div class="step-number">
+            01
+          </div>
 
+          <div class="step-content">
 
-          <div class="form-group">
+            <h3>
+              Choose a category
+            </h3>
 
-            <label for="customerName">
-              Your name
-            </label>
+            <div class="category-grid">
 
-            <input
-              type="text"
-              id="customerName"
-              placeholder="Enter your name"
+              <button
+                type="button"
+                class="category-button active"
+                data-category="cakes"
+                onclick="displayProducts('cakes', this)"
+              >
+
+                <img
+                  src="images/Classic%20cake.jpg"
+                  alt=""
+                >
+
+                <span class="category-name">
+                  Cakes
+                </span>
+
+              </button>
+
+              <button
+                type="button"
+                class="category-button"
+                data-category="cheesecakes"
+                onclick="displayProducts('cheesecakes', this)"
+              >
+
+                <img
+                  src="images/04_strawberry_cheesecake.jpg"
+                  alt=""
+                >
+
+                <span class="category-name">
+                  Cheesecakes
+                </span>
+
+              </button>
+
+              <button
+                type="button"
+                class="category-button"
+                data-category="breads"
+                onclick="displayProducts('breads', this)"
+              >
+
+                <img
+                  src="images/06_focaccia_bread.jpg"
+                  alt=""
+                >
+
+                <span class="category-name">
+                  Breads
+                </span>
+
+              </button>
+
+              <button
+                type="button"
+                class="category-button"
+                data-category="desserts"
+                onclick="displayProducts('desserts', this)"
+              >
+
+                <img
+                  src="images/05_custard.jpg"
+                  alt=""
+                >
+
+                <span class="category-name">
+                  Desserts
+                </span>
+
+              </button>
+
+              <button
+                type="button"
+                class="category-button"
+                data-category="cookies"
+                onclick="displayProducts('cookies', this)"
+              >
+
+                <img
+                  src="images/Cookies.jpg"
+                  alt=""
+                >
+
+                <span class="category-name">
+                  Cookies
+                </span>
+
+              </button>
+
+              <button
+                type="button"
+                class="category-button"
+                data-category="other"
+                onclick="displayProducts('other', this)"
+              >
+
+                <img
+                  src="images/A2%20ghee.jpg"
+                  alt=""
+                >
+
+                <span class="category-name">
+                  Other
+                </span>
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="order-step reveal">
+
+          <div class="step-number">
+            02
+          </div>
+
+          <div class="step-content">
+
+            <h3>
+              Select your items
+            </h3>
+
+            <div
+              class="order-products"
+              id="orderProducts"
+            ></div>
+
+          </div>
+
+        </div>
+
+        <div
+          class="order-step order-summary"
+          id="orderSummary"
+        >
+
+          <div class="step-number">
+            03
+          </div>
+
+          <div class="step-content">
+
+            <h3>
+              Your order
+            </h3>
+
+            <div
+              class="summary-list"
+              id="summaryList"
             >
 
+              <p class="empty-summary">
+                Your selected items will appear here.
+              </p>
+
+            </div>
+
+            <div class="customer-form">
+
+              <div class="form-group">
+
+                <label for="customerName">
+                  Your name
+                </label>
+
+                <input
+                  type="text"
+                  id="customerName"
+                  placeholder="Enter your name"
+                >
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="customerPhone">
+                  Phone number
+                </label>
+
+                <input
+                  type="tel"
+                  id="customerPhone"
+                  placeholder="519 200 8436"
+                >
+
+              </div>
+
+              <div class="form-group full">
+
+                <label for="customerNotes">
+                  Notes / special requests
+                </label>
+
+                <textarea
+                  id="customerNotes"
+                  rows="4"
+                  placeholder="Preferred date, flavour, size or any special request..."
+                ></textarea>
+
+              </div>
+
+              <button
+                type="button"
+                class="send-order"
+                onclick="sendWhatsAppOrder()"
+              >
+                Send Order on WhatsApp →
+              </button>
+
+            </div>
+
           </div>
 
-
-          <div class="form-group">
-
-            <label for="customerPhone">
-              Phone number
-            </label>
-
-            <input
-              type="tel"
-              id="customerPhone"
-              placeholder="519 200 8436"
-            >
-
-          </div>
-
-
-          <div class="form-group full">
-
-            <label for="customerNotes">
-              Notes / special requests
-            </label>
-
-            <textarea
-              id="customerNotes"
-              rows="4"
-              placeholder="Preferred date, flavour, size or any special request..."
-            ></textarea>
-
-          </div>
-
-
-          <button
-            type="button"
-            class="send-order"
-            onclick="sendWhatsAppOrder()"
-          >
-            Send Order on WhatsApp →
-          </button>
-
-
         </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </div>
+    <!-- OUR PROMISE -->
 
-</section>
-
-
-<!-- OUR PROMISE -->
-
-<section
-  class="promise-section"
-  id="promise"
->
-
-  <div class="promise-inner">
-
-
-    <div class="promise-header reveal">
-
-      <span class="section-label">
-        OUR PROMISE
-      </span>
-
-
-      <h2>
-        Simple ingredients.<br>
-        <em>Beautifully made.</em>
-      </h2>
-
-
-      <p>
-        Everything we make reflects the way we bake at home:
-        carefully, thoughtfully and without unnecessary ingredients.
-      </p>
-
-    </div>
-
-
-    <!-- KITCHEN PHOTO -->
-
-    <div class="promise-photo reveal">
-
-      <img
-        src="images/kitchen.jpg"
-        alt="Home Style Bakery kitchen"
-        loading="lazy"
-      >
-
-    </div>
-
-
-    <!-- PROMISE CARDS -->
-
-    <div class="promise-grid">
-
-
-      <!-- QUALITY -->
-
-      <div class="promise-card reveal">
-
-        <div class="promise-emoji">
-          🍰
-        </div>
-
-
-        <div class="promise-number">
-          01 · QUALITY
-        </div>
-
-
-        <h3>
-          Carefully Selected
-        </h3>
-
-
-        <p>
-          We choose ingredients thoughtfully,
-          focusing on quality, flavour and the
-          homemade experience.
-        </p>
-
-      </div>
-
-
-      <!-- EGGLESS -->
-
-      <div class="promise-card reveal">
-
-        <div class="promise-emoji">
-          🥚🚫
-        </div>
-
-
-        <div class="promise-number">
-          02 · EGGLESS
-        </div>
-
-
-        <h3>
-          100% Eggless
-        </h3>
-
-
-        <p>
-          Every item we make is prepared without eggs,
-          while keeping the flavour and texture delicious.
-        </p>
-
-      </div>
-
-
-      <!-- NATURAL -->
-
-      <div class="promise-card reveal">
-
-        <div class="promise-emoji">
-          🌿
-        </div>
-
-
-        <div class="promise-number">
-          03 · NATURAL
-        </div>
-
-
-        <h3>
-          No Artificial Colours
-        </h3>
-
-
-        <p>
-          We keep our baking simple and avoid
-          unnecessary artificial colours.
-        </p>
-
-      </div>
-
-
-      <!-- FRESH -->
-
-      <div class="promise-card reveal">
-
-        <div class="promise-emoji">
-          ✨
-        </div>
-
-
-        <div class="promise-number">
-          04 · FRESH
-        </div>
-
-
-        <h3>
-          No Preservatives
-        </h3>
-
-
-        <p>
-          Homemade baking made fresh, without
-          unnecessary preservatives.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- STORY -->
-
-<section
-  class="story"
-  id="story"
->
-
-
-  <div class="story-image reveal">
-
-    <img
-      src="images/kitchen.jpg"
-      alt="Home Style Bakery kitchen"
-      loading="lazy"
+    <section
+      class="promise-section"
+      id="promise"
     >
 
-  </div>
+      <div class="promise-inner">
 
+        <div class="promise-header reveal">
 
-  <div class="story-copy reveal">
+          <span class="section-label">
+            OUR PROMISE
+          </span>
 
-    <span class="section-label">
-      OUR STORY
-    </span>
+          <h2>
+            Simple ingredients.<br>
+            <em>Beautifully made.</em>
+          </h2>
 
+          <p>
+            Everything we make reflects the way we bake at home:
+            carefully, thoughtfully and without unnecessary ingredients.
+          </p>
 
-    <h2>
-      Made at home.<br>
-      <em>Made with heart.</em>
-    </h2>
+        </div>
 
+        <div class="promise-photo reveal">
 
-    <p>
-      Home Style Bakery started with a simple idea:
-      homemade food should taste homemade.
-    </p>
+          <img
+            src="images/kitchen.jpg"
+            alt="Home Style Bakery kitchen"
+            loading="lazy"
+          >
 
+        </div>
 
-    <p>
-      We bake in small batches using carefully selected
-      ingredients, premium quality butter and traditional
-      homemade methods.
-    </p>
+        <div class="promise-grid">
 
+          <div class="promise-card reveal">
 
-    <p>
-      From cakes and cheesecakes to breads, cookies,
-      desserts and more, everything is prepared with
-      the same care we would use for our own family.
-    </p>
+            <div class="promise-emoji">
+              🍰
+            </div>
 
+            <div class="promise-number">
+              01 · QUALITY
+            </div>
 
-    <div class="story-highlight">
+            <h3>
+              Carefully Selected
+            </h3>
 
-      <strong>
-        Home Style Bakery
-      </strong>
+            <p>
+              We choose ingredients thoughtfully,
+              focusing on quality, flavour and the
+              homemade experience.
+            </p>
 
-      <span>
-        London, Ontario
-      </span>
+          </div>
 
-    </div>
+          <div class="promise-card reveal">
 
-  </div>
+            <div class="promise-emoji">
+              🥚🚫
+            </div>
 
-</section>
+            <div class="promise-number">
+              02 · EGGLESS
+            </div>
 
+            <h3>
+              100% Eggless
+            </h3>
+
+            <p>
+              Every item we make is prepared without eggs,
+              while keeping the flavour and texture delicious.
+            </p>
+
+          </div>
+
+          <div class="promise-card reveal">
+
+            <div class="promise-emoji">
+              🌿
+            </div>
+
+            <div class="promise-number">
+              03 · NATURAL
+            </div>
+
+            <h3>
+              No Artificial Colours
+            </h3>
+
+            <p>
+              We keep our baking simple and avoid
+              unnecessary artificial colours.
+            </p>
+
+          </div>
+
+          <div class="promise-card reveal">
+
+            <div class="promise-emoji">
+              ✨
+            </div>
+
+            <div class="promise-number">
+              04 · FRESH
+            </div>
+
+            <h3>
+              No Preservatives
+            </h3>
+
+            <p>
+              Homemade baking made fresh, without
+              unnecessary preservatives.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- STORY -->
+
+    <section
+      class="story"
+      id="story"
+    >
+
+      <div class="story-image reveal">
+
+        <img
+          src="images/kitchen.jpg"
+          alt="Home Style Bakery kitchen"
+          loading="lazy"
+        >
+
+      </div>
+
+      <div class="story-copy reveal">
+
+        <span class="section-label">
+          OUR STORY
+        </span>
+
+        <h2>
+          Made at home.<br>
+          <em>Made with heart.</em>
+        </h2>
+
+        <p>
+          Home Style Bakery started with a simple idea:
+          homemade food should taste homemade.
+        </p>
+
+        <p>
+          We bake in small batches using carefully selected
+          ingredients, premium quality butter and traditional
+          homemade methods.
+        </p>
+
+        <p>
+          From cakes and cheesecakes to breads, cookies,
+          desserts and more, everything is prepared with
+          the same care we would use for our own family.
+        </p>
+
+        <div class="story-highlight">
+
+          <strong>
+            Home Style Bakery
+          </strong>
+
+          <span>
+            London, Ontario
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
 
   </main>
 
@@ -3733,129 +3213,109 @@ content="Home Style Bakery in London, Ontario. Homemade eggless vegetarian cakes
 
   <footer>
 
+    <div class="footer-inner">
 
-<div class="footer-inner">
+      <div>
 
+        <h3>
+          Home Style Bakery
+        </h3>
 
-  <div>
+        <p>
+          Homemade · Eggless · Vegetarian
+        </p>
 
-    <h3>
-      Home Style Bakery
-    </h3>
+        <div class="footer-location">
+          London, Ontario
+        </div>
 
-    <p>
-      Homemade · Eggless · Vegetarian
-    </p>
+      </div>
 
-    <div class="footer-location">
-      London, Ontario
+      <div>
+
+        <h3>
+          Explore
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="#home">
+            Home
+          </a>
+
+          <a href="#products">
+            Our Baking
+          </a>
+
+          <a href="#promise">
+            Our Promise
+          </a>
+
+          <a href="#story">
+            Our Story
+          </a>
+
+          <a href="#order">
+            Order
+          </a>
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <h3>
+          Order
+        </h3>
+
+        <p>
+
+          <a
+            href="https://wa.me/15192008436?text=Hi%20Home%20Style%20Bakery%2C%20I%20would%20like%20to%20place%20an%20order."
+            target="_blank"
+            rel="noopener"
+          >
+            WhatsApp us
+          </a>
+
+        </p>
+
+        <p>
+
+          <a href="tel:+15192008436">
+            +1 519 200 8436
+          </a>
+
+        </p>
+
+      </div>
+
     </div>
 
-  </div>
+    <div class="copyright">
 
-
-  <div>
-
-    <h3>
-      Explore
-    </h3>
-
-    <div class="footer-links">
-
-      <a href="#home">
-        Home
-      </a>
-
-      <a href="#products">
-        Our Baking
-      </a>
-
-      <a href="#promise">
-        Our Promise
-      </a>
-
-      <a href="#story">
-        Our Story
-      </a>
-
-      <a href="#order">
-        Order
-      </a>
+      © 2026 Home Style Bakery ·
+      Made with care in London, Ontario
 
     </div>
-
-  </div>
-
-
-  <div>
-
-    <h3>
-      Order
-    </h3>
-
-    <p>
-
-      <a
-        href="https://wa.me/15192008436?text=Hi%20Home%20Style%20Bakery%2C%20I%20would%20like%20to%20place%20an%20order."
-        target="_blank"
-        rel="noopener"
-      >
-        WhatsApp us
-      </a>
-
-    </p>
-
-
-    <p>
-
-      <a href="tel:+15192008436">
-        +1 519 200 8436
-      </a>
-
-    </p>
-
-  </div>
-
-
-</div>
-
-
-<div class="copyright">
-
-  © 2026 Home Style Bakery ·
-  Made with care in London, Ontario
-
-</div>
-
 
   </footer>
 
   <!-- MOBILE ORDER BUTTON -->
 
-<a
-href="#order"
-class="mobile-order"
-
->
-
-
-Start Your Order →
-
-
+  <a
+    href="#order"
+    class="mobile-order"
+  >
+    Start Your Order →
   </a>
 
   <!-- JAVASCRIPT -->
 
   <script>
 
-
-    /* =========================
-       PRODUCT DATA
-    ========================= */
-
-
     const bakeryProducts = {
-
 
       cakes: [
 
@@ -3885,7 +3345,6 @@ Start Your Order →
 
       ],
 
-
       cheesecakes: [
 
         {
@@ -3895,7 +3354,6 @@ Start Your Order →
         }
 
       ],
-
 
       breads: [
 
@@ -3913,7 +3371,6 @@ Start Your Order →
 
       ],
 
-
       desserts: [
 
         {
@@ -3924,7 +3381,6 @@ Start Your Order →
 
       ],
 
-
       cookies: [
 
         {
@@ -3934,7 +3390,6 @@ Start Your Order →
         }
 
       ],
-
 
       other: [
 
@@ -3948,66 +3403,45 @@ Start Your Order →
 
     };
 
-
     let selectedProducts = {};
-
-
-    /* =========================
-       DISPLAY PRODUCTS
-    ========================= */
-
 
     function displayProducts(category, button) {
 
-
       const container =
         document.getElementById("orderProducts");
-
 
       if (!container) {
         return;
       }
 
-
       document
         .querySelectorAll(".category-button")
         .forEach(function(btn) {
-
           btn.classList.remove("active");
-
         });
 
-
       if (button) {
-
         button.classList.add("active");
-
       }
-
 
       const products =
         bakeryProducts[category] || [];
 
-
       container.innerHTML =
         products.map(function(product) {
 
-
           const selected =
             selectedProducts[product.name];
-
 
           const quantity =
             selected
               ? selected.quantity
               : 0;
 
-
           const safeName =
             product.name
               .replace(/\\/g, "\\\\")
               .replace(/'/g, "\\'");
-
 
           return `
 
@@ -4026,7 +3460,6 @@ Start Your Order →
 
               </div>
 
-
               <div class="order-product-info">
 
                 <h4>
@@ -4043,11 +3476,9 @@ Start Your Order →
 
               </div>
 
-
               <div class="selected-check">
                 ✓
               </div>
-
 
               ${
                 selected
@@ -4062,9 +3493,7 @@ Start Your Order →
                         Quantity
                       </span>
 
-
                       <div class="quantity-controls">
-
 
                         <button
                           type="button"
@@ -4074,11 +3503,9 @@ Start Your Order →
                           −
                         </button>
 
-
                         <span class="qty-number">
                           ${quantity}
                         </span>
-
 
                         <button
                           type="button"
@@ -4087,7 +3514,6 @@ Start Your Order →
                         >
                           +
                         </button>
-
 
                       </div>
 
@@ -4105,80 +3531,49 @@ Start Your Order →
 
     }
 
-
-    /* =========================
-       TOGGLE PRODUCT
-    ========================= */
-
-
     function toggleProduct(name) {
-
 
       if (selectedProducts[name]) {
 
         delete selectedProducts[name];
 
-      }
-
-      else {
-
+      } else {
 
         let product = null;
-
 
         for (
           const category in bakeryProducts
         ) {
 
-
           const found =
             bakeryProducts[category].find(
               function(item) {
-
                 return item.name === name;
-
               }
             );
 
-
           if (found) {
-
             product = found;
-
             break;
-
           }
 
         }
-
 
         if (!product) {
           return;
         }
 
-
         selectedProducts[name] = {
-
           ...product,
-
           quantity: 1
-
         };
 
       }
 
-
       updateSummary();
-
       refreshCurrentCategory();
 
     }
-
-
-    /* =========================
-       CHANGE QUANTITY
-    ========================= */
-
 
     function changeQuantity(
       name,
@@ -4186,60 +3581,40 @@ Start Your Order →
       event
     ) {
 
-
       if (event) {
-
         event.stopPropagation();
-
       }
-
 
       if (!selectedProducts[name]) {
         return;
       }
 
-
       selectedProducts[name].quantity += amount;
-
 
       if (
         selectedProducts[name].quantity <= 0
       ) {
-
         delete selectedProducts[name];
-
       }
 
-
       updateSummary();
-
       refreshCurrentCategory();
 
     }
 
-
-    /* =========================
-       REFRESH CATEGORY
-    ========================= */
-
-
     function refreshCurrentCategory() {
-
 
       const activeButton =
         document.querySelector(
           ".category-button.active"
         );
 
-
       if (!activeButton) {
         return;
       }
 
-
       const category =
         activeButton.dataset.category;
-
 
       if (category) {
 
@@ -4252,45 +3627,32 @@ Start Your Order →
 
     }
 
-
-    /* =========================
-       UPDATE SUMMARY
-    ========================= */
-
-
     function updateSummary() {
-
 
       const summary =
         document.getElementById(
           "summaryList"
         );
 
-
       const orderSummary =
         document.getElementById(
           "orderSummary"
         );
 
-
       if (!summary || !orderSummary) {
         return;
       }
-
 
       const items =
         Object.values(
           selectedProducts
         );
 
-
       if (items.length === 0) {
-
 
         orderSummary.classList.remove(
           "visible"
         );
-
 
         summary.innerHTML = `
 
@@ -4300,31 +3662,23 @@ Start Your Order →
 
         `;
 
-
         return;
-
       }
-
 
       orderSummary.classList.add(
         "visible"
       );
 
-
       let total = 0;
-
 
       summary.innerHTML =
         items.map(function(item) {
-
 
           const itemTotal =
             item.price *
             item.quantity;
 
-
           total += itemTotal;
-
 
           return `
 
@@ -4342,7 +3696,6 @@ Start Your Order →
 
               </div>
 
-
               <strong>
 
                 ${
@@ -4359,16 +3712,12 @@ Start Your Order →
 
         }).join("");
 
-
       const hasPricedItems =
         items.some(
           function(item) {
-
             return item.price > 0;
-
           }
         );
-
 
       summary.innerHTML += `
 
@@ -4394,20 +3743,12 @@ Start Your Order →
 
     }
 
-
-    /* =========================
-       WHATSAPP ORDER
-    ========================= */
-
-
     function sendWhatsAppOrder() {
-
 
       const items =
         Object.values(
           selectedProducts
         );
-
 
       if (items.length === 0) {
 
@@ -4416,9 +3757,7 @@ Start Your Order →
         );
 
         return;
-
       }
-
 
       const name =
         document
@@ -4428,7 +3767,6 @@ Start Your Order →
           .value
           .trim();
 
-
       const phone =
         document
           .getElementById(
@@ -4436,7 +3774,6 @@ Start Your Order →
           )
           .value
           .trim();
-
 
       const notes =
         document
@@ -4446,14 +3783,11 @@ Start Your Order →
           .value
           .trim();
 
-
       let message =
         "Hi Home Style Bakery!\\n\\n";
 
-
       message +=
         "I'd like to place an order:\\n\\n";
-
 
       items.forEach(
         function(item) {
@@ -4468,9 +3802,7 @@ Start Your Order →
         }
       );
 
-
       message += "\\n";
-
 
       if (name) {
 
@@ -4481,7 +3813,6 @@ Start Your Order →
 
       }
 
-
       if (phone) {
 
         message +=
@@ -4490,7 +3821,6 @@ Start Your Order →
           "\\n";
 
       }
-
 
       if (notes) {
 
@@ -4501,17 +3831,14 @@ Start Your Order →
 
       }
 
-
       message +=
         "\\nPlease let me know availability and the final price. Thank you!";
-
 
       const whatsappURL =
         "https://wa.me/15192008436?text=" +
         encodeURIComponent(
           message
         );
-
 
       window.open(
         whatsappURL,
@@ -4520,12 +3847,6 @@ Start Your Order →
       );
 
     }
-
-
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
-
 
     const revealObserver =
       new IntersectionObserver(
@@ -4555,16 +3876,9 @@ Start Your Order →
         }
       );
 
-
-    /* =========================
-       INITIALIZE
-    ========================= */
-
-
     document.addEventListener(
       "DOMContentLoaded",
       function() {
-
 
         document
           .querySelectorAll(
@@ -4580,26 +3894,23 @@ Start Your Order →
             }
           );
 
-
         const firstCategory =
           document.querySelector(
             ".category-button.active"
           );
-
 
         displayProducts(
           "cakes",
           firstCategory
         );
 
-
         updateSummary();
 
       }
     );
 
-
   </script>
 
 </body>
 </html>
+
