@@ -3896,93 +3896,35 @@
 
   <script>
 
-    const bakeryProducts = {
+   const bakeryProducts = {
+  cakes: [
+    { name: "Lemon Cake", price: 45, image: "images/lemon-cake.jpg" },
+    { name: "Banana Walnut Cake", price: 50, image: "images/02_banana_walnut_cake.jpg" },
+    { name: "Pecan Cake", price: 50, image: "images/03_pecan_cake.jpg" },
+    { name: "Classic Cake", price: 45, image: "images/Classic%20cake.jpg" }
+  ],
 
-      cakes: [
+  cheesecakes: [
+    { name: "Strawberry Cheesecake", price: 55, image: "images/04_strawberry_cheesecake.jpg" }
+  ],
 
-        {
-          name: "Lemon Cake",
-          price: 35,
-          image: "images/lemon-cake.jpg"
-        },
+  breads: [
+    { name: "Focaccia Bread", price: 20, image: "images/06_focaccia_bread.jpg" },
+    { name: "Homemade Bread", price: 8, image: "images/07_homemade_bread.jpg" }
+  ],
 
-        {
-          name: "Banana Walnut Cake",
-          price: 35,
-          image: "images/02_banana_walnut_cake.jpg"
-        },
+  desserts: [
+    { name: "Homemade Fruit Custard", price: 20, image: "images/05_custard.jpg" }
+  ],
 
-        {
-          name: "Pecan Cake",
-          price: 40,
-          image: "images/03_pecan_cake.jpg"
-        },
+  cookies: [
+    { name: "Homemade Cookies", price: 15, image: "images/Cookies.jpg" }
+  ],
 
-        {
-          name: "Classic Cake",
-          price: 35,
-          image: "images/Classic%20cake.jpg"
-        }
-
-      ],
-
-      cheesecakes: [
-
-        {
-          name: "Strawberry Cheesecake",
-          price: 45,
-          image: "images/04_strawberry_cheesecake.jpg"
-        }
-
-      ],
-
-      breads: [
-
-        {
-          name: "Focaccia Bread",
-          price: 12,
-          image: "images/06_focaccia_bread.jpg"
-        },
-
-        {
-          name: "Homemade Bread",
-          price: 8,
-          image: "images/07_homemade_bread.jpg"
-        }
-
-      ],
-
-      desserts: [
-
-        {
-          name: "Homemade Fruit Custard",
-          price: 12,
-          image: "images/05_custard.jpg"
-        }
-
-      ],
-
-      cookies: [
-
-        {
-          name: "Homemade Cookies",
-          price: 10,
-          image: "images/Cookies.jpg"
-        }
-
-      ],
-
-      other: [
-
-        {
-          name: "Cultured A2 Cow Ghee",
-          price: 0,
-          image: "images/A2%20ghee.jpg"
-        }
-
-      ]
-
-    };
+  other: [
+    { name: "Cultured A2 Cow Ghee", price: 55, image: "images/A2%20ghee.jpg" }
+  ]
+};
 
     let selectedProducts = {};
 
