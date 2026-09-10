@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://homestylebakery.github.io/HomeStyleBakery/sitemap.xml
